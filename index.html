@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Module 3 CSS3 styling and responsive design notes for the same portfolio project.">
-  <title>Module 3 CSS3 Portfolio Styling Notes</title>
+  <meta name="description" content="Module 3 CSS3 Styling and Responsive Design notes with Project 3 responsive business website.">
+  <title>Module 3 CSS3 Styling and Responsive Design Notes</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,183 +12,116 @@
     <div class="container header-grid">
       <div>
         <h1>Module 3: CSS3 Styling and Responsive Design</h1>
-        <p>Same portfolio project ko CSS3 se style karte hue complete notes. Simple Hinglish, theory, practical code, and detailed code explanation.</p>
+        <p>Complete CSS notes in simple Hinglish with practical examples, detailed code explanations, and Project 3 responsive business website.</p>
       </div>
       <div class="badge-box">
-        <strong>Final Output</strong>
-        Module 2 wala portfolio ab clean, modern, responsive, and professional dikhega.
+        <strong>Page Theme</strong>
+        CSS syntax, selectors, box model, Flexbox, Grid, responsive design, media queries, animations, transitions, and best practices.
       </div>
     </div>
   </header>
 
   <div class="container layout">
     <aside class="sidebar">
-      <h2>Module 3 Topics</h2>
-      <a href="#goal">Module Goal</a>
-      <a href="#class-format">Class Practical Format</a>
-      <a href="#project-flow">Portfolio Flow</a>
-      <a href="#connect-css">Connect CSS</a>
-      <a href="#syntax">CSS Syntax</a>
-      <a href="#selectors">Selectors</a>
-      <a href="#specificity">Specificity</a>
-      <a href="#box-model">Box Model</a>
-      <a href="#flexbox">Flexbox</a>
-      <a href="#grid">CSS Grid</a>
-      <a href="#responsive">Responsive Design</a>
-      <a href="#media-query">Media Queries</a>
-      <a href="#animation">Animations</a>
-      <a href="#best-practices">Best Practices</a>
-      <a href="#portfolio-html">Portfolio HTML Update</a>
-      <a href="#portfolio-css">Portfolio CSS Code</a>
-      <a href="#run-project">How to Run</a>
-      <a href="#start-end-practical">Start-End Practical</a>
-      <a href="#checklist">Checklist</a>
+      <h2>Index</h2>
+      <a href="#module-goal">Module Goal</a>
+      <a href="#css-intro">1. CSS Introduction</a>
+      <a href="#syntax">2. CSS Syntax</a>
+      <a href="#selectors">3. Selectors</a>
+      <a href="#specificity">4. Specificity</a>
+      <a href="#box-model">5. Box Model</a>
+      <a href="#flexbox">6. Flexbox</a>
+      <a href="#grid">7. CSS Grid</a>
+      <a href="#responsive">8. Responsive Design</a>
+      <a href="#media">9. Media Queries</a>
+      <a href="#animation">10. Animations and Transitions</a>
+      <a href="#performance">11. Performance and Best Practices</a>
+      <a href="#project">12. Project 3</a>
+      <a href="#cheatsheet">Quick Reference</a>
+      <a href="#summary">Final Summary</a>
     </aside>
 
     <main class="content">
-      <section id="goal">
+      <section id="module-goal">
         <h2>Module Goal</h2>
-        <p>Module 2 mein humne portfolio website ka HTML structure banaya tha. Usme Home, About, Projects, and Contact pages the. Ab Module 3 mein hum same portfolio project ko CSS3 ke help se style karenge. Isse learner ko practical way mein samajh aayega ki CSS website ko beautiful, readable, responsive, and professional kaise banata hai.</p>
-        <p>Is module mein hum alag se random CSS examples nahi karenge. Har CSS topic portfolio ke kisi real part par apply hoga. Example: navigation ko Flexbox se align karenge, project cards ko CSS Grid se arrange karenge, images and layout ko responsive banayenge, buttons par transition add karenge, aur media queries se mobile layout fix karenge.</p>
-        <div class="note">
-          Teaching idea: Student ko yeh feel hona chahiye ki woh sirf CSS properties nahi padh raha, balki apna real portfolio improve kar raha hai.
-        </div>
-      </section>
+        <p>Is module ka goal hai CSS3 ko practical and simple way mein samajhna. HTML page ka structure banata hai, aur CSS us structure ko design deta hai. Agar HTML ek building ka structure hai, toh CSS us building ka paint, spacing, lighting, decoration, and layout hai.</p>
+        <p>Is module mein hum CSS syntax, selectors, specificity, box model, Flexbox, Grid, responsive design, media queries, animations, transitions, performance, and best practices cover karenge. Last mein hum ek responsive business website ka project banayenge jisme desktop and mobile layout, clean typography, spacing, Flexbox, Grid, and modern color scheme use hoga.</p>
 
-      <section id="class-format">
-        <h2>Class Practical Format: Is Module Ko Kaise Padhana Hai</h2>
-        <p>Is module ko padhate time ek fixed classroom flow follow karna best rahega. Pehle learner ko problem dikhao: HTML page structure toh ready hai, lekin page plain dikhta hai. Phir CSS ka solution introduce karo: CSS se hum same HTML ko attractive, readable, and responsive bana sakte hain. Is tarah learner ko reason clear hoga ki CSS kyun padh rahe hain.</p>
-
-        <h3>Practical Teaching Flow</h3>
+        <h3>What You Will Learn</h3>
         <table>
           <tr>
-            <th>Class Step</th>
-            <th>Teacher Action</th>
-            <th>Learner Output</th>
+            <th>Topic</th>
+            <th>Use</th>
           </tr>
           <tr>
-            <td>Step 1</td>
-            <td>Module 2 wala plain portfolio browser mein open karwao.</td>
-            <td>Learner dekhega ki content hai, but design plain hai.</td>
+            <td>CSS Syntax</td>
+            <td>CSS rule ka structure samajhna</td>
           </tr>
           <tr>
-            <td>Step 2</td>
-            <td>Project folder mein <code>styles.css</code> file create karwao.</td>
-            <td>CSS ke liye separate file ready hogi.</td>
+            <td>Selectors and Specificity</td>
+            <td>Correct element target karna and priority samajhna</td>
           </tr>
           <tr>
-            <td>Step 3</td>
-            <td>Har HTML page ke <code>head</code> mein CSS link add karwao.</td>
-            <td>HTML and CSS connected honge.</td>
+            <td>Box Model</td>
+            <td>Spacing, padding, border, margin control karna</td>
           </tr>
           <tr>
-            <td>Step 4</td>
-            <td>HTML elements par meaningful classes add karwao.</td>
-            <td>CSS target karne ke liye clear hooks milenge.</td>
+            <td>Flexbox</td>
+            <td>Navbar and horizontal/vertical alignment</td>
           </tr>
           <tr>
-            <td>Step 5</td>
-            <td>Base CSS apply karwao: body, font, colors, container.</td>
-            <td>Website readable and centered dikhegi.</td>
+            <td>CSS Grid</td>
+            <td>Cards and page sections ko rows/columns mein arrange karna</td>
           </tr>
           <tr>
-            <td>Step 6</td>
-            <td>Flexbox se navbar style karwao.</td>
-            <td>Logo left and navigation right aligned dikhega.</td>
+            <td>Responsive Design</td>
+            <td>Website ko desktop and mobile dono par proper banana</td>
           </tr>
           <tr>
-            <td>Step 7</td>
-            <td>Hero section and cards ko style karwao.</td>
-            <td>Home page professional portfolio jaisa dikhega.</td>
+            <td>Media Queries</td>
+            <td>Screen size ke according CSS change karna</td>
           </tr>
           <tr>
-            <td>Step 8</td>
-            <td>Projects section mein CSS Grid use karwao.</td>
-            <td>Project cards desktop par columns mein dikhengi.</td>
+            <td>Animations and Transitions</td>
+            <td>Hover and movement effects smooth banana</td>
           </tr>
           <tr>
-            <td>Step 9</td>
-            <td>Contact form fields style karwao.</td>
-            <td>Form clean, full-width, and readable dikhega.</td>
-          </tr>
-          <tr>
-            <td>Step 10</td>
-            <td>Media query add karke browser resize test karwao.</td>
-            <td>Mobile par layout one-column and clean ho jayega.</td>
-          </tr>
-        </table>
-
-        <h3>Class Mein Bolne Wali Simple Explanation</h3>
-        <p>Students ko simple words mein bolo: HTML content ka structure banata hai, CSS us content ko design deta hai. Aaj hum random CSS nahi padhne wale. Hum apne portfolio ke har part ko style karenge. Navbar ko Flexbox se arrange karenge, project cards ko Grid se arrange karenge, form ko user-friendly banayenge, aur mobile ke liye media query add karenge. End tak aapka plain HTML portfolio ek proper responsive portfolio ban jayega.</p>
-
-        <h3>Before Starting Practical</h3>
-        <table>
-          <tr>
-            <th>Requirement</th>
-            <th>Why Needed</th>
-          </tr>
-          <tr>
-            <td>VS Code</td>
-            <td>HTML and CSS files edit karne ke liye.</td>
-          </tr>
-          <tr>
-            <td>Browser</td>
-            <td>Output test karne ke liye.</td>
-          </tr>
-          <tr>
-            <td>Module 2 portfolio files</td>
-            <td>Same project ko continue karna hai, new random project nahi banana.</td>
-          </tr>
-          <tr>
-            <td>Basic HTML understanding</td>
-            <td>Classes, header, nav, section, article, form ko CSS se target karna hai.</td>
+            <td>Best Practices</td>
+            <td>Clean, reusable, maintainable CSS likhna</td>
           </tr>
         </table>
       </section>
 
-      <section id="project-flow">
-        <h2>Portfolio Project Flow</h2>
-        <p>Hum same portfolio folder continue karenge. Module 2 mein jo files bani thi, unke saath ab ek new CSS file add hogi. HTML structure mostly same rahega, bas classes add hongi taaki CSS easily target kar sake.</p>
-        <pre><code>portfolio-site/
-  index.html
-  about.html
-  projects.html
-  contact.html
-  styles.css
-  media/
-    profile.jpg
-    intro.mp4</code></pre>
+      <section id="css-intro">
+        <h2>1. CSS Introduction</h2>
+        <p>CSS ka full form hai Cascading Style Sheets. CSS ka use HTML elements ko style karne ke liye hota hai. CSS se hum colors, fonts, spacing, borders, shadows, layout, hover effects, responsiveness, and animations control kar sakte hain.</p>
+        <p>Without CSS, website plain document jaisi dikhti hai. With CSS, wahi website professional and user-friendly dikhti hai. Real websites mein HTML and CSS dono saath kaam karte hain: HTML meaning deta hai, CSS appearance deta hai.</p>
+
+        <h3>Types of CSS</h3>
         <table>
           <tr>
-            <th>File / Folder</th>
-            <th>Detailed Explanation</th>
+            <th>Type</th>
+            <th>Example</th>
+            <th>Explanation</th>
           </tr>
           <tr>
-            <td><code>index.html</code></td>
-            <td>Home page. Isme hero section, intro, learning topics, and navigation styled honge.</td>
+            <td>Inline CSS</td>
+            <td><code>&lt;h1 style="color: blue;"&gt;</code></td>
+            <td>CSS direct HTML tag ke andar likhte hain. Small testing ke liye okay, but professional project mein avoid karna better hai.</td>
           </tr>
           <tr>
-            <td><code>about.html</code></td>
-            <td>About page. Isme image, skills list, and education table ko CSS se clean design denge.</td>
+            <td>Internal CSS</td>
+            <td><code>&lt;style&gt; h1 { color: blue; } &lt;/style&gt;</code></td>
+            <td>CSS same HTML file ke head section mein likhte hain. Single-page demo ke liye useful.</td>
           </tr>
           <tr>
-            <td><code>projects.html</code></td>
-            <td>Projects page. Isme project articles ko cards ki tarah style karenge and video section responsive hoga.</td>
-          </tr>
-          <tr>
-            <td><code>contact.html</code></td>
-            <td>Contact form page. Inputs, labels, textarea, and button ko professional style denge.</td>
-          </tr>
-          <tr>
-            <td><code>styles.css</code></td>
-            <td>New CSS file. Saari styling, layout, responsive rules, transitions, and design yahin likhenge.</td>
+            <td>External CSS</td>
+            <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+            <td>CSS separate file mein likhte hain. Real projects ke liye best because code clean and reusable hota hai.</td>
           </tr>
         </table>
-      </section>
 
-      <section id="connect-css">
-        <h2>Step 1: CSS File Ko HTML Se Connect Karna</h2>
-        <p>Sabse pehle har HTML page ke <code>&lt;head&gt;</code> section mein CSS file connect karni hogi. Browser HTML file load karte time <code>styles.css</code> file bhi load karega. Agar link tag missing hai, CSS file likhne ke baad bhi design apply nahi hoga.</p>
+        <h3>External CSS Practical</h3>
         <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
         <table>
           <tr>
@@ -197,215 +130,327 @@
           </tr>
           <tr>
             <td><code>&lt;link&gt;</code></td>
-            <td>External file connect karne ke liye HTML tag. CSS file connect karne ka standard way hai.</td>
+            <td>External resource connect karne ka HTML tag. CSS file connect karne ke liye use hota hai.</td>
           </tr>
           <tr>
             <td><code>rel="stylesheet"</code></td>
-            <td>Browser ko batata hai ki linked file stylesheet hai. Matlab browser is file ko design rules ke form mein read karega.</td>
+            <td>Browser ko batata hai ki linked file stylesheet hai. Matlab browser is file ko design rules ki tarah read karega.</td>
           </tr>
           <tr>
             <td><code>href="styles.css"</code></td>
-            <td>CSS file ka path. Agar CSS file same folder mein hai toh direct <code>styles.css</code> likhenge. File name galat hua toh styling load nahi hogi.</td>
+            <td>CSS file ka path. Agar CSS file same folder mein hai toh direct <code>styles.css</code> likhenge.</td>
           </tr>
         </table>
       </section>
 
       <section id="syntax">
-        <h2>Step 2: CSS Syntax</h2>
-        <p>CSS syntax selector, property, and value se banta hai. Selector decide karta hai kis element ko style karna hai. Property decide karti hai kya style change karna hai. Value decide karti hai final setting kya hogi.</p>
-        <pre><code>.logo {
-  color: #2563eb;
-  font-size: 28px;
-}</code></pre>
-        <table>
-          <tr>
-            <th>Line / Code</th>
-            <th>Detailed Explanation</th>
-          </tr>
-          <tr>
-            <td><code>.logo</code></td>
-            <td>Class selector hai. Jis HTML element par <code>class="logo"</code> hoga, us par yeh CSS apply hogi. Portfolio mein website name ko style karne ke liye use hoga.</td>
-          </tr>
-          <tr>
-            <td><code>{</code></td>
-            <td>CSS declaration block start karta hai. Iske andar style rules likhe jaate hain.</td>
-          </tr>
-          <tr>
-            <td><code>color: #2563eb;</code></td>
-            <td>Text color blue set karta hai. <code>color</code> property hai and <code>#2563eb</code> hex color value hai.</td>
-          </tr>
-          <tr>
-            <td><code>font-size: 28px;</code></td>
-            <td>Logo text ka size 28 pixels set karta hai. Semicolon rule end karta hai.</td>
-          </tr>
-          <tr>
-            <td><code>}</code></td>
-            <td>CSS block close karta hai. Iske baad next selector ka code start ho sakta hai.</td>
-          </tr>
-        </table>
-      </section>
+        <h2>2. CSS Syntax</h2>
+        <p>CSS syntax selector, property, and value se milkar banta hai. Selector batata hai kis element ko style karna hai. Property batati hai kya style change karna hai. Value batati hai us property ki setting kya hogi.</p>
 
-      <section id="selectors">
-        <h2>Step 3: Selectors</h2>
-        <p>Selectors CSS ka foundation hain. Selector batata hai ki CSS rule kis element par apply hoga. Portfolio project mein hum element selector, class selector, descendant selector, group selector, and pseudo-class selector use karenge.</p>
+        <pre><code>h1 {
+  color: blue;
+  font-size: 36px;
+}</code></pre>
+
+        <h3>Syntax Breakdown</h3>
         <table>
           <tr>
-            <th>Selector</th>
-            <th>Portfolio Use</th>
+            <th>Part</th>
             <th>Explanation</th>
           </tr>
           <tr>
-            <td><code>body</code></td>
-            <td>Whole page style</td>
-            <td>Element selector. Page ke body par default font, background, and text color apply karega.</td>
+            <td><code>h1</code></td>
+            <td>Selector hai. Page ke saare h1 headings ko target karta hai.</td>
           </tr>
           <tr>
-            <td><code>.container</code></td>
-            <td>Content width</td>
-            <td>Class selector. Reusable wrapper jo content ko center and readable width mein rakhega.</td>
+            <td><code>{ }</code></td>
+            <td>Declaration block. CSS rules iske andar likhe jaate hain.</td>
           </tr>
           <tr>
-            <td><code>.nav-links a</code></td>
-            <td>Navigation links</td>
-            <td>Descendant selector. Sirf nav-links class ke andar wale anchor tags target honge.</td>
+            <td><code>color</code></td>
+            <td>Property hai. Text ka color change karti hai.</td>
           </tr>
           <tr>
-            <td><code>.button:hover</code></td>
-            <td>Button hover effect</td>
-            <td>Pseudo-class selector. Jab mouse button par hover karega tab style apply hogi.</td>
+            <td><code>blue</code></td>
+            <td>Value hai. Text blue color ka ho jayega.</td>
           </tr>
           <tr>
-            <td><code>.profile-card, .project-card</code></td>
-            <td>Common card styling</td>
-            <td>Group selector. Dono classes par same CSS apply hogi.</td>
+            <td><code>font-size</code></td>
+            <td>Property hai. Text ka size control karti hai.</td>
+          </tr>
+          <tr>
+            <td><code>36px</code></td>
+            <td>Value hai. Heading ka size 36 pixels hoga.</td>
+          </tr>
+          <tr>
+            <td><code>;</code></td>
+            <td>Semicolon CSS declaration ko end karta hai.</td>
+          </tr>
+        </table>
+
+        <h3>Practical Example</h3>
+        <pre><code>body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}</code></pre>
+        <p>Yeh code complete page ka default font, background color, and text color set karta hai.</p>
+      </section>
+
+      <section id="selectors">
+        <h2>3. CSS Selectors</h2>
+        <p>Selector decide karta hai ki CSS kis HTML element par apply hogi. Agar selector wrong hai, CSS likhne ke baad bhi style apply nahi hogi. Isliye selectors CSS ka foundation hain.</p>
+
+        <table>
+          <tr>
+            <th>Selector Type</th>
+            <th>Code</th>
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td>Element Selector</td>
+            <td><code>p</code></td>
+            <td>Page ke saare paragraph tags target karega.</td>
+          </tr>
+          <tr>
+            <td>Class Selector</td>
+            <td><code>.card</code></td>
+            <td>Jis element par <code>class="card"</code> hoga usko target karega.</td>
+          </tr>
+          <tr>
+            <td>ID Selector</td>
+            <td><code>#hero</code></td>
+            <td>Jis element par <code>id="hero"</code> hoga usko target karega.</td>
+          </tr>
+          <tr>
+            <td>Descendant Selector</td>
+            <td><code>nav a</code></td>
+            <td>Nav ke andar ke anchor links target karega.</td>
+          </tr>
+          <tr>
+            <td>Group Selector</td>
+            <td><code>h1, h2, h3</code></td>
+            <td>Multiple elements par same style apply karega.</td>
+          </tr>
+          <tr>
+            <td>Pseudo-class</td>
+            <td><code>a:hover</code></td>
+            <td>Mouse hover hone par style apply karega.</td>
+          </tr>
+        </table>
+
+        <h3>Practical Code</h3>
+        <pre><code>.card {
+  background: white;
+}
+
+nav a:hover {
+  color: #2563eb;
+}</code></pre>
+
+        <h3>Code Explanation</h3>
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>.card</code></td>
+            <td>Class selector. Cards ko style karne ke liye reusable class.</td>
+          </tr>
+          <tr>
+            <td><code>background: white;</code></td>
+            <td>Card ka background white banata hai.</td>
+          </tr>
+          <tr>
+            <td><code>nav a:hover</code></td>
+            <td>Navigation links par mouse hover hone par style apply karta hai.</td>
           </tr>
         </table>
       </section>
 
       <section id="specificity">
-        <h2>Step 4: Specificity</h2>
-        <p>Specificity CSS priority system hai. Agar same element par multiple rules apply ho rahe hain, toh browser stronger selector ko choose karta hai. Simple order: inline style strongest, then ID selector, then class selector, then element selector.</p>
+        <h2>4. Specificity</h2>
+        <p>Specificity ka matlab CSS priority. Agar same element par multiple CSS rules apply ho rahe hain, toh browser decide karta hai kaunsa rule win karega. ID selector class selector se strong hota hai, class selector element selector se strong hota hai.</p>
+
         <pre><code>p {
-  color: #475569;
+  color: black;
 }
 
-.hero-text {
-  color: #334155;
+.text {
+  color: blue;
 }
 
-#special-intro {
-  color: #1d4ed8;
+#intro {
+  color: red;
 }</code></pre>
-        <p>Agar ek paragraph normal <code>p</code> bhi hai, uski class <code>hero-text</code> bhi hai, and id <code>special-intro</code> bhi hai, toh ID selector ka color apply hoga because ID class and element selector se stronger hota hai.</p>
-        <div class="note">
-          Best practice: Portfolio project mein mostly class selectors use karo. ID selectors only special cases mein use karo.
-        </div>
+
+        <p>Agar ek paragraph par <code>class="text"</code> and <code>id="intro"</code> dono hain, toh red color apply hoga because ID selector stronger hota hai.</p>
+
+        <table>
+          <tr>
+            <th>Selector</th>
+            <th>Priority</th>
+          </tr>
+          <tr>
+            <td>Inline Style</td>
+            <td>Highest</td>
+          </tr>
+          <tr>
+            <td>ID Selector</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>Class Selector</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>Element Selector</td>
+            <td>Low</td>
+          </tr>
+        </table>
       </section>
 
       <section id="box-model">
-        <h2>Step 5: Box Model and Layout Concepts</h2>
-        <p>CSS box model ke according har HTML element ek box hota hai. Box ke andar content, padding, border, and margin hota hai. Portfolio project mein cards, buttons, forms, sections, and tables ko proper spacing dene ke liye box model samajhna zaroori hai.</p>
-        <pre><code>.project-card {
-  background: #ffffff;
+        <h2>5. Box Model and Layout Concepts</h2>
+        <p>CSS box model ke according har HTML element ek box hota hai. Har box ke four parts hote hain: content, padding, border, and margin. Layout and spacing samajhne ke liye box model bahut important hai.</p>
+
+        <table>
+          <tr>
+            <th>Part</th>
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>Actual text/image area.</td>
+          </tr>
+          <tr>
+            <td>Padding</td>
+            <td>Content and border ke beech inside space.</td>
+          </tr>
+          <tr>
+            <td>Border</td>
+            <td>Element ke around line.</td>
+          </tr>
+          <tr>
+            <td>Margin</td>
+            <td>Element ke bahar ka space.</td>
+          </tr>
+        </table>
+
+        <h3>Practical Code</h3>
+        <pre><code>.service-card {
+  background: white;
   padding: 24px;
   border: 1px solid #e2e8f0;
   margin-bottom: 20px;
   border-radius: 8px;
 }</code></pre>
+
+        <h3>Line-by-Line Explanation</h3>
         <table>
           <tr>
-            <th>Line / Code</th>
-            <th>Detailed Explanation</th>
+            <th>Code</th>
+            <th>Explanation</th>
           </tr>
           <tr>
-            <td><code>background: #ffffff;</code></td>
-            <td>Project card ka background white banata hai. White card light background par clearly visible hota hai.</td>
+            <td><code>background: white;</code></td>
+            <td>Card ka background white banata hai.</td>
           </tr>
           <tr>
             <td><code>padding: 24px;</code></td>
-            <td>Card ke andar text and border ke beech space add karta hai. Content chipka hua nahi dikhta.</td>
+            <td>Card ke andar content ke around space create karta hai.</td>
           </tr>
           <tr>
             <td><code>border: 1px solid #e2e8f0;</code></td>
-            <td>Card ke around light border add karta hai. Card boundary clear hoti hai.</td>
+            <td>Card ke around light border create karta hai.</td>
           </tr>
           <tr>
             <td><code>margin-bottom: 20px;</code></td>
-            <td>Card ke bahar neeche space create karta hai. Next card se gap maintain hota hai.</td>
+            <td>Card ke neeche outside space add karta hai.</td>
           </tr>
           <tr>
             <td><code>border-radius: 8px;</code></td>
-            <td>Card corners rounded banata hai. Modern UI mein soft corners professional lagte hain.</td>
+            <td>Card ke corners rounded banata hai.</td>
           </tr>
         </table>
       </section>
 
       <section id="flexbox">
-        <h2>Step 6: Flexbox Layout System</h2>
-        <p>Flexbox one-dimensional layout system hai. Portfolio website mein navbar ko align karne ke liye Flexbox best hai. Logo left side, links right side, and vertical center alignment Flexbox se easily hota hai.</p>
+        <h2>6. Flexbox Layout System</h2>
+        <p>Flexbox one-dimensional layout system hai. Iska use row ya column direction mein items align karne ke liye hota hai. Navbar, buttons group, hero content alignment ke liye Flexbox bahut useful hai.</p>
+
+        <h3>Practical Code</h3>
         <pre><code>.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
 }</code></pre>
+
+        <h3>Code Explanation</h3>
         <table>
           <tr>
-            <th>Line / Code</th>
-            <th>Detailed Explanation</th>
+            <th>Code</th>
+            <th>Explanation</th>
           </tr>
           <tr>
             <td><code>display: flex;</code></td>
-            <td>Navbar ke child elements ko flex layout mein arrange karta hai. Logo and links ek row mein aa jaate hain.</td>
+            <td>Container ke children ko flex layout mein arrange karta hai.</td>
           </tr>
           <tr>
             <td><code>justify-content: space-between;</code></td>
-            <td>Logo ko left side and navigation links ko right side push karta hai. Beech ka space automatically manage hota hai.</td>
+            <td>Items ko horizontal direction mein left and right side spread karta hai.</td>
           </tr>
           <tr>
             <td><code>align-items: center;</code></td>
-            <td>Logo and links vertically center align hote hain. Navbar balanced dikhta hai.</td>
+            <td>Items ko vertical center align karta hai.</td>
           </tr>
           <tr>
             <td><code>gap: 24px;</code></td>
-            <td>Flex items ke beech 24px gap add karta hai. Spacing clean and consistent hoti hai.</td>
+            <td>Items ke beech fixed spacing add karta hai.</td>
           </tr>
         </table>
       </section>
 
       <section id="grid">
-        <h2>Step 7: CSS Grid Layout System</h2>
-        <p>CSS Grid two-dimensional layout system hai. Portfolio projects page mein project cards ko rows and columns mein arrange karne ke liye Grid perfect hai. Desktop par cards side-by-side dikh sakte hain, mobile par one-by-one stack honge.</p>
-        <pre><code>.projects-grid {
+        <h2>7. CSS Grid Layout System</h2>
+        <p>CSS Grid two-dimensional layout system hai. Grid rows and columns dono control kar sakta hai. Cards, galleries, services sections, dashboards, and page layouts ke liye Grid powerful hai.</p>
+
+        <h3>Practical Code</h3>
+        <pre><code>.services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }</code></pre>
+
+        <h3>Code Explanation</h3>
         <table>
           <tr>
-            <th>Line / Code</th>
-            <th>Detailed Explanation</th>
+            <th>Code</th>
+            <th>Explanation</th>
           </tr>
           <tr>
             <td><code>display: grid;</code></td>
-            <td>Projects container ko grid layout mein convert karta hai.</td>
+            <td>Container ko grid layout mein convert karta hai.</td>
           </tr>
           <tr>
-            <td><code>grid-template-columns: repeat(2, 1fr);</code></td>
-            <td>Desktop par 2 equal columns create karta hai. <code>1fr</code> available space ka equal fraction hota hai.</td>
+            <td><code>grid-template-columns: repeat(3, 1fr);</code></td>
+            <td>3 equal columns create karta hai. <code>1fr</code> available space ka equal fraction hai.</td>
           </tr>
           <tr>
             <td><code>gap: 24px;</code></td>
-            <td>Project cards ke beech horizontal and vertical spacing add karta hai.</td>
+            <td>Cards ke beech spacing add karta hai.</td>
           </tr>
         </table>
       </section>
 
       <section id="responsive">
-        <h2>Step 8: Responsive Design Principles</h2>
-        <p>Responsive design ka matlab website desktop, tablet, and mobile sab screens par properly work kare. Portfolio responsive hona zaroori hai, kyunki learner apna portfolio mobile par bhi share kar sakta hai. Responsive design mein flexible widths, responsive images, readable font sizes, and mobile-friendly layouts use hote hain.</p>
-        <pre><code>img,
-video {
+        <h2>8. Responsive Design Principles</h2>
+        <p>Responsive design ka matlab website different screen sizes par properly work kare. Desktop, tablet, and mobile par website readable and usable honi chahiye. Responsive design ke liye flexible width, responsive images, readable typography, and media queries use hote hain.</p>
+
+        <h3>Practical Code</h3>
+        <pre><code>img {
   max-width: 100%;
   height: auto;
 }
@@ -414,66 +459,78 @@ video {
   width: min(1120px, 92%);
   margin: 0 auto;
 }</code></pre>
+
+        <h3>Code Explanation</h3>
         <table>
           <tr>
-            <th>Line / Code</th>
-            <th>Detailed Explanation</th>
+            <th>Code</th>
+            <th>Explanation</th>
           </tr>
           <tr>
             <td><code>max-width: 100%;</code></td>
-            <td>Image/video parent container se bahar overflow nahi karega. Mobile par media shrink ho jayega.</td>
+            <td>Image ko parent container se bahar overflow hone se prevent karta hai.</td>
           </tr>
           <tr>
             <td><code>height: auto;</code></td>
-            <td>Image/video ratio maintain karta hai. Stretch ya distortion avoid hota hai.</td>
+            <td>Image ka original ratio maintain karta hai.</td>
           </tr>
           <tr>
             <td><code>width: min(1120px, 92%);</code></td>
-            <td>Container desktop par max 1120px rahega, mobile par 92% width use karega.</td>
+            <td>Desktop par max 1120px width, mobile par 92% width use karta hai.</td>
           </tr>
           <tr>
             <td><code>margin: 0 auto;</code></td>
-            <td>Container ko horizontally center align karta hai.</td>
+            <td>Container ko center align karta hai.</td>
           </tr>
         </table>
       </section>
 
-      <section id="media-query">
-        <h2>Step 9: Media Queries</h2>
-        <p>Media queries screen size ke according CSS change karne ke liye use hoti hain. Portfolio website desktop par wide layout mein dikhegi, but mobile par content one-column layout mein hona chahiye. Iske liye media query use karenge.</p>
+      <section id="media">
+        <h2>9. Media Queries</h2>
+        <p>Media query CSS ka rule hai jo screen size ke according styles change karta hai. Example: desktop par 3 columns, mobile par 1 column. Responsive design mein media queries very important hain.</p>
+
+        <h3>Practical Code</h3>
         <pre><code>@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .projects-grid {
+  .services-grid {
     grid-template-columns: 1fr;
   }
 }</code></pre>
+
+        <h3>Code Explanation</h3>
         <table>
           <tr>
-            <th>Line / Code</th>
-            <th>Detailed Explanation</th>
+            <th>Code</th>
+            <th>Explanation</th>
           </tr>
           <tr>
             <td><code>@media (max-width: 768px)</code></td>
-            <td>Yeh CSS rules tab apply honge jab screen width 768px ya usse kam hogi. Mostly mobile/tablet ke liye.</td>
+            <td>Yeh CSS tab apply hogi jab screen width 768px ya usse kam hogi.</td>
           </tr>
           <tr>
             <td><code>flex-direction: column;</code></td>
-            <td>Navbar items horizontal row ke bajay vertical column mein aa jaate hain. Mobile par menu readable hota hai.</td>
+            <td>Navbar items row ke bajay column mein aa jaate hain.</td>
+          </tr>
+          <tr>
+            <td><code>align-items: flex-start;</code></td>
+            <td>Navbar items left side align hote hain.</td>
           </tr>
           <tr>
             <td><code>grid-template-columns: 1fr;</code></td>
-            <td>Project cards mobile par one column mein stack ho jaate hain.</td>
+            <td>Grid mobile par one-column layout ban jaati hai.</td>
           </tr>
         </table>
       </section>
 
       <section id="animation">
-        <h2>Step 10: Animations and Transitions</h2>
-        <p>Transition style changes ko smooth banata hai. Portfolio mein button hover and card hover effects ke liye transition use karenge. Animation ka use movement/fade effects ke liye hota hai, but beginners ke liye pehle transitions clear hona important hai.</p>
+        <h2>10. Animations and Transitions</h2>
+        <p>Transition style changes ko smooth banata hai. Animation repeated or staged movement create karta hai. Beginners ke liye hover transitions sabse common practical use case hai.</p>
+
+        <h3>Practical Code</h3>
         <pre><code>.button {
   transition: transform 0.2s ease, background 0.2s ease;
 }
@@ -482,117 +539,194 @@ video {
   background: #1d4ed8;
   transform: translateY(-2px);
 }</code></pre>
+
+        <h3>Code Explanation</h3>
         <table>
           <tr>
-            <th>Line / Code</th>
-            <th>Detailed Explanation</th>
+            <th>Code</th>
+            <th>Explanation</th>
           </tr>
           <tr>
             <td><code>transition</code></td>
-            <td>Hover par background and movement smooth banata hai. Without transition change sudden dikhega.</td>
+            <td>Background and movement change ko smooth banata hai.</td>
           </tr>
           <tr>
             <td><code>.button:hover</code></td>
-            <td>Button ke hover state ko target karta hai. User mouse le jaata hai tab yeh CSS apply hoti hai.</td>
+            <td>Mouse hover hone par button ka hover style apply hota hai.</td>
+          </tr>
+          <tr>
+            <td><code>background: #1d4ed8;</code></td>
+            <td>Hover par button ka background dark blue hota hai.</td>
           </tr>
           <tr>
             <td><code>transform: translateY(-2px);</code></td>
-            <td>Button ko thoda upar move karta hai. Isse interactive feel aata hai.</td>
+            <td>Button hover par thoda upar move hota hai.</td>
           </tr>
         </table>
       </section>
 
-      <section id="best-practices">
-        <h2>Step 11: CSS Performance and Best Practices</h2>
-        <p>Good CSS maintainable, clean, and fast hota hai. Agar CSS random likh diya, future mein design change karna difficult ho jaata hai. Portfolio project mein reusable classes, consistent spacing, limited colors, and simple selectors use karna best hai.</p>
-        <ul>
-          <li>External CSS file use karo.</li>
-          <li>Class names meaningful rakho, jaise <code>.navbar</code>, <code>.project-card</code>, <code>.contact-form</code>.</li>
-          <li>Same colors and spacing repeat karo for consistency.</li>
-          <li>Too many fonts use mat karo.</li>
-          <li>Mobile view test karo.</li>
-          <li>Unnecessary CSS remove karo.</li>
-          <li>Over-specific selectors avoid karo.</li>
-        </ul>
-      </section>
+      <section id="performance">
+        <h2>11. CSS Performance and Best Practices</h2>
+        <p>Good CSS clean, reusable, and maintainable hota hai. CSS random likhne se future changes difficult ho jaate hain. Professional CSS mein naming clear hoti hai, repeated code kam hota hai, and mobile responsiveness test hoti hai.</p>
 
-      <section id="portfolio-html">
-        <h2>Portfolio HTML Update: Classes Add Karna</h2>
-        <p>CSS apply karne ke liye HTML mein classes add karni hoti hain. Classes CSS ko target points deti hain. Neeche home page ka updated structure hai. Same pattern about, projects, and contact pages mein use kar sakte hain.</p>
-        <pre><code>&lt;header class="site-header"&gt;
-  &lt;div class="container navbar"&gt;
-    &lt;h1 class="logo"&gt;My Portfolio&lt;/h1&gt;
-
-    &lt;nav class="nav-links" aria-label="Main navigation"&gt;
-      &lt;a href="index.html"&gt;Home&lt;/a&gt;
-      &lt;a href="about.html"&gt;About&lt;/a&gt;
-      &lt;a href="projects.html"&gt;Projects&lt;/a&gt;
-      &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-    &lt;/nav&gt;
-  &lt;/div&gt;
-&lt;/header&gt;
-
-&lt;main&gt;
-  &lt;section class="hero-section"&gt;
-    &lt;div class="container hero-grid"&gt;
-      &lt;div&gt;
-        &lt;p class="eyebrow"&gt;Beginner Web Developer&lt;/p&gt;
-        &lt;h2&gt;I am learning HTML, CSS and MERN Stack step by step.&lt;/h2&gt;
-        &lt;p class="hero-text"&gt;This portfolio is built using semantic HTML5 and styled with CSS3.&lt;/p&gt;
-        &lt;a class="button" href="projects.html"&gt;View Projects&lt;/a&gt;
-      &lt;/div&gt;
-
-      &lt;div class="profile-card"&gt;
-        &lt;h3&gt;Current Focus&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;HTML5 page structure&lt;/li&gt;
-          &lt;li&gt;CSS3 styling&lt;/li&gt;
-          &lt;li&gt;Responsive design&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-&lt;/main&gt;</code></pre>
-        <h3>HTML Class Explanation</h3>
         <table>
           <tr>
-            <th>Class / Code</th>
-            <th>Detailed Explanation</th>
+            <th>Best Practice</th>
+            <th>Explanation</th>
           </tr>
           <tr>
-            <td><code>class="site-header"</code></td>
-            <td>Header ko CSS se background, border, and sticky behavior dene ke liye class.</td>
+            <td>External CSS use karo</td>
+            <td>Styles separate file mein clean rehte hain.</td>
+          </tr>
+          <tr>
+            <td>Meaningful class names</td>
+            <td><code>.navbar</code>, <code>.service-card</code>, <code>.hero</code> jaise names readable hote hain.</td>
+          </tr>
+          <tr>
+            <td>Reusable styles</td>
+            <td>Same card style repeat karne ke bajay reusable class banao.</td>
+          </tr>
+          <tr>
+            <td>Consistent colors</td>
+            <td>Website professional dikhti hai.</td>
+          </tr>
+          <tr>
+            <td>Mobile test karo</td>
+            <td>Responsive design verify hota hai.</td>
+          </tr>
+          <tr>
+            <td>Over-specific selectors avoid karo</td>
+            <td>CSS maintain karna easy hota hai.</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="project">
+        <h2>12. Project 3: Responsive Business Website</h2>
+        <p>Ab hum CSS3 concepts ko use karke ek responsive business website banayenge. Is project mein desktop and mobile responsive layout, clean typography, spacing, Flexbox navbar, Grid cards, modern colors, buttons, transitions, and media queries use honge.</p>
+
+        <h3>Project Features</h3>
+        <table>
+          <tr>
+            <th>Feature</th>
+            <th>Use</th>
+          </tr>
+          <tr>
+            <td>Desktop and mobile responsive layout</td>
+            <td>Website all screen sizes par proper dikhegi.</td>
+          </tr>
+          <tr>
+            <td>Clean typography and spacing</td>
+            <td>Text readable and layout balanced hoga.</td>
+          </tr>
+          <tr>
+            <td>Flexbox navbar</td>
+            <td>Logo and navigation links align honge.</td>
+          </tr>
+          <tr>
+            <td>Grid cards</td>
+            <td>Services cards clean columns mein dikhengi.</td>
+          </tr>
+          <tr>
+            <td>Modern color scheme</td>
+            <td>Website professional look degi.</td>
+          </tr>
+        </table>
+
+        <h3>Final HTML Code</h3>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;BrightWeb Studio&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header class="site-header"&gt;
+    &lt;div class="container navbar"&gt;
+      &lt;h1 class="logo"&gt;BrightWeb Studio&lt;/h1&gt;
+      &lt;nav class="nav-links"&gt;
+        &lt;a href="#"&gt;Home&lt;/a&gt;
+        &lt;a href="#"&gt;Services&lt;/a&gt;
+        &lt;a href="#"&gt;About&lt;/a&gt;
+        &lt;a href="#"&gt;Contact&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section class="hero"&gt;
+      &lt;div class="container hero-grid"&gt;
+        &lt;div&gt;
+          &lt;p class="eyebrow"&gt;Modern Web Solutions&lt;/p&gt;
+          &lt;h2&gt;We build responsive websites for growing businesses.&lt;/h2&gt;
+          &lt;p class="hero-text"&gt;We create clean, fast, and mobile-friendly websites using HTML and CSS.&lt;/p&gt;
+          &lt;a class="button" href="#"&gt;Start Project&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="hero-card"&gt;
+          &lt;h3&gt;Why Choose Us?&lt;/h3&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Responsive layout&lt;/li&gt;
+            &lt;li&gt;Clean design&lt;/li&gt;
+            &lt;li&gt;SEO-friendly structure&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="services"&gt;
+      &lt;div class="container"&gt;
+        &lt;h2&gt;Our Services&lt;/h2&gt;
+        &lt;div class="services-grid"&gt;
+          &lt;article class="service-card"&gt;
+            &lt;h3&gt;Website Design&lt;/h3&gt;
+            &lt;p&gt;Clean and user-friendly website design.&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class="service-card"&gt;
+            &lt;h3&gt;Responsive Layout&lt;/h3&gt;
+            &lt;p&gt;Websites that work on desktop and mobile.&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class="service-card"&gt;
+            &lt;h3&gt;CSS Optimization&lt;/h3&gt;
+            &lt;p&gt;Reusable, clean, and maintainable CSS code.&lt;/p&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h3>HTML Code Explanation</h3>
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+            <td>HTML page ko CSS file se connect karta hai.</td>
           </tr>
           <tr>
             <td><code>class="container navbar"</code></td>
-            <td>Same element par two classes. Container width control karega, navbar flex alignment karega.</td>
-          </tr>
-          <tr>
-            <td><code>class="nav-links"</code></td>
-            <td>Navigation links group ko target karta hai. Links spacing and hover styles yahin apply honge.</td>
-          </tr>
-          <tr>
-            <td><code>class="hero-section"</code></td>
-            <td>Home page ke top intro area ko style karne ke liye class.</td>
+            <td>Same element par two classes. Container width control karega, navbar Flexbox layout dega.</td>
           </tr>
           <tr>
             <td><code>class="hero-grid"</code></td>
-            <td>Hero section ke left text and right card ko CSS Grid se arrange karne ke liye class.</td>
+            <td>Hero section ko Grid layout mein arrange karne ke liye.</td>
           </tr>
           <tr>
-            <td><code>class="button"</code></td>
-            <td>Normal link ko button design dene ke liye class.</td>
+            <td><code>class="services-grid"</code></td>
+            <td>Service cards ko CSS Grid se columns mein arrange karne ke liye.</td>
           </tr>
           <tr>
-            <td><code>class="profile-card"</code></td>
-            <td>Right side card ko padding, border, shadow, and background dene ke liye class.</td>
+            <td><code>class="service-card"</code></td>
+            <td>Each service ko card design dene ke liye.</td>
           </tr>
         </table>
-      </section>
 
-      <section id="portfolio-css">
-        <h2>Final Portfolio CSS Code: styles.css</h2>
-        <p>Ab complete CSS file banayenge. Is CSS ko same portfolio project ke <code>styles.css</code> file mein save karna hai.</p>
+        <h3>Final CSS Code</h3>
         <pre><code>* {
   box-sizing: border-box;
 }
@@ -610,23 +744,14 @@ a {
   text-decoration: none;
 }
 
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
 .container {
   width: min(1120px, 92%);
   margin: 0 auto;
 }
 
 .site-header {
-  background: #ffffff;
+  background: white;
   border-bottom: 1px solid #e2e8f0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 
 .navbar {
@@ -639,27 +764,19 @@ video {
 
 .logo {
   margin: 0;
-  font-size: 26px;
   color: #2563eb;
 }
 
 .nav-links {
   display: flex;
   gap: 18px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: #334155;
-  font-weight: 700;
-  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
   color: #2563eb;
 }
 
-.hero-section {
+.hero {
   padding: 80px 0;
   background: linear-gradient(135deg, #eff6ff, #ffffff);
 }
@@ -674,26 +791,23 @@ video {
 .eyebrow {
   color: #2563eb;
   font-weight: 700;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.hero-section h2 {
+.hero h2 {
   font-size: 44px;
   line-height: 1.1;
-  margin: 0;
 }
 
 .hero-text {
   color: #475569;
   font-size: 18px;
-  max-width: 640px;
 }
 
 .button {
   display: inline-block;
   background: #2563eb;
-  color: #ffffff;
+  color: white;
   padding: 12px 20px;
   border-radius: 8px;
   font-weight: 700;
@@ -705,386 +819,151 @@ video {
   transform: translateY(-2px);
 }
 
-.profile-card,
-.project-card,
-.contact-form {
-  background: #ffffff;
+.hero-card,
+.service-card {
+  background: white;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 24px;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
-.section {
-  padding: 64px 0;
+.services {
+  padding: 72px 0;
 }
 
-.section-title {
-  font-size: 32px;
-  margin: 0 0 24px;
-}
-
-.projects-grid {
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-}
-
-.project-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font: inherit;
-}
-
-label {
-  display: block;
-  font-weight: 700;
-  margin: 14px 0 6px;
-}
-
-button {
-  border: 0;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .navbar {
-    align-items: flex-start;
     flex-direction: column;
-  }
-
-  .hero-section {
-    padding: 56px 0;
+    align-items: flex-start;
   }
 
   .hero-grid,
-  .projects-grid {
+  .services-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-section h2 {
+  .hero h2 {
     font-size: 32px;
   }
 }</code></pre>
 
-        <h3>Complete CSS Explanation</h3>
+        <h3>CSS Code Explanation</h3>
         <table>
           <tr>
             <th>CSS Code</th>
-            <th>Detailed Explanation</th>
+            <th>Explanation</th>
           </tr>
-          <tr><td><code>*</code></td><td>Universal selector. Page ke saare elements ko target karta hai.</td></tr>
-          <tr><td><code>box-sizing: border-box;</code></td><td>Padding and border ko width ke andar count karta hai. Layout predictable ho jaata hai.</td></tr>
-          <tr><td><code>body</code></td><td>Complete page ke base styles set karta hai: font, background, text color, line height.</td></tr>
-          <tr><td><code>margin: 0;</code></td><td>Browser ka default body margin remove karta hai.</td></tr>
-          <tr><td><code>font-family</code></td><td>Website ka main font set karta hai.</td></tr>
-          <tr><td><code>a</code></td><td>All links ko target karta hai. Default underline remove and color inherit karta hai.</td></tr>
-          <tr><td><code>img, video</code></td><td>Images and videos ko responsive banata hai.</td></tr>
-          <tr><td><code>.container</code></td><td>Content ko center and controlled width mein rakhta hai.</td></tr>
-          <tr><td><code>.site-header</code></td><td>Header ko white background, border, sticky position deta hai.</td></tr>
-          <tr><td><code>position: sticky;</code></td><td>Header scroll karte waqt top par stuck reh sakta hai.</td></tr>
-          <tr><td><code>.navbar</code></td><td>Navigation layout ke liye Flexbox use karta hai.</td></tr>
-          <tr><td><code>.logo</code></td><td>Portfolio name ka size and color set karta hai.</td></tr>
-          <tr><td><code>.nav-links</code></td><td>Navigation links ko row mein arrange karta hai and gap deta hai.</td></tr>
-          <tr><td><code>.nav-links a:hover</code></td><td>Hover par link color change karta hai.</td></tr>
-          <tr><td><code>.hero-section</code></td><td>Home page top section ko padding and gradient background deta hai.</td></tr>
-          <tr><td><code>.hero-grid</code></td><td>Hero content ko two-column grid mein arrange karta hai.</td></tr>
-          <tr><td><code>.eyebrow</code></td><td>Small uppercase label ko highlight style deta hai.</td></tr>
-          <tr><td><code>.button</code></td><td>Normal link ko button design deta hai.</td></tr>
-          <tr><td><code>.button:hover</code></td><td>Button hover effect define karta hai.</td></tr>
-          <tr><td><code>.profile-card, .project-card, .contact-form</code></td><td>Group selector. Same card style multiple portfolio sections par apply karta hai.</td></tr>
-          <tr><td><code>.projects-grid</code></td><td>Project cards ko CSS Grid layout mein arrange karta hai.</td></tr>
-          <tr><td><code>input, select, textarea</code></td><td>Contact form fields ko same professional styling deta hai.</td></tr>
-          <tr><td><code>@media (max-width: 768px)</code></td><td>Mobile responsive rules start karta hai.</td></tr>
-          <tr><td><code>grid-template-columns: 1fr;</code></td><td>Mobile par grid ko one-column layout mein convert karta hai.</td></tr>
+          <tr>
+            <td><code>* { box-sizing: border-box; }</code></td>
+            <td>All elements ka width calculation predictable banata hai.</td>
+          </tr>
+          <tr>
+            <td><code>body</code></td>
+            <td>Whole page ka default font, color, background, and spacing set karta hai.</td>
+          </tr>
+          <tr>
+            <td><code>.container</code></td>
+            <td>Content ko center and fixed readable width mein rakhta hai.</td>
+          </tr>
+          <tr>
+            <td><code>.navbar</code></td>
+            <td>Flexbox se logo and nav links align karta hai.</td>
+          </tr>
+          <tr>
+            <td><code>.hero-grid</code></td>
+            <td>Hero section ko two-column grid layout deta hai.</td>
+          </tr>
+          <tr>
+            <td><code>.services-grid</code></td>
+            <td>Service cards ko 3 columns mein arrange karta hai.</td>
+          </tr>
+          <tr>
+            <td><code>@media (max-width: 768px)</code></td>
+            <td>Mobile screen par responsive changes apply karta hai.</td>
+          </tr>
         </table>
-      </section>
 
-      <section id="run-project">
-        <h2>How to Run Portfolio CSS Project</h2>
+        <h3>How to Run</h3>
         <ol>
-          <li>VS Code mein Module 2 wala <code>portfolio-site</code> folder open karo.</li>
-          <li>New file create karo: <code>styles.css</code>.</li>
-          <li>Final CSS code ko <code>styles.css</code> mein paste karo.</li>
-          <li>Har HTML page ke head section mein <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code> add karo.</li>
-          <li>Home page mein classes add karo: <code>site-header</code>, <code>container</code>, <code>navbar</code>, <code>hero-section</code>, <code>hero-grid</code>, <code>button</code>.</li>
-          <li>Projects page mein project articles ko <code>project-card</code> and wrapper ko <code>projects-grid</code> class do.</li>
-          <li>Contact form ko <code>contact-form</code> class do.</li>
+          <li>Project folder create karo.</li>
+          <li><code>index.html</code> file create karo.</li>
+          <li><code>styles.css</code> file create karo.</li>
+          <li>HTML code <code>index.html</code> mein paste karo.</li>
+          <li>CSS code <code>styles.css</code> mein paste karo.</li>
           <li>Browser mein <code>index.html</code> open karo.</li>
-          <li>Desktop view check karo.</li>
-          <li>Browser resize karke mobile responsive layout check karo.</li>
+          <li>Desktop output check karo.</li>
+          <li>Browser resize karke mobile output check karo.</li>
         </ol>
-
-        <h3>Expected Output</h3>
-        <p>Desktop par portfolio ka header sticky and clean dikhega. Logo left side and nav links right side honge. Hero section two-column layout mein dikhega. Projects page par cards grid mein dikhengi. Contact form fields clean, full-width, and readable honge. Mobile par navbar vertical ho jayega, hero section one-column layout mein aa jayega, and projects cards one-by-one stack honge.</p>
       </section>
 
-      <section id="start-end-practical">
-        <h2>Start to End Practical Script for Learners</h2>
-        <p>Yeh section aap directly class mein follow kara sakte ho. Isme starting se ending tak exact practical order diya gaya hai. Har step ka reason, code location, implementation method, and output check included hai.</p>
-
-        <h3>Practical 1: Plain Portfolio Ko Observe Karna</h3>
-        <p>Pehle learner ko Module 2 wala plain HTML portfolio browser mein open karna hai. Is step ka purpose hai problem identify karna. Learner ko batana hai ki website structure correct hai, but design plain hai. Ab CSS se hum isko visually better banayenge.</p>
+      <section id="cheatsheet">
+        <h2>Quick Reference Cheatsheet</h2>
         <table>
           <tr>
-            <th>Action</th>
-            <th>Explanation</th>
-          </tr>
-          <tr>
-            <td><code>index.html</code> browser mein open karo</td>
-            <td>Home page ka current output dekho. Heading, paragraph, navigation visible honge but styling basic hogi.</td>
-          </tr>
-          <tr>
-            <td>About, Projects, Contact pages open karo</td>
-            <td>Har page ka structure check karo. Learner ko samjhao ki CSS sab pages ko consistent design dega.</td>
-          </tr>
-        </table>
-
-        <h3>Practical 2: CSS File Create Karna</h3>
-        <p>Project folder mein <code>styles.css</code> create karna hai. CSS ko separate file mein rakhna professional approach hai, kyunki same CSS multiple HTML pages par apply ho sakti hai.</p>
-        <pre><code>portfolio-site/
-  index.html
-  about.html
-  projects.html
-  contact.html
-  styles.css</code></pre>
-        <table>
-          <tr>
-            <th>Line / File</th>
-            <th>Explanation</th>
-          </tr>
-          <tr>
-            <td><code>styles.css</code></td>
-            <td>Yeh new file saari styling rules store karegi. Isme colors, spacing, layout, responsive rules, and hover effects likhenge.</td>
-          </tr>
-        </table>
-
-        <h3>Practical 3: CSS Link Har HTML Page Mein Add Karna</h3>
-        <p>Har HTML page ke <code>&lt;head&gt;</code> section mein CSS link add karo. Agar sirf index.html mein link add karoge, toh sirf home page style hoga. About, projects, contact pages plain rahenge. Isliye same link all pages mein add karna hai.</p>
-        <pre><code>&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;My Portfolio&lt;/title&gt;
-  &lt;link rel="stylesheet" href="styles.css"&gt;
-&lt;/head&gt;</code></pre>
-        <table>
-          <tr>
+            <th>Concept</th>
             <th>Code</th>
-            <th>Detailed Explanation</th>
+            <th>Use</th>
           </tr>
           <tr>
-            <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
-            <td>Yeh line browser ko bolti hai ki current HTML page ke saath <code>styles.css</code> file bhi load karo. CSS file same folder mein honi chahiye.</td>
-          </tr>
-        </table>
-
-        <h3>Practical 4: HTML Mein Classes Add Karna</h3>
-        <p>CSS ko properly apply karne ke liye HTML tags par classes add karna zaroori hai. Class CSS ke liye naam hota hai. Example: navbar ko style karna hai toh nav wrapper ko <code>class="navbar"</code> denge.</p>
-        <pre><code>&lt;header class="site-header"&gt;
-  &lt;div class="container navbar"&gt;
-    &lt;h1 class="logo"&gt;My Portfolio&lt;/h1&gt;
-    &lt;nav class="nav-links"&gt;...&lt;/nav&gt;
-  &lt;/div&gt;
-&lt;/header&gt;</code></pre>
-        <table>
-          <tr>
-            <th>Class</th>
-            <th>Implementation Meaning</th>
+            <td>Color</td>
+            <td><code>color: blue;</code></td>
+            <td>Text color change</td>
           </tr>
           <tr>
-            <td><code>site-header</code></td>
-            <td>Header area ko background, border, sticky behavior dene ke liye.</td>
+            <td>Background</td>
+            <td><code>background: #fff;</code></td>
+            <td>Element background</td>
           </tr>
           <tr>
-            <td><code>container</code></td>
-            <td>Content ko center and fixed readable width mein rakhne ke liye.</td>
+            <td>Padding</td>
+            <td><code>padding: 20px;</code></td>
+            <td>Inside spacing</td>
           </tr>
           <tr>
-            <td><code>navbar</code></td>
-            <td>Logo and links ko Flexbox se align karne ke liye.</td>
+            <td>Margin</td>
+            <td><code>margin: 20px;</code></td>
+            <td>Outside spacing</td>
           </tr>
           <tr>
-            <td><code>nav-links</code></td>
-            <td>Navigation links ko gap, color, and hover effect dene ke liye.</td>
-          </tr>
-        </table>
-
-        <h3>Practical 5: Base CSS Add Karna</h3>
-        <p>Base CSS woh hota hai jo poori website par apply hota hai. Isme body margin remove, font set, background color, text color, line-height, link reset, and responsive media rules aate hain.</p>
-        <pre><code>* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #0f172a;
-  background: #f8fafc;
-  line-height: 1.6;
-}</code></pre>
-        <table>
-          <tr>
-            <th>CSS</th>
-            <th>Why We Use It</th>
+            <td>Flexbox</td>
+            <td><code>display: flex;</code></td>
+            <td>One-dimensional layout</td>
           </tr>
           <tr>
-            <td><code>box-sizing: border-box;</code></td>
-            <td>Padding and border ko width ke andar include karta hai. Layout calculate karna easy hota hai.</td>
+            <td>Grid</td>
+            <td><code>display: grid;</code></td>
+            <td>Rows and columns layout</td>
           </tr>
           <tr>
-            <td><code>margin: 0;</code></td>
-            <td>Browser ka default body margin remove karta hai. Page spacing hum khud control karte hain.</td>
+            <td>Media Query</td>
+            <td><code>@media</code></td>
+            <td>Responsive design</td>
           </tr>
           <tr>
-            <td><code>line-height: 1.6;</code></td>
-            <td>Paragraph readability improve karta hai. Lines ke beech comfortable gap aata hai.</td>
-          </tr>
-        </table>
-
-        <h3>Practical 6: Navbar Ko Flexbox Se Style Karna</h3>
-        <p>Navbar portfolio ka top navigation area hai. Desktop par logo left and links right side chahiye. Yeh Flexbox ka perfect use case hai.</p>
-        <pre><code>.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-}</code></pre>
-        <p>Output check: Logo left side dikhega, links right side dikhenge, and vertically center align honge.</p>
-
-        <h3>Practical 7: Hero Section Ko Grid Se Style Karna</h3>
-        <p>Hero section mein left side intro text and right side profile card hai. Desktop par two-column layout chahiye. CSS Grid yahan useful hai.</p>
-        <pre><code>.hero-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 32px;
-  align-items: center;
-}</code></pre>
-        <p>Output check: Left side intro content wider hoga, right side profile card smaller hoga, and dono vertically center aligned honge.</p>
-
-        <h3>Practical 8: Projects Page Cards Banana</h3>
-        <p>Projects page mein each project ko card jaisa dikhana hai. Iske liye article tag par <code>project-card</code> class add karo and wrapper par <code>projects-grid</code> class add karo.</p>
-        <pre><code>&lt;div class="projects-grid"&gt;
-  &lt;article class="project-card"&gt;
-    &lt;h3&gt;Portfolio Website&lt;/h3&gt;
-    &lt;p&gt;A responsive portfolio created using HTML and CSS.&lt;/p&gt;
-  &lt;/article&gt;
-&lt;/div&gt;</code></pre>
-        <p>Output check: Desktop par project cards side-by-side dikhenge. Card ke andar padding, border, and shadow hoga.</p>
-
-        <h3>Practical 9: Contact Form Styling</h3>
-        <p>Contact form ko readable and professional banana important hai. Inputs full width hone chahiye, labels clear hone chahiye, and fields ke andar padding honi chahiye.</p>
-        <pre><code>input,
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font: inherit;
-}</code></pre>
-        <p>Output check: Form fields clean, equal width, rounded corners, and readable font ke saath dikhenge.</p>
-
-        <h3>Practical 10: Mobile Responsive Testing</h3>
-        <p>Browser ko resize karo ya Chrome DevTools mein mobile view open karo. Agar layout break ho raha hai, media query se fix karo.</p>
-        <pre><code>@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-grid,
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}</code></pre>
-        <table>
-          <tr>
-            <th>Mobile Change</th>
-            <th>Reason</th>
-          </tr>
-          <tr>
-            <td>Navbar column layout</td>
-            <td>Small screen par horizontal links cramped ho sakte hain, column readable hota hai.</td>
-          </tr>
-          <tr>
-            <td>Hero grid one column</td>
-            <td>Mobile width kam hoti hai, side-by-side layout fit nahi hota.</td>
-          </tr>
-          <tr>
-            <td>Projects one column</td>
-            <td>Cards mobile par stack hone chahiye, taaki text readable rahe.</td>
-          </tr>
-        </table>
-
-        <h3>Common Mistakes and Fixes</h3>
-        <table>
-          <tr>
-            <th>Mistake</th>
-            <th>Reason</th>
-            <th>Fix</th>
-          </tr>
-          <tr>
-            <td>CSS apply nahi ho rahi</td>
-            <td>Link tag missing ya file name wrong.</td>
-            <td><code>href="styles.css"</code> and file location check karo.</td>
-          </tr>
-          <tr>
-            <td>Navbar flex nahi ho raha</td>
-            <td>Class name mismatch.</td>
-            <td>HTML mein <code>class="navbar"</code> and CSS mein <code>.navbar</code> same rakho.</td>
-          </tr>
-          <tr>
-            <td>Grid mobile par break ho raha</td>
-            <td>Media query missing.</td>
-            <td><code>@media</code> rule add karke <code>grid-template-columns: 1fr;</code> set karo.</td>
-          </tr>
-          <tr>
-            <td>Image overflow ho rahi</td>
-            <td>Responsive image CSS missing.</td>
-            <td><code>img { max-width: 100%; height: auto; }</code> add karo.</td>
+            <td>Transition</td>
+            <td><code>transition: 0.2s;</code></td>
+            <td>Smooth style change</td>
           </tr>
         </table>
       </section>
 
-      <section id="checklist">
-        <h2>Module 3 Final Checklist</h2>
-        <table class="checklist">
-          <tr><th>Requirement</th><th>Done</th></tr>
-          <tr><td>CSS Syntax covered</td><td></td></tr>
-          <tr><td>Selectors covered</td><td></td></tr>
-          <tr><td>Specificity explained</td><td></td></tr>
-          <tr><td>Box Model explained</td><td></td></tr>
-          <tr><td>Flexbox used in navbar</td><td></td></tr>
-          <tr><td>CSS Grid used in project cards</td><td></td></tr>
-          <tr><td>Responsive design principles covered</td><td></td></tr>
-          <tr><td>Media Queries added</td><td></td></tr>
-          <tr><td>Transitions and hover effects added</td><td></td></tr>
-          <tr><td>CSS Performance and Best Practices covered</td><td></td></tr>
-          <tr><td>Same portfolio project upgraded with CSS</td><td></td></tr>
-        </table>
-
-        <h3>Final Summary</h3>
-        <p>Module 3 mein learner ne same portfolio project ko CSS3 se style karna seekha. Har topic portfolio ke practical part ke saath connect hua: syntax se logo styling, selectors se sections target karna, box model se cards banana, Flexbox se navbar align karna, Grid se project cards arrange karna, media queries se mobile layout banana, and transitions se hover effects add karna.</p>
-        <p>Is module ke baad learner ke paas ek styled and responsive portfolio website hoga. Saath hi learner CSS ka real use samjhega, sirf properties memorize nahi karega.</p>
+      <section id="summary">
+        <h2>Final Summary</h2>
+        <p>CSS3 website ko design and responsive behavior deta hai. CSS syntax selector, property, and value se banta hai. Selectors elements target karte hain, specificity priority decide karti hai, box model spacing samjhata hai, Flexbox alignment ke liye useful hai, Grid columns and rows ke liye powerful hai, media queries responsive design ke liye important hain, and transitions user interaction smooth banate hain.</p>
+        <p>Project 3 mein learner ne responsive business website banayi jisme desktop and mobile layout, clean typography, spacing, Flexbox navbar, Grid cards, modern colors, and hover transitions use hue.</p>
       </section>
     </main>
   </div>
 
   <footer class="footer">
-    <div class="container">Module 3 CSS3 Portfolio Styling Notes</div>
+    <div class="container">Module 3 CSS3 Styling and Responsive Design Notes</div>
   </footer>
 </body>
 </html>
