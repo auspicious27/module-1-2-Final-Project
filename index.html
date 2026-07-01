@@ -1,92 +1,548 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkyTrip Travel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Travel landing page project teaching notes in simple Hinglish with detailed HTML and CSS explanation.">
+  <title>Travel Landing Page Notes</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container navbar">
-      <h1 class="logo">SkyTrip Travel</h1>
-      <nav class="nav-links">
-        <a href="#destinations">Destinations</a>
-        <a href="#packages">Packages</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <header class="top">
+    <div class="wrap">
+      <p class="tag">HTML + CSS Project Notes</p>
+      <h1>Travel Landing Page - Complete Teaching Notes</h1>
+      <p class="subtitle">Simple Hinglish notes for explaining and building a travel landing page step by step in VS Code.</p>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="tagline">Explore the world with confidence</p>
-          <h2>Plan your next holiday with simple and affordable travel packages.</h2>
-          <p class="hero-description">SkyTrip Travel helps families, students, and working professionals discover beautiful places with easy planning and clear pricing.</p>
-          <a class="primary-button" href="#packages">View Packages</a>
-        </div>
+  <main class="wrap">
+    <article class="paper">
+      <h2>Project Story</h2>
+      <p>Aaj hum ek travel agency ke liye landing page banayenge. Website ka naam hoga <strong>SkyTrip Travel</strong>. Landing page ka simple meaning hota hai ek single page website jahan user ko service ke baare mein clear information milti hai aur woh action le sakta hai, jaise packages dekhna ya travel guide ko contact karna.</p>
+      <p>Real-world example: jab koi travel company Manali, Goa, Jaipur jaise destinations ke packages sell karti hai, toh unko ek clean page chahiye jahan hero message, popular destinations, package benefits, contact button, and footer ho. Isi flow ko hum HTML aur CSS se build karenge.</p>
 
-        <div class="booking-card">
-          <h3>Quick Trip Plan</h3>
-          <p>Choose a destination, select a package, and contact our travel guide for a custom plan.</p>
-          <strong>Starting from Rs. 9,999</strong>
-        </div>
-      </div>
-    </section>
+      <h2>Learning Goals</h2>
+      <table>
+        <tr>
+          <th>Concept</th>
+          <th>Project Mein Use</th>
+        </tr>
+        <tr>
+          <td>HTML Structure</td>
+          <td>Header, hero, destination cards, packages, contact, footer sections banana.</td>
+        </tr>
+        <tr>
+          <td>Semantic Tags</td>
+          <td><code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>footer</code> ka proper use.</td>
+        </tr>
+        <tr>
+          <td>CSS Styling</td>
+          <td>Colors, spacing, fonts, buttons, cards, and background design apply karna.</td>
+        </tr>
+        <tr>
+          <td>Flexbox</td>
+          <td>Navbar mein logo and links ko side-by-side arrange karna.</td>
+        </tr>
+        <tr>
+          <td>CSS Grid</td>
+          <td>Hero layout and destination cards ko columns mein arrange karna.</td>
+        </tr>
+        <tr>
+          <td>Responsive Design</td>
+          <td>Mobile par layout ko one-column banana using media query.</td>
+        </tr>
+      </table>
 
-    <section id="destinations" class="section">
-      <div class="container">
-        <h2>Popular Destinations</h2>
-        <div class="destination-grid">
-          <article class="destination-card">
-            <div class="card-image mountains"></div>
-            <h3>Manali</h3>
-            <p>Perfect for mountains, snow views, cafes, and adventure activities.</p>
-          </article>
+      <h2>VS Code Setup</h2>
+      <p>Class mein pehle learners ko folder setup karwana hai. Isse unko project organization samajh aata hai. Ek project ke liye alag folder banana professional habit hai.</p>
+      <pre><code>travel-landing-page/
+  index.html
+  styles.css</code></pre>
+      <ol>
+        <li>Desktop ya Documents mein <code>travel-landing-page</code> folder banao.</li>
+        <li>VS Code open karo.</li>
+        <li><code>File &gt; Open Folder</code> se project folder open karo.</li>
+        <li><code>index.html</code> file banao. Isme page ka structure likhenge.</li>
+        <li><code>styles.css</code> file banao. Isme page ka design likhenge.</li>
+        <li>Live Server extension se <code>index.html</code> run karo.</li>
+      </ol>
+      <div class="note">Teaching point: Pehle blank page run karwao, phir HTML add karte jao. Har section add hone ke baad browser output dikhao.</div>
 
-          <article class="destination-card">
-            <div class="card-image beach"></div>
-            <h3>Goa</h3>
-            <p>Best for beaches, sunset walks, water sports, and relaxing holidays.</p>
-          </article>
+      <h2>Step 1: Basic HTML Structure</h2>
+      <p>Sabse pehle HTML ka basic skeleton likhenge. Skeleton ka matlab page ki basic body. Iske bina browser ko page ka structure properly samajh nahi aata.</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;SkyTrip Travel&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
 
-          <article class="destination-card">
-            <div class="card-image city"></div>
-            <h3>Jaipur</h3>
-            <p>Great for forts, culture, shopping, food, and royal heritage tours.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <table>
+        <tr>
+          <th>Line / Code</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;!DOCTYPE html&gt;</code></td>
+          <td>Browser ko batata hai ki yeh HTML5 document hai. Is line ko top par likhna zaroori hota hai taaki browser modern HTML rules follow kare.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;html lang="en"&gt;</code></td>
+          <td>Complete HTML document yahan se start hota hai. <code>lang="en"</code> page ki language English set karta hai. Screen readers and SEO ke liye useful hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;head&gt;</code></td>
+          <td>Head section browser ke liye information rakhta hai. Yeh information page par direct visible nahi hoti, but browser ko page handle karne mein help karti hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+          <td>Text encoding set karta hai. Isse normal letters, numbers, and symbols properly show hote hain.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;meta name="viewport"...&gt;</code></td>
+          <td>Mobile responsive design ke liye important line hai. Yeh browser ko bolti hai ki page device width ke according scale karo.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;title&gt;SkyTrip Travel&lt;/title&gt;</code></td>
+          <td>Browser tab ka title set karta hai. Jab page open hoga tab tab mein SkyTrip Travel dikhega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+          <td>HTML file ko CSS file se connect karta hai. Agar yeh line missing hogi ya file name wrong hoga, toh CSS design apply nahi hoga.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;body&gt;</code></td>
+          <td>Visible website content yahan se start hota hai. Header, hero, cards, footer sab body ke andar likhenge.</td>
+        </tr>
+      </table>
 
-    <section id="packages" class="section packages-section">
-      <div class="container package-box">
-        <div>
-          <h2>Why Choose Our Packages?</h2>
-          <p>Our packages are made for beginners who want a simple travel plan without confusion. We help with hotels, local transport, sightseeing, and day-wise planning.</p>
-        </div>
-        <ul class="package-list">
-          <li>Budget-friendly hotel suggestions</li>
-          <li>Day-wise sightseeing plan</li>
-          <li>Pickup and local transport support</li>
-          <li>Travel guide support on call</li>
-        </ul>
-      </div>
-    </section>
+      <h2>Step 2: Header And Navbar</h2>
+      <p>Header website ka top area hota hai. Real websites mein yahan logo aur navigation links hote hain. Travel website mein user destinations, packages, and contact section tak quickly pahunch sake, isliye navbar banate hain.</p>
+      <pre><code>&lt;header class="site-header"&gt;
+  &lt;div class="container navbar"&gt;
+    &lt;h1 class="logo"&gt;SkyTrip Travel&lt;/h1&gt;
+    &lt;nav class="nav-links"&gt;
+      &lt;a href="#destinations"&gt;Destinations&lt;/a&gt;
+      &lt;a href="#packages"&gt;Packages&lt;/a&gt;
+      &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+      <table>
+        <tr>
+          <th>Line / Code</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;header class="site-header"&gt;</code></td>
+          <td>Header website ka top section hai. <code>site-header</code> class CSS mein header ka background, border, and sticky behavior set karegi.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="container navbar"&gt;</code></td>
+          <td>Ek div par two classes hain. <code>container</code> content ko center and limited width mein rakhega. <code>navbar</code> logo and links ko Flexbox se arrange karega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h1 class="logo"&gt;SkyTrip Travel&lt;/h1&gt;</code></td>
+          <td>Website ka brand name hai. Real travel website mein yahi company ka logo/name hota hai. CSS se iska blue color and size set hoga.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;nav class="nav-links"&gt;</code></td>
+          <td>Navigation links ka semantic area hai. Browser and screen readers ko samajh aata hai ki is area mein page navigation links hain.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a href="#destinations"&gt;Destinations&lt;/a&gt;</code></td>
+          <td>Same page ke <code>id="destinations"</code> section par le jaane wala link hai. Yeh one-page website navigation ka common pattern hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a href="#packages"&gt;Packages&lt;/a&gt;</code></td>
+          <td>User ko packages section tak le jaata hai. Travel website mein packages important selling section hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</code></td>
+          <td>User ko contact section tak le jaata hai, jahan woh travel guide se connect kar sakta hai.</td>
+        </tr>
+      </table>
 
-    <section id="contact" class="section contact-section">
-      <div class="container contact-box">
-        <h2>Ready for your next trip?</h2>
-        <p>Send us your destination and travel dates. Our team will share a simple trip plan with package details.</p>
-        <a class="primary-button" href="mailto:hello@skytrip.com">Contact Travel Guide</a>
-      </div>
-    </section>
+      <h2>Step 3: Hero Section</h2>
+      <p>Hero section page ka first large section hota hai. User page open karte hi sabse pehle yahi dekhta hai. Isme clear message, short description, main button, and offer card rakhte hain.</p>
+      <pre><code>&lt;main&gt;
+  &lt;section class="hero"&gt;
+    &lt;div class="container hero-grid"&gt;
+      &lt;div class="hero-content"&gt;
+        &lt;p class="tagline"&gt;Explore the world with confidence&lt;/p&gt;
+        &lt;h2&gt;Plan your next holiday with simple and affordable travel packages.&lt;/h2&gt;
+        &lt;p class="hero-description"&gt;SkyTrip Travel helps families, students, and working professionals discover beautiful places with easy planning and clear pricing.&lt;/p&gt;
+        &lt;a class="primary-button" href="#packages"&gt;View Packages&lt;/a&gt;
+      &lt;/div&gt;
+
+      &lt;div class="booking-card"&gt;
+        &lt;h3&gt;Quick Trip Plan&lt;/h3&gt;
+        &lt;p&gt;Choose a destination, select a package, and contact our travel guide for a custom plan.&lt;/p&gt;
+        &lt;strong&gt;Starting from Rs. 9,999&lt;/strong&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+      <table>
+        <tr>
+          <th>Line / Code</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;main&gt;</code></td>
+          <td>Page ka main content start hota hai. Header and footer ke beech ka primary content main tag ke andar rakhte hain.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section class="hero"&gt;</code></td>
+          <td>Hero section website ka main introduction section hai. CSS se isko gradient background and large spacing milegi.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="container hero-grid"&gt;</code></td>
+          <td>Hero content ko center width mein rakhta hai and Grid layout apply karne ke liye class deta hai. Desktop par left text and right card dikhega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="hero-content"&gt;</code></td>
+          <td>Hero ke left side text content ka wrapper hai. Isme tagline, heading, paragraph, and button rakha gaya hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p class="tagline"&gt;...&lt;/p&gt;</code></td>
+          <td>Small highlight line hai. Real landing pages mein tagline user ko mood and topic quickly batati hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h2&gt;Plan your next holiday...&lt;/h2&gt;</code></td>
+          <td>Main hero heading hai. Yeh user ko clearly batati hai ki website kis cheez ke baare mein hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p class="hero-description"&gt;...&lt;/p&gt;</code></td>
+          <td>Heading ko support karne wala paragraph hai. Isme audience and service detail simple words mein di gayi hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a class="primary-button" href="#packages"&gt;View Packages&lt;/a&gt;</code></td>
+          <td>Call-to-action button hai. HTML mein link hai, but CSS se button jaisa dikhega. Click par packages section tak jayega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="booking-card"&gt;</code></td>
+          <td>Hero ke right side offer card hai. Isme quick trip plan and starting price show hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;strong&gt;Starting from Rs. 9,999&lt;/strong&gt;</code></td>
+          <td>Price important information hai, isliye <code>strong</code> tag use kiya. Browser isko bold show karega.</td>
+        </tr>
+      </table>
+
+      <h2>Step 4: Destinations Section</h2>
+      <p>Destinations cards user ko travel options compare karne mein help karte hain. Cards visual blocks hote hain jisme title and short details hoti hain.</p>
+      <pre><code>&lt;section id="destinations" class="section"&gt;
+  &lt;div class="container"&gt;
+    &lt;h2&gt;Popular Destinations&lt;/h2&gt;
+    &lt;div class="destination-grid"&gt;
+      &lt;article class="destination-card"&gt;
+        &lt;div class="card-image mountains"&gt;&lt;/div&gt;
+        &lt;h3&gt;Manali&lt;/h3&gt;
+        &lt;p&gt;Perfect for mountains, snow views, cafes, and adventure activities.&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+      <table>
+        <tr>
+          <th>Line / Code</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;section id="destinations" class="section"&gt;</code></td>
+          <td>Destinations section start hota hai. <code>id</code> navbar link ke liye hai and <code>section</code> class common spacing ke liye.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h2&gt;Popular Destinations&lt;/h2&gt;</code></td>
+          <td>Section heading hai. User ko pata chal jaata hai ki neeche destination cards hain.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="destination-grid"&gt;</code></td>
+          <td>Cards ka parent wrapper hai. CSS Grid se desktop par 3 cards ek row mein arrange honge.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;article class="destination-card"&gt;</code></td>
+          <td>Har destination ek independent information block hai, isliye article semantic tag use karna meaningful hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="card-image mountains"&gt;&lt;/div&gt;</code></td>
+          <td>Image placeholder block hai. Is project mein real image ke jagah CSS gradient use karenge taaki setup simple rahe.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h3&gt;Manali&lt;/h3&gt;</code></td>
+          <td>Card ka title hai. Similar cards mein Goa and Jaipur names use honge.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p&gt;Perfect for mountains...&lt;/p&gt;</code></td>
+          <td>Destination ka short description hai. User ko quickly idea milta hai ki place kis type ke trip ke liye best hai.</td>
+        </tr>
+      </table>
+
+      <h2>Step 5: Packages And Contact Sections</h2>
+      <p>Packages section user ko benefits batata hai. Contact section user ko final action lene ke liye motivate karta hai.</p>
+      <pre><code>&lt;section id="packages" class="section packages-section"&gt;
+  &lt;div class="container package-box"&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Why Choose Our Packages?&lt;/h2&gt;
+      &lt;p&gt;Our packages are made for beginners who want a simple travel plan without confusion.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;ul class="package-list"&gt;
+      &lt;li&gt;Budget-friendly hotel suggestions&lt;/li&gt;
+      &lt;li&gt;Day-wise sightseeing plan&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="contact" class="section contact-section"&gt;
+  &lt;div class="container contact-box"&gt;
+    &lt;h2&gt;Ready for your next trip?&lt;/h2&gt;
+    &lt;p&gt;Send us your destination and travel dates.&lt;/p&gt;
+    &lt;a class="primary-button" href="mailto:hello@skytrip.com"&gt;Contact Travel Guide&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+      <table>
+        <tr>
+          <th>Line / Code</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;section id="packages"...&gt;</code></td>
+          <td>Packages section start hota hai. Navbar and hero button isi section par scroll kar sakte hain.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;ul class="package-list"&gt;</code></td>
+          <td>Benefits ko bullet list form mein dikhata hai. Short points ke liye list best hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;li&gt;Budget-friendly hotel suggestions&lt;/li&gt;</code></td>
+          <td>Ek package benefit item hai. Har <code>li</code> ek separate bullet point show karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section id="contact"...&gt;</code></td>
+          <td>Contact section final call-to-action area hai. User yahan se agency ko email kar sakta hai.</td>
+        </tr>
+        <tr>
+          <td><code>href="mailto:hello@skytrip.com"</code></td>
+          <td>Email link create karta hai. Click karne par user's email app open ho sakta hai.</td>
+        </tr>
+      </table>
+
+      <h2>CSS Step 1: Base Styles</h2>
+      <pre><code>* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #123047;
+  background: #f4f8fb;
+  line-height: 1.6;
+}</code></pre>
+      <table>
+        <tr>
+          <th>CSS Line</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>*</code></td>
+          <td>Universal selector hai. Page ke saare elements ko target karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>box-sizing: border-box;</code></td>
+          <td>Padding and border ko element width ke andar count karta hai. Isse layout calculation easy hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>margin: 0;</code></td>
+          <td>Browser ka default body margin remove karta hai. Page clean edge se start hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>font-family: Arial, Helvetica, sans-serif;</code></td>
+          <td>Website ka font set karta hai. Arial simple and readable hai, beginners ke project ke liye perfect.</td>
+        </tr>
+        <tr>
+          <td><code>color: #123047;</code></td>
+          <td>Default text color dark blue set karta hai. Travel theme ke saath calm and professional feel deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>background: #f4f8fb;</code></td>
+          <td>Page ka light background set karta hai. White cards is background par clearly visible honge.</td>
+        </tr>
+        <tr>
+          <td><code>line-height: 1.6;</code></td>
+          <td>Text lines ke beech spacing badhata hai. Paragraphs easy to read ho jaate hain.</td>
+        </tr>
+      </table>
+
+      <h2>CSS Step 2: Layout, Navbar, Hero, Cards</h2>
+      <pre><code>.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}</code></pre>
+      <table>
+        <tr>
+          <th>CSS Line</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>.container</code></td>
+          <td>Common wrapper class hai. Content ko center and readable width mein rakhta hai. Real websites mein container very common hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>width: 90%;</code></td>
+          <td>Container screen ka 90 percent width lega. Isse left-right side mein safe spacing rahegi.</td>
+        </tr>
+        <tr>
+          <td><code>max-width: 1120px;</code></td>
+          <td>Large screens par content ko zyada wide hone se rokta hai. Reading comfortable hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>display: flex;</code></td>
+          <td>Navbar items ko row mein arrange karta hai. Logo and links side-by-side aa jaate hain.</td>
+        </tr>
+        <tr>
+          <td><code>justify-content: space-between;</code></td>
+          <td>Logo ko left side and nav links ko right side push karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>display: grid;</code></td>
+          <td>Grid layout start karta hai. Columns and rows banana easy hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>grid-template-columns: 1.35fr 0.65fr;</code></td>
+          <td>Hero section mein left text ko zyada width and right card ko kam width deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>grid-template-columns: repeat(3, 1fr);</code></td>
+          <td>Destination cards ke liye 3 equal columns banata hai.</td>
+        </tr>
+        <tr>
+          <td><code>gap</code></td>
+          <td>Items ke beech spacing add karta hai. Gap se layout clean and readable lagta hai.</td>
+        </tr>
+      </table>
+
+      <h2>CSS Step 3: Button And Responsive Design</h2>
+      <pre><code>.primary-button {
+  display: inline-block;
+  background: #0284c7;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-grid,
+  .destination-grid,
+  .package-box {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+      <table>
+        <tr>
+          <th>CSS Line</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>display: inline-block;</code></td>
+          <td>Anchor link ko button box jaisa behave karata hai, jisse padding and shape properly apply hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>background: #0284c7;</code></td>
+          <td>Button ka blue background set karta hai. Travel/water/sky theme ke saath match karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>border-radius: 999px;</code></td>
+          <td>Button ko pill shape deta hai. Modern landing pages mein rounded buttons common hote hain.</td>
+        </tr>
+        <tr>
+          <td><code>@media (max-width: 768px)</code></td>
+          <td>Responsive rules start karta hai. Jab screen 768px ya usse kam hogi, tab ye rules apply honge.</td>
+        </tr>
+        <tr>
+          <td><code>flex-direction: column;</code></td>
+          <td>Mobile par navbar ko vertical stack karta hai. Logo upar, links neeche aa jaate hain.</td>
+        </tr>
+        <tr>
+          <td><code>grid-template-columns: 1fr;</code></td>
+          <td>Mobile par grid ko one-column layout mein convert karta hai. Cards readable ho jaate hain.</td>
+        </tr>
+      </table>
+
+      <h2>Class Teaching Flow</h2>
+      <ol>
+        <li>Project story explain karo: travel agency ko landing page chahiye.</li>
+        <li>VS Code mein folder and files create karwao.</li>
+        <li>Basic HTML structure likhwao and blank output dikhao.</li>
+        <li>Header add karo, phir browser output dikhao.</li>
+        <li>Hero section add karo and explain karo ki landing page ka first impression yahi hota hai.</li>
+        <li>Destination cards add karo and cards ka real-world use explain karo.</li>
+        <li>CSS add karte waqt har property ka visual output dikhao.</li>
+        <li>Browser width kam karke responsive design show karo.</li>
+      </ol>
+
+      <h2>Common Mistakes And Fixes</h2>
+      <table>
+        <tr>
+          <th>Mistake</th>
+          <th>Fix</th>
+        </tr>
+        <tr>
+          <td>CSS apply nahi ho rahi.</td>
+          <td>Check karo <code>styles.css</code> same folder mein hai and link tag correct hai.</td>
+        </tr>
+        <tr>
+          <td>Navbar links kaam nahi kar rahe.</td>
+          <td>Check karo <code>href="#destinations"</code> and section <code>id="destinations"</code> same spelling mein hain.</td>
+        </tr>
+        <tr>
+          <td>Cards columns mein nahi aa rahe.</td>
+          <td>Parent wrapper par <code>destination-grid</code> class and CSS Grid rules check karo.</td>
+        </tr>
+        <tr>
+          <td>Mobile layout break ho raha hai.</td>
+          <td>Viewport meta tag and media query dono check karo.</td>
+        </tr>
+      </table>
+    </article>
   </main>
 
-  <footer class="site-footer">
-    <p>SkyTrip Travel - Simple HTML and CSS Landing Page</p>
+  <footer class="footer">
+    Travel Landing Page Notes - HTML and CSS Teaching Guide
   </footer>
 </body>
 </html>
