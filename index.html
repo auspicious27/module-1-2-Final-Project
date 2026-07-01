@@ -871,6 +871,662 @@ body {
         </tr>
       </table>
 
+      <h2>Final Travel Project Complete Code</h2>
+      <p>Ab tak humne project ko small steps mein samjha. Ab same travel landing page ka complete code ek jagah dekhte hain. Class mein aap learners ko bol sakte ho: "Ab hum final project ko VS Code mein exactly isi structure ke saath banayenge. Pehle <code>index.html</code> file banegi, phir <code>styles.css</code> file banegi. HTML content ka structure banayega, CSS usko professional design dega."</p>
+
+      <h3>VS Code Mein Project Kaise Implement Karna Hai</h3>
+      <table>
+        <tr>
+          <th>Step</th>
+          <th>Kya Karna Hai</th>
+          <th>Simple Explanation</th>
+        </tr>
+        <tr>
+          <td>Step 1</td>
+          <td>Desktop ya Documents mein <code>travel-landing-page</code> folder banao.</td>
+          <td>Folder project ka ghar hota hai. Iske andar HTML and CSS dono files rahengi, taaki browser easily files ko connect kar sake.</td>
+        </tr>
+        <tr>
+          <td>Step 2</td>
+          <td>VS Code open karo and <code>File &gt; Open Folder</code> se yeh folder open karo.</td>
+          <td>VS Code ko project folder open karna zaroori hai, warna files alag-alag jagah save ho sakti hain aur CSS link break ho sakta hai.</td>
+        </tr>
+        <tr>
+          <td>Step 3</td>
+          <td><code>index.html</code> file banao and HTML code paste/type karo.</td>
+          <td><code>index.html</code> website ka main page hota hai. Browser normally isi file ko homepage ki tarah open karta hai.</td>
+        </tr>
+        <tr>
+          <td>Step 4</td>
+          <td><code>styles.css</code> file banao and CSS code paste/type karo.</td>
+          <td>CSS file design ke liye hai. Isme colors, spacing, layout, cards, buttons, and responsive rules rahenge.</td>
+        </tr>
+        <tr>
+          <td>Step 5</td>
+          <td><code>index.html</code> ko browser mein open karo ya VS Code Live Server use karo.</td>
+          <td>Output mein top navbar, hero section, destination cards, package area, contact section, and footer dikhna chahiye.</td>
+        </tr>
+      </table>
+
+      <h3>Final <code>index.html</code> Code</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;SkyTrip Travel&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header class="site-header"&gt;
+    &lt;div class="container navbar"&gt;
+      &lt;h1 class="logo"&gt;SkyTrip Travel&lt;/h1&gt;
+      &lt;nav class="nav-links"&gt;
+        &lt;a href="#destinations"&gt;Destinations&lt;/a&gt;
+        &lt;a href="#packages"&gt;Packages&lt;/a&gt;
+        &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section class="hero"&gt;
+      &lt;div class="container hero-grid"&gt;
+        &lt;div class="hero-content"&gt;
+          &lt;p class="tagline"&gt;Explore the world with confidence&lt;/p&gt;
+          &lt;h2&gt;Plan your next holiday with simple and affordable travel packages.&lt;/h2&gt;
+          &lt;p class="hero-description"&gt;SkyTrip Travel helps families, students, and working professionals discover beautiful places with easy planning and clear pricing.&lt;/p&gt;
+          &lt;a class="primary-button" href="#packages"&gt;View Packages&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class="booking-card"&gt;
+          &lt;h3&gt;Quick Trip Plan&lt;/h3&gt;
+          &lt;p&gt;Choose a destination, select a package, and contact our travel guide for a custom plan.&lt;/p&gt;
+          &lt;strong&gt;Starting from Rs. 9,999&lt;/strong&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id="destinations" class="section"&gt;
+      &lt;div class="container"&gt;
+        &lt;h2&gt;Popular Destinations&lt;/h2&gt;
+        &lt;div class="destination-grid"&gt;
+          &lt;article class="destination-card"&gt;
+            &lt;div class="card-image mountains"&gt;&lt;/div&gt;
+            &lt;h3&gt;Manali&lt;/h3&gt;
+            &lt;p&gt;Perfect for mountains, snow views, cafes, and adventure activities.&lt;/p&gt;
+          &lt;/article&gt;
+
+          &lt;article class="destination-card"&gt;
+            &lt;div class="card-image beach"&gt;&lt;/div&gt;
+            &lt;h3&gt;Goa&lt;/h3&gt;
+            &lt;p&gt;Best for beaches, sunset views, food, and relaxing holidays.&lt;/p&gt;
+          &lt;/article&gt;
+
+          &lt;article class="destination-card"&gt;
+            &lt;div class="card-image heritage"&gt;&lt;/div&gt;
+            &lt;h3&gt;Jaipur&lt;/h3&gt;
+            &lt;p&gt;Great for forts, culture, shopping, and royal heritage trips.&lt;/p&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id="packages" class="section packages-section"&gt;
+      &lt;div class="container package-box"&gt;
+        &lt;div&gt;
+          &lt;h2&gt;Why Choose Our Packages?&lt;/h2&gt;
+          &lt;p&gt;Our packages are made for beginners who want a simple travel plan without confusion.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;ul class="package-list"&gt;
+          &lt;li&gt;Budget-friendly hotel suggestions&lt;/li&gt;
+          &lt;li&gt;Day-wise sightseeing plan&lt;/li&gt;
+          &lt;li&gt;Clear pricing before booking&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id="contact" class="section contact-section"&gt;
+      &lt;div class="container contact-box"&gt;
+        &lt;h2&gt;Ready for your next trip?&lt;/h2&gt;
+        &lt;p&gt;Send us your destination and travel dates. Our guide will help you choose the best plan.&lt;/p&gt;
+        &lt;a class="primary-button" href="mailto:hello@skytrip.com"&gt;Contact Travel Guide&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;SkyTrip Travel. Simple travel planning demo project.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <h3>Final <code>styles.css</code> Code</h3>
+      <pre><code>* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #123047;
+  background: #f4f8fb;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #dbeafe;
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.logo {
+  margin: 0;
+  color: #0284c7;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: #123047;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #e0f2fe, #ffffff);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.tagline {
+  color: #0284c7;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin: 0 0 18px;
+}
+
+.hero-description {
+  max-width: 650px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: #0284c7;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.booking-card,
+.destination-card,
+.package-box,
+.contact-box {
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+}
+
+.booking-card {
+  padding: 28px;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.destination-card {
+  overflow: hidden;
+}
+
+.destination-card h3,
+.destination-card p {
+  padding: 0 20px;
+}
+
+.card-image {
+  height: 160px;
+}
+
+.mountains {
+  background: linear-gradient(135deg, #38bdf8, #0f766e);
+}
+
+.beach {
+  background: linear-gradient(135deg, #fbbf24, #38bdf8);
+}
+
+.heritage {
+  background: linear-gradient(135deg, #fb7185, #f97316);
+}
+
+.package-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 30px;
+}
+
+.package-list {
+  margin: 0;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-box {
+  padding: 36px;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-grid,
+  .destination-grid,
+  .package-box {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+}</code></pre>
+
+      <h2>Complete Line-by-Line Extra Reference</h2>
+      <p>Is section ko revision/reference ke liye use karo. Jab learner kisi chhoti line par confuse ho, jaise closing tag, CSS value, selector, ya JavaScript line, toh yahan se usko individually explain kar sakte ho. Yeh section classroom mein quick doubt solving ke liye helpful rahega.</p>
+
+      <h3>Live HTML Interpreter - Har Small Line Ka Meaning</h3>
+      <table>
+        <tr>
+          <th>Small Code Line</th>
+          <th>Deep Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+          <td>Yeh browser ko batata hai ki page ka text UTF-8 encoding mein read karna hai. Simple words mein: letters, numbers, symbols, and special characters properly show karne ke liye yeh line use hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></td>
+          <td>Yeh mobile screen ke liye important hai. <code>width=device-width</code> page ko device ki screen width ke according set karta hai. <code>initial-scale=1.0</code> page ka default zoom normal rakhta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;title&gt;Live HTML Interpreter&lt;/title&gt;</code></td>
+          <td>Browser tab ka naam set karta hai. Jab file browser mein open hogi, tab tab title mein Live HTML Interpreter dikhega. Students ko batao: title page ka browser identity card hai.</td>
+        </tr>
+        <tr>
+          <td><code>body {</code></td>
+          <td>Yahan body selector ka CSS block start hota hai. Jo properties is block ke andar likhenge woh complete visible page par apply hongi.</td>
+        </tr>
+        <tr>
+          <td><code>margin: 0;</code></td>
+          <td>Browser default body ke around thoda gap deta hai. <code>margin: 0</code> woh gap hata deta hai. Isse app screen ke edge se clean start hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>font-family: Arial, sans-serif;</code></td>
+          <td>Page ka font set karta hai. Arial readable font hai. Agar Arial available na ho toh browser koi sans-serif font use karega.</td>
+        </tr>
+        <tr>
+          <td><code>background: #f4f8fb;</code></td>
+          <td>Page ka background light blue-gray karta hai. Interpreter ka editor and preview is background par clean dikhta hai.</td>
+        </tr>
+        <tr>
+          <td><code>color: #123047;</code></td>
+          <td>Default text color dark blue karta hai. Yeh black se thoda softer and travel-theme friendly color hai.</td>
+        </tr>
+        <tr>
+          <td><code>}</code></td>
+          <td>CSS block close karta hai. Jo selector start hua tha, uski styling yahan end hoti hai. Agar closing brace miss ho jaaye toh CSS next rules ko galat read kar sakti hai.</td>
+        </tr>
+        <tr>
+          <td><code>.app {</code></td>
+          <td><code>.app</code> class selector hai. HTML mein jahan <code>class="app"</code> hoga, wahan yeh styles apply hongi. Yeh interpreter ka main layout wrapper hai.</td>
+        </tr>
+        <tr>
+          <td><code>display: grid;</code></td>
+          <td>App wrapper ko CSS Grid layout bana deta hai. Grid ka use columns and rows banane ke liye hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>grid-template-columns: 1fr 1fr;</code></td>
+          <td>Do equal columns banata hai. Left column editor ke liye, right column preview ke liye. <code>fr</code> ka matlab available space ka fraction hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>gap: 20px;</code></td>
+          <td>Editor and preview ke beech 20px ka space add karta hai. Gap na ho toh dono boxes chipke hue dikhenge.</td>
+        </tr>
+        <tr>
+          <td><code>padding: 20px;</code></td>
+          <td>App ke andar content ke around 20px inner space add karta hai. Isse layout breathe karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>textarea, iframe {</code></td>
+          <td>Group selector hai. Same CSS rules textarea and iframe dono par apply honge. Isse editor and preview same size/style ke dikhenge.</td>
+        </tr>
+        <tr>
+          <td><code>width: 100%;</code></td>
+          <td>Textarea and iframe apne parent column ki full width lenge. Isse layout properly fill hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>min-height: 300px;</code></td>
+          <td>Minimum height 300px set karta hai. Agar content kam bhi ho toh editor/preview readable size mein dikhenge.</td>
+        </tr>
+        <tr>
+          <td><code>border: 1px solid #d8e8f2;</code></td>
+          <td>Boxes ke around light border add karta hai. Border se editor and preview ki boundary clear dikhti hai.</td>
+        </tr>
+        <tr>
+          <td><code>border-radius: 10px;</code></td>
+          <td>Box ke corners rounded karta hai. Rounded corners UI ko modern and soft look dete hain.</td>
+        </tr>
+        <tr>
+          <td><code>textarea {</code></td>
+          <td>Sirf textarea editor ke liye CSS block start hota hai. Preview iframe par yeh specific rules apply nahi honge.</td>
+        </tr>
+        <tr>
+          <td><code>background: #0f172a;</code></td>
+          <td>Textarea ka background dark navy karta hai, code editor jaisa feel dene ke liye.</td>
+        </tr>
+        <tr>
+          <td><code>color: #e5e7eb;</code></td>
+          <td>Textarea ke andar typed code ka text light gray karta hai, taaki dark background par readable ho.</td>
+        </tr>
+        <tr>
+          <td><code>font-family: Consolas, monospace;</code></td>
+          <td>Code editor ke liye monospace font use hota hai. Monospace mein har character same width leta hai, isse code aligned dikhta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h1&gt;Live HTML Interpreter&lt;/h1&gt;</code></td>
+          <td>Page ka main heading show karta hai. Learner ko immediately pata chal jaata hai ki yeh page interpreter tool hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="app"&gt;</code></td>
+          <td>Editor and preview ko ek common wrapper mein rakhta hai. CSS Grid isi wrapper par apply hogi.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;textarea id="htmlInput"&gt;</code></td>
+          <td>HTML typing area start karta hai. <code>id</code> JavaScript ko textarea find karne ke liye diya gaya hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h2&gt;Hello Students&lt;/h2&gt;</code></td>
+          <td>Textarea ke andar default sample HTML hai. Preview mein heading show hogi, jisse learners ko first output immediately dikhe.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p&gt;This is live HTML preview.&lt;/p&gt;</code></td>
+          <td>Default sample paragraph hai. Isse learner heading ke saath paragraph output bhi dekhta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;/textarea&gt;</code></td>
+          <td>Textarea close karta hai. Iske baad typed content ka input area end ho jaata hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;iframe id="previewFrame"&gt;&lt;/iframe&gt;</code></td>
+          <td>Preview area create karta hai. JavaScript typed HTML ko isi iframe ke andar render karegi.</td>
+        </tr>
+        <tr>
+          <td><code>const</code></td>
+          <td>JavaScript mein constant variable declare karta hai. Yahan element references change nahi honge, isliye <code>const</code> use kiya.</td>
+        </tr>
+        <tr>
+          <td><code>document.getElementById(...)</code></td>
+          <td>HTML document mein kisi element ko uske id se find karta hai. Yeh JavaScript ka common DOM selection method hai.</td>
+        </tr>
+        <tr>
+          <td><code>htmlInput.value</code></td>
+          <td>Textarea ke andar currently jo text/code likha hai, usko read karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>previewFrame.srcdoc</code></td>
+          <td>Iframe ke andar direct HTML content set karta hai. Is project mein live preview isi property se kaam karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>addEventListener('input', updatePreview)</code></td>
+          <td>Jab user textarea mein kuch type/change kare, tab updatePreview function automatically run karne ke liye event listener lagata hai.</td>
+        </tr>
+      </table>
+
+      <h3>Travel Landing Page - HTML Lines Extra Reference</h3>
+      <table>
+        <tr>
+          <th>Small Code Line</th>
+          <th>Deep Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;/head&gt;</code></td>
+          <td>Head section close karta hai. Iske baad browser visible body content read karega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;/body&gt;</code></td>
+          <td>Visible page content close karta hai. Body ke baad normally koi visible website content nahi likhte.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;/html&gt;</code></td>
+          <td>Complete HTML document close karta hai. Yeh final closing wrapper hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;/header&gt;</code></td>
+          <td>Header section close karta hai. Iske baad main page content start kar sakte hain.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;/nav&gt;</code></td>
+          <td>Navigation links ka group close karta hai. Iske andar sirf page navigation links rakhne chahiye.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;/main&gt;</code></td>
+          <td>Main content close karta hai. Footer main ke baad aata hai because footer closing information hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>class="section"</code></td>
+          <td>Common section spacing ke liye class hai. Isse multiple sections ko same padding style diya ja sakta hai.</td>
+        </tr>
+        <tr>
+          <td><code>id="packages"</code></td>
+          <td>Unique section id hai. Navbar link ya button <code>#packages</code> se isi section par scroll karega. Anchor link aur section id ka spelling same hona chahiye, tabhi click karne par browser correct section tak jump karega.</td>
+        </tr>
+        <tr>
+          <td><code>class="primary-button"</code></td>
+          <td>Link ko button design dene ke liye class hai. Same button style multiple places par reuse kar sakte hain.</td>
+        </tr>
+        <tr>
+          <td><code>class="booking-card"</code></td>
+          <td>Hero section ke side offer card ko style karne ke liye class hai. CSS isko white card and shadow dega.</td>
+        </tr>
+        <tr>
+          <td><code>class="destination-card"</code></td>
+          <td>Har destination ko card design dene ke liye class hai. Isse all cards consistent dikhenge.</td>
+        </tr>
+        <tr>
+          <td><code>class="package-box"</code></td>
+          <td>Package section ke text and list ko card/grid layout dene ke liye class hai.</td>
+        </tr>
+        <tr>
+          <td><code>class="contact-section"</code></td>
+          <td>Contact section ko center aligned call-to-action area banane ke liye class hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;footer&gt;</code></td>
+          <td>Website ka bottom section hota hai. Isme copyright, project name, ya closing information rakhte hain.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;article class="destination-card"&gt;</code></td>
+          <td>Ek destination ka complete card start karta hai. Story type samjho: har card ek chhota travel brochure hai jisme place name, visual area, and short description hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>class="card-image mountains"</code></td>
+          <td>Ek element par two classes hain. <code>card-image</code> common image box size dega, aur <code>mountains</code> Manali ke liye special gradient color dega.</td>
+        </tr>
+        <tr>
+          <td><code>class="card-image beach"</code></td>
+          <td>Goa card ke visual area ko beach theme color dene ke liye use hota hai. Same structure reuse hota hai, bas theme class change hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>class="card-image heritage"</code></td>
+          <td>Jaipur card ke visual area ko heritage/warm color theme dene ke liye use hota hai. Isse har card ka mood alag dikhta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;ul class="package-list"&gt;</code></td>
+          <td>Package benefits ki bullet list start karta hai. Jab information points mein ho, list paragraph se better hoti hai because learner/user quickly scan kar sakta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;li&gt;Clear pricing before booking&lt;/li&gt;</code></td>
+          <td>Ek benefit point hai. Travel business mein pricing clarity trust build karti hai, isliye isko separate bullet point mein show kiya.</td>
+        </tr>
+        <tr>
+          <td><code>class="contact-box"</code></td>
+          <td>Contact content ko card-style box mein rakhne ke liye class hai. Final CTA ko clean and focused dikhane mein help karti hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p&gt;SkyTrip Travel...&lt;/p&gt;</code></td>
+          <td>Footer ka short closing text hai. Real project mein yahan copyright, company name, or disclaimer add kar sakte hain.</td>
+        </tr>
+      </table>
+
+      <h3>Travel Landing Page - CSS Lines Extra Reference</h3>
+      <table>
+        <tr>
+          <th>Small CSS Line</th>
+          <th>Deep Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>.primary-button {</code></td>
+          <td>Primary button class ka CSS block start hota hai. Iske andar CTA button ka complete design likhenge.</td>
+        </tr>
+        <tr>
+          <td><code>color: #ffffff;</code></td>
+          <td>Text color white karta hai. Blue background par white text high contrast and readable hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>padding: 12px 22px;</code></td>
+          <td>Button ke andar top-bottom 12px and left-right 22px space deta hai. Padding button ko clickable and comfortable banati hai.</td>
+        </tr>
+        <tr>
+          <td><code>font-weight: 800;</code></td>
+          <td>Button text ko bold karta hai. CTA button important action hai, isliye bold text attention grab karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.navbar {</code></td>
+          <td>Navbar layout styling start karta hai. Is block mein logo and nav links ka alignment set hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>align-items: center;</code></td>
+          <td>Flexbox items ko vertical center align karta hai. Logo and links same line mein balanced dikhte hain.</td>
+        </tr>
+        <tr>
+          <td><code>.hero-grid, .destination-grid, .package-box</code></td>
+          <td>Group selector hai. Media query ke andar in sab grids ko mobile par one-column banane ke liye target karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.hero h2 { font-size: 32px; }</code></td>
+          <td>Mobile par hero heading ka size chhota karta hai. Agar desktop size 44px mobile par rahe toh heading screen se bahar ya awkward wrap ho sakti hai.</td>
+        </tr>
+        <tr>
+          <td><code>#0284c7</code></td>
+          <td>Blue color hex code hai. Travel theme mein sky/water/trust feel ke liye use ho raha hai.</td>
+        </tr>
+        <tr>
+          <td><code>#f4f8fb</code></td>
+          <td>Light background color hai. Ye page ko soft and clean feel deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>1fr</code></td>
+          <td>Fraction unit hai. Grid layout mein available space ka equal hissa represent karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.site-header {</code></td>
+          <td>Header styling block start karta hai. Is block mein top navigation ka background, border, and sticky behavior set hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>position: sticky;</code></td>
+          <td>Header ko scroll ke time top par chipka kar rakhne mein help karta hai. Real websites mein sticky navbar se user ko navigation baar-baar accessible milti hai.</td>
+        </tr>
+        <tr>
+          <td><code>top: 0;</code></td>
+          <td>Sticky element ko browser ke top edge se 0px distance par rakhta hai. Sticky header ke liye <code>top</code> value dena zaroori hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>.nav-links a {</code></td>
+          <td>Navbar ke andar jo anchor links hain unko target karta hai. Isse sirf nav links ka color, underline, and font weight control hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>text-decoration: none;</code></td>
+          <td>Links ki default underline remove karta hai. Navbar mein clean modern look ke liye underline remove karke hover/spacing se clickable feel dete hain.</td>
+        </tr>
+        <tr>
+          <td><code>background: linear-gradient(...)</code></td>
+          <td>Background mein two ya more colors ko smoothly blend karta hai. Is project mein gradients image ki jagah visual feel create karte hain.</td>
+        </tr>
+        <tr>
+          <td><code>box-shadow: 0 14px 40px rgba(...)</code></td>
+          <td>Cards ke neeche soft shadow add karta hai. Shadow se card background se lift hota hua dikhta hai, jaise paper page ke upar rakha ho.</td>
+        </tr>
+        <tr>
+          <td><code>overflow: hidden;</code></td>
+          <td>Card ke andar ka content border-radius ke bahar nikle toh usko cut kar deta hai. Image area rounded card ke andar clean fit hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>height: 160px;</code></td>
+          <td>Card image placeholder ki fixed height set karta hai. Sab destination cards ka visual area equal dikhta hai, layout professional lagta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.destination-card h3, .destination-card p</code></td>
+          <td>Group selector hai. Destination card ke heading and paragraph dono ko same horizontal padding dene ke liye use kiya gaya hai.</td>
+        </tr>
+        <tr>
+          <td><code>.contact-section { text-align: center; }</code></td>
+          <td>Contact section ke text and button ko center align karta hai. Final CTA center mein rakhenge toh user ka focus action par aata hai.</td>
+        </tr>
+        <tr>
+          <td><code>footer {</code></td>
+          <td>Footer styling block start karta hai. Footer page ka last section hai, isliye dark background and centered text se closing clear dikhti hai.</td>
+        </tr>
+      </table>
+
       <h2>Class Teaching Flow</h2>
       <ol>
         <li>Project story explain karo: travel agency ko landing page chahiye.</li>
