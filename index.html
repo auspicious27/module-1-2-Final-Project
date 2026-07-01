@@ -22,6 +22,57 @@
       <p>Aaj hum ek travel agency ke liye landing page banayenge. Website ka naam hoga <strong>SkyTrip Travel</strong>. Landing page ka simple meaning hota hai ek single page website jahan user ko service ke baare mein clear information milti hai aur woh action le sakta hai, jaise packages dekhna ya travel guide ko contact karna.</p>
       <p>Real-world example: jab koi travel company Manali, Goa, Jaipur jaise destinations ke packages sell karti hai, toh unko ek clean page chahiye jahan hero message, popular destinations, package benefits, contact button, and footer ho. Isi flow ko hum HTML aur CSS se build karenge.</p>
 
+      <h2>Is Project Se Hum Kya Seekhenge?</h2>
+      <p>Is project ka main purpose sirf ek page banana nahi hai. Is project se learners ko samajh aayega ki real website ka structure kaise plan hota hai, HTML tags ka use kahan hota hai, CSS se layout kaise beautiful banta hai, aur mobile responsive design kaise apply hota hai.</p>
+      <p>Aap class mein learners ko aise bol sakte ho: "Aaj hum ek travel website ka landing page live build karenge. Pehle hum HTML se page ka skeleton banayenge, phir CSS se usko design karenge. Jaise ghar banate time pehle structure banta hai aur baad mein paint/interior hota hai, waise hi website mein pehle HTML structure aur baad mein CSS styling hoti hai."</p>
+      <table>
+        <tr>
+          <th>Hum Kya Seekhenge?</th>
+          <th>Simple Meaning</th>
+          <th>Real Project Mein Kahan Use Hoga?</th>
+        </tr>
+        <tr>
+          <td>Project Planning</td>
+          <td>Website banane se pehle sections decide karna.</td>
+          <td>Header, hero, destinations, packages, contact, footer ka order plan karenge.</td>
+        </tr>
+        <tr>
+          <td>HTML Skeleton</td>
+          <td>Page ka basic structure banana.</td>
+          <td><code>html</code>, <code>head</code>, <code>body</code>, meta tags, title, CSS link.</td>
+        </tr>
+        <tr>
+          <td>Semantic HTML</td>
+          <td>Meaningful tags use karna.</td>
+          <td><code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>footer</code>.</td>
+        </tr>
+        <tr>
+          <td>Internal Page Links</td>
+          <td>Same page ke section par jump karna.</td>
+          <td>Navbar links: Destinations, Packages, Contact.</td>
+        </tr>
+        <tr>
+          <td>CSS Linking</td>
+          <td>HTML file ko CSS file se connect karna.</td>
+          <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>.</td>
+        </tr>
+        <tr>
+          <td>Flexbox</td>
+          <td>Items ko row ya column mein arrange karna.</td>
+          <td>Navbar mein logo left and links right side set karna.</td>
+        </tr>
+        <tr>
+          <td>CSS Grid</td>
+          <td>Cards/sections ko columns mein arrange karna.</td>
+          <td>Hero layout and destination cards.</td>
+        </tr>
+        <tr>
+          <td>Responsive Design</td>
+          <td>Website ko mobile friendly banana.</td>
+          <td>Mobile par 3 cards ko one-column layout mein convert karna.</td>
+        </tr>
+      </table>
+
       <h2>Learning Goals</h2>
       <table>
         <tr>
@@ -54,20 +105,120 @@
         </tr>
       </table>
 
-      <h2>VS Code Setup</h2>
-      <p>Class mein pehle learners ko folder setup karwana hai. Isse unko project organization samajh aata hai. Ek project ke liye alag folder banana professional habit hai.</p>
+      <h2>VS Code Step-by-Step Setup Guide</h2>
+      <p>Ab learners ko practically VS Code mein project setup karwana hai. Yeh part slow and clear rakhna, kyunki beginners ke liye folder, file, save, and browser output ka flow pehli baar confusing ho sakta hai.</p>
       <pre><code>travel-landing-page/
   index.html
   styles.css</code></pre>
-      <ol>
-        <li>Desktop ya Documents mein <code>travel-landing-page</code> folder banao.</li>
-        <li>VS Code open karo.</li>
-        <li><code>File &gt; Open Folder</code> se project folder open karo.</li>
-        <li><code>index.html</code> file banao. Isme page ka structure likhenge.</li>
-        <li><code>styles.css</code> file banao. Isme page ka design likhenge.</li>
-        <li>Live Server extension se <code>index.html</code> run karo.</li>
-      </ol>
-      <div class="note">Teaching point: Pehle blank page run karwao, phir HTML add karte jao. Har section add hone ke baad browser output dikhao.</div>
+      <table>
+        <tr>
+          <th>Step</th>
+          <th>VS Code Mein Kya Karna Hai?</th>
+          <th>Students Ko Kaise Explain Karna Hai?</th>
+          <th>Expected Output</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Desktop ya Documents mein <code>travel-landing-page</code> folder banao.</td>
+          <td>Folder ek project ka ghar hota hai. Is project ke saare files isi folder ke andar rahenge.</td>
+          <td>Ek empty folder ready hoga.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>VS Code open karo.</td>
+          <td>VS Code hamara code editor hai. Yahi par HTML and CSS code likhenge.</td>
+          <td>VS Code window open hogi.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><code>File &gt; Open Folder</code> par click karke <code>travel-landing-page</code> folder select karo.</td>
+          <td>VS Code ko batana padta hai ki hum kis project folder par kaam kar rahe hain.</td>
+          <td>Left side Explorer mein folder name show hoga.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Explorer mein New File button par click karke <code>index.html</code> file banao.</td>
+          <td><code>index.html</code> website ka main page hota hai. Browser default root page ke liye mostly index.html ko read karta hai.</td>
+          <td>Explorer mein <code>index.html</code> file dikhegi.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>New File button se <code>styles.css</code> file banao.</td>
+          <td>CSS file website ka design store karegi. HTML and CSS separate rakhna clean coding habit hai.</td>
+          <td>Explorer mein <code>styles.css</code> file dikhegi.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><code>index.html</code> mein basic HTML skeleton likho.</td>
+          <td>Pehle page ka base structure banega. Body empty hogi toh output blank dikhega, ye normal hai.</td>
+          <td>Browser blank page show karega ya title tab mein dikhega.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Head mein CSS link add karo: <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+          <td>Yeh HTML and CSS ka connection wire hai. Is wire ke bina CSS design HTML tak nahi pahunchti.</td>
+          <td>CSS file connect ho jayegi, but design tab dikhega jab CSS rules likhenge.</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Live Server install/open karo. <code>index.html</code> par right click karke <strong>Open with Live Server</strong> karo.</td>
+          <td>Live Server browser mein page open karta hai. Save karte hi changes quickly browser mein reflect hote hain.</td>
+          <td>Browser mein local page open hoga.</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Har HTML section likhne ke baad file save karo.</td>
+          <td>Save karna zaroori hai. Agar save nahi karenge toh browser old output hi show karega.</td>
+          <td>Browser mein newly added content show hoga.</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>CSS likhne ke baad browser output compare karo.</td>
+          <td>Students ko plain HTML vs styled CSS ka difference visibly samjhao.</td>
+          <td>Page gradually professional landing page jaisa dikhega.</td>
+        </tr>
+      </table>
+      <div class="note">Teaching point: Project ko ek saath copy-paste mat karwana. Pehle header likhwao and output dikhao, phir hero likhwao, phir destinations. CSS bhi step-by-step add karna. Isse learners ko har change ka visual impact samajh aayega.</div>
+
+      <h2>Project Build Roadmap</h2>
+      <p>Is roadmap ko class ke starting mein dikha do. Learners ko pata rahega ki hum kis order mein project build karenge.</p>
+      <table>
+        <tr>
+          <th>Phase</th>
+          <th>Hum Kya Add Karenge?</th>
+          <th>Browser Mein Kya Dikhega?</th>
+        </tr>
+        <tr>
+          <td>Phase 1</td>
+          <td>Basic HTML skeleton</td>
+          <td>Blank page with correct browser title.</td>
+        </tr>
+        <tr>
+          <td>Phase 2</td>
+          <td>Header and navbar</td>
+          <td>Top par SkyTrip Travel logo and links.</td>
+        </tr>
+        <tr>
+          <td>Phase 3</td>
+          <td>Hero section</td>
+          <td>Main heading, paragraph, button, and booking card.</td>
+        </tr>
+        <tr>
+          <td>Phase 4</td>
+          <td>Destination cards</td>
+          <td>Manali, Goa, Jaipur cards.</td>
+        </tr>
+        <tr>
+          <td>Phase 5</td>
+          <td>Packages and contact section</td>
+          <td>Benefits list and contact button.</td>
+        </tr>
+        <tr>
+          <td>Phase 6</td>
+          <td>CSS styling</td>
+          <td>Colors, spacing, cards, grid, button, and responsive design.</td>
+        </tr>
+      </table>
 
       <h2>Step 1: Basic HTML Structure</h2>
       <p>Sabse pehle HTML ka basic skeleton likhenge. Skeleton ka matlab page ki basic body. Iske bina browser ko page ka structure properly samajh nahi aata.</p>
