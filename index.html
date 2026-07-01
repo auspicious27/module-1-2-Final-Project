@@ -330,63 +330,63 @@
         </tr>
         <tr>
           <td><code>&lt;!DOCTYPE html&gt;</code></td>
-          <td>Browser ko batata hai ki file HTML5 document hai. Har HTML page ke top par ye line likhna best practice hai.</td>
+          <td>Yeh line browser ko batati hai ki yeh file modern HTML5 document hai. Story type samjho: browser ek reader hai, aur yeh line usko pehle hi bata deti hai ki "is page ko latest HTML rules ke hisaab se read karo." Agar yeh line na ho toh browser kabhi-kabhi old/quirks mode mein page render kar sakta hai. Class mein bolna: har HTML file ki entry gate line yahi hoti hai.</td>
         </tr>
         <tr>
           <td><code>&lt;html lang="en"&gt;</code></td>
-          <td>HTML document yahan se start hota hai. <code>lang="en"</code> language English set karta hai.</td>
+          <td>Yahan se complete HTML document start hota hai. <code>lang="en"</code> ka matlab page ki primary language English hai. Real websites mein yeh accessibility aur SEO ke liye useful hota hai, kyunki screen readers ko pata chalta hai ki text ka pronunciation kaise karna hai. Students ko batao: yeh poore page ka outer wrapper hai, jaise notebook ka cover.</td>
         </tr>
         <tr>
           <td><code>&lt;style&gt; ... &lt;/style&gt;</code></td>
-          <td>Internal CSS likhne ke liye use hota hai. Interpreter mini project hai, isliye CSS same file mein rakhi gayi hai taaki learners ko file switching kam karni pade.</td>
+          <td><code>&lt;style&gt;</code> tag ke andar hum CSS rules likhte hain. Is mini interpreter mein CSS same file mein rakhi gayi hai kyunki yeh sirf practice project hai. Real large project mein CSS ko separate <code>styles.css</code> file mein rakhna better hota hai. Yahan purpose hai learners ko jaldi se layout and design ka result dikhana without multiple file confusion.</td>
         </tr>
         <tr>
           <td><code>body { ... }</code></td>
-          <td>Complete page ka base design set karta hai, jaise margin, font, background, and text color.</td>
+          <td><code>body</code> complete visible page ka main area hota hai. Is rule mein hum page ka default margin remove karte hain, font set karte hain, background color dete hain, aur text color decide karte hain. Story: body website ka canvas hai. Agar canvas clean hoga toh editor aur preview dono clean dikhenge.</td>
         </tr>
         <tr>
           <td><code>.app { display: grid; grid-template-columns: 1fr 1fr; }</code></td>
-          <td>Main app ko two columns mein divide karta hai. Left column code editor ke liye, right column preview ke liye. <code>1fr 1fr</code> ka matlab dono equal width lenge.</td>
+          <td><code>.app</code> main wrapper hai jiske andar textarea aur iframe rakhe hain. <code>display: grid</code> us wrapper ko grid layout bana deta hai. <code>grid-template-columns: 1fr 1fr</code> ka matlab page do equal parts mein divide hoga: left side code editor, right side live preview. Isse learners ko side-by-side comparison milta hai.</td>
         </tr>
         <tr>
           <td><code>textarea, iframe { ... }</code></td>
-          <td>Textarea and iframe dono ko same width, height, border, and rounded corners deta hai. Isse editor and preview visually balanced dikhenge.</td>
+          <td>Yeh group selector hai. <code>textarea</code> aur <code>iframe</code> dono par same basic style apply karta hai. Dono ki width 100%, minimum height 300px, border, and rounded corners same rahenge. Isse editor aur preview balanced pair ki tarah dikhte hain. Agar yeh common styling na ho toh ek box bada, ek chhota, ya uneven lag sakta hai.</td>
         </tr>
         <tr>
           <td><code>&lt;textarea id="htmlInput"&gt;...&lt;/textarea&gt;</code></td>
-          <td>Textarea ek multi-line input box hai. Students yahan HTML code type karenge. <code>id="htmlInput"</code> JavaScript ko is textarea ko find karne mein help karta hai.</td>
+          <td><code>textarea</code> ek multi-line input box hota hai. Students isme HTML tags type karenge, jaise <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>. <code>id="htmlInput"</code> is box ka unique naam hai. JavaScript isi id ki help se textarea ko find karegi aur uske andar likha code read karegi.</td>
         </tr>
         <tr>
           <td><code>&lt;iframe id="previewFrame"&gt;&lt;/iframe&gt;</code></td>
-          <td>Iframe page ke andar ek mini browser jaisa hota hai. Typed HTML ka final output isi iframe ke andar render hoga.</td>
+          <td><code>iframe</code> page ke andar ek mini browser window jaisa hota hai. Jo HTML learner textarea mein type karega, uska output iframe ke andar dikhega. Isse main notes page disturb nahi hota aur preview separate safe area mein render hota hai. <code>id="previewFrame"</code> JavaScript ke liye iframe ka address hai.</td>
         </tr>
         <tr>
           <td><code>&lt;script&gt; ... &lt;/script&gt;</code></td>
-          <td>JavaScript code likhne ke liye use hota hai. Yahi part textarea ka code preview iframe mein bhejega.</td>
+          <td><code>&lt;script&gt;</code> tag ke andar JavaScript likhte hain. HTML structure bana deta hai, CSS design deta hai, aur JavaScript behavior add karta hai. Is interpreter mein JavaScript ka kaam hai: textarea se code lena aur iframe mein live preview dikhana.</td>
         </tr>
         <tr>
           <td><code>const htmlInput = document.getElementById('htmlInput');</code></td>
-          <td>JavaScript textarea ko find karke variable mein store karti hai. Ab hum textarea mein likha code read kar sakte hain.</td>
+          <td>Yeh line document ke andar se <code>htmlInput</code> id wala textarea find karti hai. <code>const htmlInput</code> variable mein us element ko store kar leti hai. Story: JavaScript ko pehle editor box ka address chahiye, tabhi woh usme likha HTML read kar paayegi.</td>
         </tr>
         <tr>
           <td><code>const previewFrame = document.getElementById('previewFrame');</code></td>
-          <td>JavaScript iframe ko find karke variable mein store karti hai. Ab hum iframe ke andar output set kar sakte hain.</td>
+          <td>Yeh line <code>previewFrame</code> id wala iframe find karti hai aur usko variable mein store karti hai. Ab JavaScript ke paas preview window ka address hai, jahan woh output inject karegi. Agar id spelling wrong ho, toh preview update nahi hoga.</td>
         </tr>
         <tr>
           <td><code>function updatePreview() { ... }</code></td>
-          <td>Function ek reusable block hai. Jab bhi textarea change hoga, ye function preview update karega.</td>
+          <td>Function ek reusable instruction block hota hai. <code>updatePreview</code> ka kaam hai textarea ke current HTML ko iframe mein dikhana. Jab bhi learner code badlega, isi function ko dobara chalaya jayega. Students ko batao: function ek button jaisa hai, jisko call karte hi ek fixed kaam hota hai.</td>
         </tr>
         <tr>
           <td><code>previewFrame.srcdoc = htmlInput.value;</code></td>
-          <td>Yeh sabse important line hai. <code>htmlInput.value</code> textarea ka current HTML code leta hai. <code>srcdoc</code> iframe ke andar us HTML ko render karta hai.</td>
+          <td>Yeh interpreter ki main working line hai. <code>htmlInput.value</code> textarea ke andar likha hua current code leta hai. <code>previewFrame.srcdoc</code> iframe ke andar direct HTML content set karta hai. Matlab jo code left side likha, woh right side mini browser mein render ho gaya. Agar yeh line na ho toh interpreter ka preview kabhi update nahi hoga.</td>
         </tr>
         <tr>
           <td><code>htmlInput.addEventListener('input', updatePreview);</code></td>
-          <td>Input event listen karta hai. Jab learner textarea mein type karega, function automatically chalega aur preview update hoga.</td>
+          <td>Yeh line textarea par <code>input</code> event listen karti hai. Input event tab hota hai jab user type kare, delete kare, paste kare, ya content change kare. Jaise hi change hota hai, <code>updatePreview</code> function automatically run hota hai. Isi se live preview real-time lagta hai.</td>
         </tr>
         <tr>
           <td><code>updatePreview();</code></td>
-          <td>Page load hote hi preview ko first time update karta hai. Is line se default sample HTML ka output immediately dikh jaata hai.</td>
+          <td>Yeh line page load hote hi function ko manually ek baar run karti hai. Isse textarea ke andar jo default sample HTML diya hai, uska output immediately preview mein dikh jaata hai. Agar yeh line remove kar do, toh preview blank rahega jab tak learner kuch type na kare.</td>
         </tr>
       </table>
 
@@ -397,6 +397,7 @@
   index.html
   styles.css</code></pre>
       <div class="note">Separation reminder: <code>live-interpreter.html</code> interpreter practice ke liye tha. Travel Landing Page ke andar live interpreter ka textarea, iframe, or JavaScript code add nahi karna.</div>
+      <div class="note">Code explanation ka reading pattern: Har code line ko 4 angle se samjhao: pehle line ka simple meaning, phir real website mein kyu use hoti hai, phir browser output mein kya change dikhega, aur last mein agar line missing/wrong ho toh kya issue aayega. Isse learners sirf code yaad nahi karenge, balki reason ke saath samjhenge.</div>
       <p>Is roadmap ko travel project start karte time dikha do. Learners ko pata rahega ki hum kis order mein landing page build karenge.</p>
       <table>
         <tr>
@@ -457,35 +458,35 @@
         </tr>
         <tr>
           <td><code>&lt;!DOCTYPE html&gt;</code></td>
-          <td>Browser ko batata hai ki yeh HTML5 document hai. Is line ko top par likhna zaroori hota hai taaki browser modern HTML rules follow kare.</td>
+          <td>Yeh line browser ko batati hai ki yeh HTML5 document hai. Story type samjho: browser ek visitor hai aur yeh line usko entry par bata deti hai ki page ko modern HTML rules ke hisaab se read karna hai. Isko top par likhna zaroori hota hai. Agar yeh missing ho toh browser old rendering mode use kar sakta hai.</td>
         </tr>
         <tr>
           <td><code>&lt;html lang="en"&gt;</code></td>
-          <td>Complete HTML document yahan se start hota hai. <code>lang="en"</code> page ki language English set karta hai. Screen readers and SEO ke liye useful hai.</td>
+          <td>Complete HTML document yahan se start hota hai. Yeh poore page ka outer container hai. <code>lang="en"</code> page ki language English set karta hai. Real websites mein yeh accessibility ke liye important hai, kyunki screen reader English pronunciation follow kar sakta hai. SEO ke liye bhi useful signal hota hai.</td>
         </tr>
         <tr>
           <td><code>&lt;head&gt;</code></td>
-          <td>Head section browser ke liye information rakhta hai. Yeh information page par direct visible nahi hoti, but browser ko page handle karne mein help karti hai.</td>
+          <td><code>head</code> section page ka backstage area hai. Yahan woh information hoti hai jo user ko direct page par nahi dikhti, lekin browser ke liye important hoti hai: character encoding, mobile viewport, page title, and CSS link. Students ko batao: body stage hai, head backstage control room hai.</td>
         </tr>
         <tr>
           <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
-          <td>Text encoding set karta hai. Isse normal letters, numbers, and symbols properly show hote hain.</td>
+          <td>Yeh line text encoding set karti hai. <code>UTF-8</code> most common encoding hai jo English letters, numbers, symbols, and many special characters ko properly show karne mein help karta hai. Agar encoding issue ho toh text strange symbols mein dikh sakta hai.</td>
         </tr>
         <tr>
           <td><code>&lt;meta name="viewport"...&gt;</code></td>
-          <td>Mobile responsive design ke liye important line hai. Yeh browser ko bolti hai ki page device width ke according scale karo.</td>
+          <td>Yeh mobile responsive design ke liye very important line hai. Iska meaning hai: browser page ko device ki actual width ke according render kare. Agar yeh line missing ho toh mobile par page zoomed-out ya desktop-size layout jaisa dikhega. Class mein mobile preview dikhate time is line ko highlight karna.</td>
         </tr>
         <tr>
           <td><code>&lt;title&gt;SkyTrip Travel&lt;/title&gt;</code></td>
-          <td>Browser tab ka title set karta hai. Jab page open hoga tab tab mein SkyTrip Travel dikhega.</td>
+          <td>Yeh browser tab ka title set karta hai. Jab user page open karega, tab browser tab mein <code>SkyTrip Travel</code> dikhega. Real websites mein title search results and bookmarks mein bhi useful hota hai. Yeh page ki identity batata hai.</td>
         </tr>
         <tr>
           <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
-          <td>HTML file ko CSS file se connect karta hai. Agar yeh line missing hogi ya file name wrong hoga, toh CSS design apply nahi hoga.</td>
+          <td>Yeh line HTML file ko external CSS file se connect karti hai. <code>href="styles.css"</code> ka matlab hai CSS file same folder mein honi chahiye. Agar file ka naam galat hua ya link missing hua, toh HTML content dikhega but design apply nahi hoga. Beginners ki common mistake yahi hoti hai.</td>
         </tr>
         <tr>
           <td><code>&lt;body&gt;</code></td>
-          <td>Visible website content yahan se start hota hai. Header, hero, cards, footer sab body ke andar likhenge.</td>
+          <td>Visible website content yahan se start hota hai. Jo kuch browser screen par dikhega, jaise header, hero text, destination cards, buttons, package list, footer, sab body ke andar likhenge. Head browser ke liye tha, body user ke liye hoti hai.</td>
         </tr>
       </table>
 
@@ -508,31 +509,31 @@
         </tr>
         <tr>
           <td><code>&lt;header class="site-header"&gt;</code></td>
-          <td>Header website ka top section hai. <code>site-header</code> class CSS mein header ka background, border, and sticky behavior set karegi.</td>
+          <td>Header website ka top section hai. Real travel website mein yahan agency ka name/logo and navigation links hote hain. <code>site-header</code> class CSS mein header ka white background, bottom border, and sticky top behavior set karegi. Isse user page scroll kare tab bhi navigation accessible rahe sakti hai.</td>
         </tr>
         <tr>
           <td><code>&lt;div class="container navbar"&gt;</code></td>
-          <td>Ek div par two classes hain. <code>container</code> content ko center and limited width mein rakhega. <code>navbar</code> logo and links ko Flexbox se arrange karega.</td>
+          <td>Yeh wrapper div hai jisme logo and nav links rakhe gaye hain. Ek hi div par two classes di gayi hain. <code>container</code> page content ko center and limited width mein rakhega. <code>navbar</code> CSS Flexbox use karke logo ko left and links ko right side arrange karega. Multiple classes professional CSS pattern hai.</td>
         </tr>
         <tr>
           <td><code>&lt;h1 class="logo"&gt;SkyTrip Travel&lt;/h1&gt;</code></td>
-          <td>Website ka brand name hai. Real travel website mein yahi company ka logo/name hota hai. CSS se iska blue color and size set hoga.</td>
+          <td>Yeh website ka brand name hai. Real travel agency website mein yahi logo ya company name hota hai. <code>h1</code> important heading hoti hai, lekin is project mein brand identity ke liye use kar rahe hain. <code>logo</code> class se iska blue color, size, and spacing control hoga.</td>
         </tr>
         <tr>
           <td><code>&lt;nav class="nav-links"&gt;</code></td>
-          <td>Navigation links ka semantic area hai. Browser and screen readers ko samajh aata hai ki is area mein page navigation links hain.</td>
+          <td><code>nav</code> semantic tag hai jo batata hai ki is area mein navigation links hain. Screen readers aur browser dono ke liye meaningful hai. Real websites mein navigation user ko important sections tak quickly le jaati hai. Yahan Destinations, Packages, Contact links rakhe hain.</td>
         </tr>
         <tr>
           <td><code>&lt;a href="#destinations"&gt;Destinations&lt;/a&gt;</code></td>
-          <td>Same page ke <code>id="destinations"</code> section par le jaane wala link hai. Yeh one-page website navigation ka common pattern hai.</td>
+          <td>Yeh same page ke <code>id="destinations"</code> section par le jaane wala link hai. <code>#destinations</code> ka matlab browser page mein us id wale section ko search karega and wahan scroll karega. One-page landing pages mein yeh pattern bahut common hai.</td>
         </tr>
         <tr>
           <td><code>&lt;a href="#packages"&gt;Packages&lt;/a&gt;</code></td>
-          <td>User ko packages section tak le jaata hai. Travel website mein packages important selling section hota hai.</td>
+          <td>Yeh link user ko packages section tak le jaata hai. Travel business mein packages important selling area hota hai, kyunki user wahi dekhna chahta hai ki service mein kya-kya milega. Agar id spelling match nahi karegi toh link kaam nahi karega.</td>
         </tr>
         <tr>
           <td><code>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</code></td>
-          <td>User ko contact section tak le jaata hai, jahan woh travel guide se connect kar sakta hai.</td>
+          <td>Yeh link user ko contact section tak le jaata hai. Landing page ka final goal contact ya inquiry hota hai. Isliye Contact link navigation mein clear visible hona chahiye. User ko agency se connect karne ka shortest path milta hai.</td>
         </tr>
       </table>
 
@@ -563,43 +564,43 @@
         </tr>
         <tr>
           <td><code>&lt;main&gt;</code></td>
-          <td>Page ka main content start hota hai. Header and footer ke beech ka primary content main tag ke andar rakhte hain.</td>
+          <td><code>main</code> tag page ke primary content ko represent karta hai. Header navigation ke liye hota hai, footer closing info ke liye hota hai, aur beech ka main useful content <code>main</code> ke andar aata hai. Accessibility ke liye bhi helpful hai, kyunki screen readers directly main content par jump kar sakte hain.</td>
         </tr>
         <tr>
           <td><code>&lt;section class="hero"&gt;</code></td>
-          <td>Hero section website ka main introduction section hai. CSS se isko gradient background and large spacing milegi.</td>
+          <td>Hero section landing page ka first impression hota hai. Jaise shop ke bahar board customer ko attract karta hai, waise hero section user ko immediately batata hai ki website kya offer kar rahi hai. CSS se isko gradient background, spacing, and layout milega.</td>
         </tr>
         <tr>
           <td><code>&lt;div class="container hero-grid"&gt;</code></td>
-          <td>Hero content ko center width mein rakhta hai and Grid layout apply karne ke liye class deta hai. Desktop par left text and right card dikhega.</td>
+          <td>Yeh hero section ka layout wrapper hai. <code>container</code> content ko center and limited width mein rakhta hai. <code>hero-grid</code> CSS Grid apply karega jisse desktop par left side text and right side booking card dikhega. Yeh modern landing page layout pattern hai.</td>
         </tr>
         <tr>
           <td><code>&lt;div class="hero-content"&gt;</code></td>
-          <td>Hero ke left side text content ka wrapper hai. Isme tagline, heading, paragraph, and button rakha gaya hai.</td>
+          <td>Yeh left side content ka group hai. Iske andar tagline, heading, description, and button hai. Group banane ka benefit yeh hai ki CSS se poore text block ko ek saath style/position kar sakte hain. Real website mein this is the marketing message area.</td>
         </tr>
         <tr>
           <td><code>&lt;p class="tagline"&gt;...&lt;/p&gt;</code></td>
-          <td>Small highlight line hai. Real landing pages mein tagline user ko mood and topic quickly batati hai.</td>
+          <td>Tagline ek short highlight line hoti hai. Yeh user ko mood set karke batati hai ki website kis vibe ki hai. <code>Explore the world with confidence</code> trust and travel feel deta hai. CSS mein isko uppercase, blue, and bold banayenge taaki heading se pehle attention aaye.</td>
         </tr>
         <tr>
           <td><code>&lt;h2&gt;Plan your next holiday...&lt;/h2&gt;</code></td>
-          <td>Main hero heading hai. Yeh user ko clearly batati hai ki website kis cheez ke baare mein hai.</td>
+          <td>Yeh hero section ki main heading hai. Landing page mein heading sabse important text hota hai, kyunki user 2-3 seconds mein decide karta hai page relevant hai ya nahi. Yeh line clear promise deti hai: simple and affordable holiday packages.</td>
         </tr>
         <tr>
           <td><code>&lt;p class="hero-description"&gt;...&lt;/p&gt;</code></td>
-          <td>Heading ko support karne wala paragraph hai. Isme audience and service detail simple words mein di gayi hai.</td>
+          <td>Yeh supporting paragraph heading ko detail deta hai. Isme bataya gaya hai ki SkyTrip families, students, and working professionals ko help karta hai. Real-world use: heading attention grab karti hai, paragraph trust and clarity deta hai.</td>
         </tr>
         <tr>
           <td><code>&lt;a class="primary-button" href="#packages"&gt;View Packages&lt;/a&gt;</code></td>
-          <td>Call-to-action button hai. HTML mein link hai, but CSS se button jaisa dikhega. Click par packages section tak jayega.</td>
+          <td>Yeh call-to-action link hai. HTML mein yeh anchor tag hai, lekin CSS se button jaisa dikhega. <code>href="#packages"</code> user ko packages section tak le jaata hai. Landing page mein CTA button very important hota hai because it guides user to next action.</td>
         </tr>
         <tr>
           <td><code>&lt;div class="booking-card"&gt;</code></td>
-          <td>Hero ke right side offer card hai. Isme quick trip plan and starting price show hota hai.</td>
+          <td>Booking card hero section ka right side information block hai. Isme quick plan and starting price show hota hai. Real travel website mein aise cards user ko immediately offer summary dete hain. CSS se isko white card, border, rounded corners, and shadow milegi.</td>
         </tr>
         <tr>
           <td><code>&lt;strong&gt;Starting from Rs. 9,999&lt;/strong&gt;</code></td>
-          <td>Price important information hai, isliye <code>strong</code> tag use kiya. Browser isko bold show karega.</td>
+          <td>Price important information hai, isliye <code>strong</code> tag use kiya. Browser default bold show karta hai. Students ko batao: jab kisi text ko importance deni ho, jaise price, warning, or key point, tab <code>strong</code> useful hota hai.</td>
         </tr>
       </table>
 
@@ -624,31 +625,31 @@
         </tr>
         <tr>
           <td><code>&lt;section id="destinations" class="section"&gt;</code></td>
-          <td>Destinations section start hota hai. <code>id</code> navbar link ke liye hai and <code>section</code> class common spacing ke liye.</td>
+          <td>Destinations section start hota hai. <code>id="destinations"</code> navbar ke link se connect hota hai. <code>class="section"</code> common spacing ke liye use hoti hai. Real website mein har major content block ko section banana readable and structured approach hai.</td>
         </tr>
         <tr>
           <td><code>&lt;h2&gt;Popular Destinations&lt;/h2&gt;</code></td>
-          <td>Section heading hai. User ko pata chal jaata hai ki neeche destination cards hain.</td>
+          <td>Yeh section ka heading hai. User ko immediately pata chal jaata hai ki neeche popular places listed hain. Headings page ko scan karne mein help karti hain, especially jab user quickly information dhoondh raha ho.</td>
         </tr>
         <tr>
           <td><code>&lt;div class="destination-grid"&gt;</code></td>
-          <td>Cards ka parent wrapper hai. CSS Grid se desktop par 3 cards ek row mein arrange honge.</td>
+          <td>Yeh cards ka parent wrapper hai. Is class par CSS Grid apply hogi. Desktop par Manali, Goa, Jaipur cards ek row mein 3 columns mein dikhenge. Agar yeh wrapper na ho toh cards normal block flow mein one-by-one aa sakte hain.</td>
         </tr>
         <tr>
           <td><code>&lt;article class="destination-card"&gt;</code></td>
-          <td>Har destination ek independent information block hai, isliye article semantic tag use karna meaningful hai.</td>
+          <td>Har destination card apne aap mein complete information block hai: image area, title, and description. Isliye <code>article</code> semantic tag meaningful hai. Students ko batao: agar content independently samajh aa sakta hai, article use kar sakte hain.</td>
         </tr>
         <tr>
           <td><code>&lt;div class="card-image mountains"&gt;&lt;/div&gt;</code></td>
-          <td>Image placeholder block hai. Is project mein real image ke jagah CSS gradient use karenge taaki setup simple rahe.</td>
+          <td>Yeh image placeholder block hai. Is project mein actual image file use nahi kar rahe, kyunki beginners ke liye path/image setup confusing ho sakta hai. CSS gradient se visual image-like block banayenge. <code>mountains</code> class se mountain card ka color theme set hoga.</td>
         </tr>
         <tr>
           <td><code>&lt;h3&gt;Manali&lt;/h3&gt;</code></td>
-          <td>Card ka title hai. Similar cards mein Goa and Jaipur names use honge.</td>
+          <td>Yeh card ka title hai. <code>h3</code> use kiya kyunki section heading <code>h2</code> hai, aur card heading uske neeche sub-heading hai. Heading order maintain karna semantic HTML ke liye important hai.</td>
         </tr>
         <tr>
           <td><code>&lt;p&gt;Perfect for mountains...&lt;/p&gt;</code></td>
-          <td>Destination ka short description hai. User ko quickly idea milta hai ki place kis type ke trip ke liye best hai.</td>
+          <td>Yeh destination ka short description hai. Isme user ko quickly idea milta hai ki Manali kis type ke trip ke liye best hai. Real travel cards mein short descriptions user ko compare karne mein help karte hain.</td>
         </tr>
       </table>
 
@@ -681,23 +682,23 @@
         </tr>
         <tr>
           <td><code>&lt;section id="packages"...&gt;</code></td>
-          <td>Packages section start hota hai. Navbar and hero button isi section par scroll kar sakte hain.</td>
+          <td>Packages section start hota hai. Navbar ka Packages link aur hero ka View Packages button user ko isi section par la sakte hain. Landing page mein packages section selling point hota hai, jahan user ko service benefits clear hote hain.</td>
         </tr>
         <tr>
           <td><code>&lt;ul class="package-list"&gt;</code></td>
-          <td>Benefits ko bullet list form mein dikhata hai. Short points ke liye list best hoti hai.</td>
+          <td><code>ul</code> unordered list start karta hai. Package benefits short points hain, isliye bullet list best hai. Paragraph mein benefits likhne se user ko scan karna mushkil hota, list se information clear and quick dikhti hai.</td>
         </tr>
         <tr>
           <td><code>&lt;li&gt;Budget-friendly hotel suggestions&lt;/li&gt;</code></td>
-          <td>Ek package benefit item hai. Har <code>li</code> ek separate bullet point show karta hai.</td>
+          <td><code>li</code> ek list item hota hai. Har benefit separate bullet point mein show hota hai. Real packages mein users quickly check karte hain ki hotel, transport, guide support included hai ya nahi, isliye list format useful hai.</td>
         </tr>
         <tr>
           <td><code>&lt;section id="contact"...&gt;</code></td>
-          <td>Contact section final call-to-action area hai. User yahan se agency ko email kar sakta hai.</td>
+          <td>Contact section final call-to-action area hai. Landing page ka goal hota hai user ko final action tak le jaana. Yahan user travel agency ko email kar sakta hai. Is section ko clear and centered rakhna conversion ke liye useful hota hai.</td>
         </tr>
         <tr>
           <td><code>href="mailto:hello@skytrip.com"</code></td>
-          <td>Email link create karta hai. Click karne par user's email app open ho sakta hai.</td>
+          <td><code>mailto:</code> email link create karta hai. Jab user click karega, device ka default email app open ho sakta hai with this email address. Real websites mein contact button ke liye mailto simple option hota hai, especially beginner HTML projects mein.</td>
         </tr>
       </table>
 
@@ -720,31 +721,31 @@ body {
         </tr>
         <tr>
           <td><code>*</code></td>
-          <td>Universal selector hai. Page ke saare elements ko target karta hai.</td>
+          <td><code>*</code> universal selector hai. Iska matlab page ke saare HTML elements target honge: heading, paragraph, div, links, cards, sab. Is project mein hum ise reset style ke liye use kar rahe hain. Students ko batao: yeh ek global rule hai, isliye carefully use karna chahiye.</td>
         </tr>
         <tr>
           <td><code>box-sizing: border-box;</code></td>
-          <td>Padding and border ko element width ke andar count karta hai. Isse layout calculation easy hoti hai.</td>
+          <td>Yeh property padding and border ko element ki total width ke andar count karti hai. Example: agar card width 300px hai aur padding add karo, toh card unexpectedly 340px nahi banega. Beginners ke layout issues ka common fix yahi hai. Isse cards and grids predictable behave karte hain.</td>
         </tr>
         <tr>
           <td><code>margin: 0;</code></td>
-          <td>Browser ka default body margin remove karta hai. Page clean edge se start hota hai.</td>
+          <td>Browser body par default margin deta hai, jisse page ke around unwanted white gap dikhta hai. <code>margin: 0</code> us default gap ko remove karta hai. Landing page mein header screen ke top se clean start hona chahiye, isliye yeh important hai.</td>
         </tr>
         <tr>
           <td><code>font-family: Arial, Helvetica, sans-serif;</code></td>
-          <td>Website ka font set karta hai. Arial simple and readable hai, beginners ke project ke liye perfect.</td>
+          <td>Yeh page ka default font set karta hai. Browser pehle Arial use karega, agar Arial available nahi toh Helvetica, aur last mein generic sans-serif. Real websites mein readable fonts important hote hain, kyunki user content easily read karna chahta hai.</td>
         </tr>
         <tr>
           <td><code>color: #123047;</code></td>
-          <td>Default text color dark blue set karta hai. Travel theme ke saath calm and professional feel deta hai.</td>
+          <td>Yeh complete page ka default text color set karta hai. Dark blue travel website ke liye calm, trustworthy, and professional feel deta hai. Agar color set na karein toh browser default black use karega, jo kabhi-kabhi design theme se match nahi karta.</td>
         </tr>
         <tr>
           <td><code>background: #f4f8fb;</code></td>
-          <td>Page ka light background set karta hai. White cards is background par clearly visible honge.</td>
+          <td>Yeh page ka overall background light blue-gray set karta hai. Travel website mein light background open sky/clean journey jaisa feel deta hai. White cards is background par clearly pop out honge, jisse sections readable banenge.</td>
         </tr>
         <tr>
           <td><code>line-height: 1.6;</code></td>
-          <td>Text lines ke beech spacing badhata hai. Paragraphs easy to read ho jaate hain.</td>
+          <td><code>line-height</code> text ki lines ke beech vertical spacing control karta hai. <code>1.6</code> ka matlab normal se thoda zyada spacing. Paragraphs breathe karte hain aur learners/user ko read karna easy lagta hai. Dense text website ko heavy bana deta hai.</td>
         </tr>
       </table>
 
@@ -781,39 +782,39 @@ body {
         </tr>
         <tr>
           <td><code>.container</code></td>
-          <td>Common wrapper class hai. Content ko center and readable width mein rakhta hai. Real websites mein container very common hota hai.</td>
+          <td><code>.container</code> ek reusable wrapper class hai. Iska kaam content ko screen ke center mein rakhna aur maximum width limit karna hai. Real websites mein container class har section mein use hoti hai, taaki content ultra-wide screens par too stretched na lage.</td>
         </tr>
         <tr>
           <td><code>width: 90%;</code></td>
-          <td>Container screen ka 90 percent width lega. Isse left-right side mein safe spacing rahegi.</td>
+          <td>Container screen width ka 90 percent lega. Isse mobile and desktop dono par left-right side mein safe breathing space milti hai. Agar width 100% hoti toh content screen edges se chipak sakta tha.</td>
         </tr>
         <tr>
           <td><code>max-width: 1120px;</code></td>
-          <td>Large screens par content ko zyada wide hone se rokta hai. Reading comfortable hoti hai.</td>
+          <td><code>max-width</code> large screens par content ko limit karta hai. Example: 4K monitor par bhi content 1120px se zyada wide nahi hoga. Isse reading comfortable hoti hai aur layout professional lagta hai.</td>
         </tr>
         <tr>
           <td><code>display: flex;</code></td>
-          <td>Navbar items ko row mein arrange karta hai. Logo and links side-by-side aa jaate hain.</td>
+          <td><code>display: flex</code> navbar ko Flexbox container banata hai. Iske child elements, jaise logo and nav links, ek row mein arrange ho jaate hain. Navbar alignment ke liye Flexbox simplest and powerful option hai.</td>
         </tr>
         <tr>
           <td><code>justify-content: space-between;</code></td>
-          <td>Logo ko left side and nav links ko right side push karta hai.</td>
+          <td>Yeh Flexbox property available horizontal space ko items ke beech distribute karti hai. Logo left side chipka rahega, nav links right side chale jayenge. Real navbar mein brand left and menu right common pattern hai.</td>
         </tr>
         <tr>
           <td><code>display: grid;</code></td>
-          <td>Grid layout start karta hai. Columns and rows banana easy hota hai.</td>
+          <td><code>display: grid</code> element ko CSS Grid container banata hai. Grid tab useful hota hai jab hume columns/rows based layout banana ho. Hero section and destination cards ke liye grid perfect hai because content ko structured columns mein dikhana hai.</td>
         </tr>
         <tr>
           <td><code>grid-template-columns: 1.35fr 0.65fr;</code></td>
-          <td>Hero section mein left text ko zyada width and right card ko kam width deta hai.</td>
+          <td>Yeh hero section ko two columns mein divide karta hai. <code>1.35fr</code> left text ko zyada space deta hai, <code>0.65fr</code> booking card ko kam space. Isse main marketing message prominent hota hai aur offer card supportive role mein dikhta hai.</td>
         </tr>
         <tr>
           <td><code>grid-template-columns: repeat(3, 1fr);</code></td>
-          <td>Destination cards ke liye 3 equal columns banata hai.</td>
+          <td><code>repeat(3, 1fr)</code> ka matlab 3 equal columns banao. Har destination card ko equal width milegi. Real travel websites mein cards equal size ke hon toh comparison easy hota hai and layout balanced dikhta hai.</td>
         </tr>
         <tr>
           <td><code>gap</code></td>
-          <td>Items ke beech spacing add karta hai. Gap se layout clean and readable lagta hai.</td>
+          <td><code>gap</code> grid/flex items ke beech spacing add karta hai. Pehle developers margins use karte the, but gap cleaner and easier hai. Cards ke beech gap na ho toh they look crowded and hard to read.</td>
         </tr>
       </table>
 
@@ -846,27 +847,27 @@ body {
         </tr>
         <tr>
           <td><code>display: inline-block;</code></td>
-          <td>Anchor link ko button box jaisa behave karata hai, jisse padding and shape properly apply hoti hai.</td>
+          <td>Anchor tag normally inline element hota hai. <code>display: inline-block</code> usko text link se button-like box banata hai, jisse padding, margin, width-like behavior properly work karta hai. CTA buttons ke liye yeh common property hai.</td>
         </tr>
         <tr>
           <td><code>background: #0284c7;</code></td>
-          <td>Button ka blue background set karta hai. Travel/water/sky theme ke saath match karta hai.</td>
+          <td>Yeh button ka background blue set karta hai. Travel project mein blue sky/water/trust feel deta hai. CTA button ko background color dene se user ko clearly dikhta hai ki yeh clickable action hai.</td>
         </tr>
         <tr>
           <td><code>border-radius: 999px;</code></td>
-          <td>Button ko pill shape deta hai. Modern landing pages mein rounded buttons common hote hain.</td>
+          <td><code>border-radius: 999px</code> button ko fully rounded pill shape deta hai. Jab radius very high hota hai, corners completely round ho jaate hain. Modern travel and startup landing pages mein aise soft rounded buttons common hote hain.</td>
         </tr>
         <tr>
           <td><code>@media (max-width: 768px)</code></td>
-          <td>Responsive rules start karta hai. Jab screen 768px ya usse kam hogi, tab ye rules apply honge.</td>
+          <td>Media query responsive design ka gate hai. Iska meaning hai: agar screen width 768px ya usse kam ho, toh andar ke CSS rules apply karo. Tablet/mobile screens ke liye layout change karne ka standard method hai.</td>
         </tr>
         <tr>
           <td><code>flex-direction: column;</code></td>
-          <td>Mobile par navbar ko vertical stack karta hai. Logo upar, links neeche aa jaate hain.</td>
+          <td>Desktop par navbar row mein hota hai, but mobile screen chhoti hoti hai. <code>flex-direction: column</code> logo and links ko vertical stack kar deta hai. Isse nav items squeeze nahi hote and readable rehte hain.</td>
         </tr>
         <tr>
           <td><code>grid-template-columns: 1fr;</code></td>
-          <td>Mobile par grid ko one-column layout mein convert karta hai. Cards readable ho jaate hain.</td>
+          <td>Mobile par multiple columns cramped ho jaate hain. <code>grid-template-columns: 1fr</code> grid ko single column bana deta hai. Hero text, booking card, destination cards, package box sab one-by-one stack honge. Yeh mobile-friendly layout ka key rule hai.</td>
         </tr>
       </table>
 
