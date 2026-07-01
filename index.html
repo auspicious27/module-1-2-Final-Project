@@ -180,9 +180,10 @@
       </table>
       <div class="note">Teaching point: Project ko ek saath copy-paste mat karwana. Pehle header likhwao and output dikhao, phir hero likhwao, phir destinations. CSS bhi step-by-step add karna. Isse learners ko har change ka visual impact samajh aayega.</div>
 
-      <h2>Live HTML Interpreter - Class Mein Instant Practice</h2>
-      <p>Is notes page mein ek small live HTML interpreter bhi add kiya gaya hai. Iska use aap class mein starting demo ke liye kar sakte ho. Learners ko dikhao ki left side mein HTML likhne par right side preview mein output turant dikhta hai. Isse unko browser ka behavior quickly samajh aata hai, phir wahi concept VS Code mein implement karwana easy ho jaata hai.</p>
-      <p>Real use case: Jab aap <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, ya <code>&lt;button&gt;</code> explain kar rahe ho, toh pehle interpreter mein chhota code run karke output dikhao. Phir bolo: "Ab isi idea ko hum VS Code ke real project file mein likhenge."</p>
+      <h2>Before Project: Live HTML Interpreter Build Karna Sikhao</h2>
+      <p>Travel landing page start karne se pehle learners ko ek chhota sa <strong>Live HTML Interpreter</strong> build karwana useful rahega. Interpreter ka matlab hota hai ek aisa mini tool jahan user HTML code type kare aur uska output turant side mein preview ho jaye. Isse learners ko instantly samajh aata hai ki HTML tag browser mein kaise render hota hai.</p>
+      <p>Aap class mein aise explain kar sakte ho: "Pehle hum ek mini HTML practice tool banayenge. Left side hum HTML likhenge, right side browser uska output dikhayega. Jab ye samajh aa jayega, tab hum same HTML knowledge use karke Travel Landing Page project start karenge."</p>
+      <div class="note">Important teaching flow: Pehle <code>live-interpreter.html</code> file banwao aur interpreter build karwao. Uske baad naya project file <code>index.html</code> and <code>styles.css</code> se travel landing page start karwao.</div>
 
       <div class="live-lab">
         <div class="lab-panel">
@@ -197,86 +198,172 @@
         </div>
       </div>
 
-      <h3>Live Interpreter Ko Kaise Use Karna Hai?</h3>
+      <h3>Live HTML Interpreter Build Karne Ka Complete Code</h3>
+      <p>Is code ko learners se VS Code mein <code>live-interpreter.html</code> file ke andar likhwao. Yeh ek single-file mini project hai, isliye isme HTML, CSS, and JavaScript teeno ek hi file mein rakhe gaye hain. Isse beginners ko setup easy lagega.</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Live HTML Interpreter&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f8fb;
+      color: #123047;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    textarea,
+    iframe {
+      width: 100%;
+      min-height: 300px;
+      border: 1px solid #d8e8f2;
+      border-radius: 10px;
+    }
+
+    textarea {
+      background: #0f172a;
+      color: #e5e7eb;
+      font-family: Consolas, monospace;
+      padding: 16px;
+    }
+
+    iframe {
+      background: #ffffff;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Live HTML Interpreter&lt;/h1&gt;
+
+  &lt;div class="app"&gt;
+    &lt;textarea id="htmlInput"&gt;&lt;h2&gt;Hello Students&lt;/h2&gt;
+&lt;p&gt;This is live HTML preview.&lt;/p&gt;&lt;/textarea&gt;
+
+    &lt;iframe id="previewFrame"&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    const htmlInput = document.getElementById('htmlInput');
+    const previewFrame = document.getElementById('previewFrame');
+
+    function updatePreview() {
+      previewFrame.srcdoc = htmlInput.value;
+    }
+
+    htmlInput.addEventListener('input', updatePreview);
+    updatePreview();
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <h3>Is Code Ko VS Code Mein Kaise Implement Karna Hai?</h3>
       <table>
         <tr>
-          <th>Step</th>
-          <th>Action</th>
-          <th>Explanation</th>
+          <th>Kab?</th>
+          <th>Kya Karna Hai?</th>
+          <th>Students Ko Kya Batana Hai?</th>
         </tr>
         <tr>
-          <td>1</td>
-          <td>Left side textarea mein HTML code type karo.</td>
-          <td>Textarea ek practice editor jaisa kaam karega. Students yahan small HTML snippets try kar sakte hain.</td>
+          <td>Project start karne se pehle</td>
+          <td>VS Code mein <code>live-interpreter.html</code> file banao.</td>
+          <td>Ye mini practice tool hai. Iske baad hum actual travel landing page start karenge.</td>
         </tr>
         <tr>
-          <td>2</td>
-          <td>Right side preview dekho.</td>
-          <td>Iframe browser ke andar ek mini browser jaisa hota hai. Yeh typed HTML ka output show karega.</td>
+          <td>File banane ke baad</td>
+          <td>Upar wala complete interpreter code paste/write karo.</td>
+          <td>Is single file mein structure, design, and logic teeno hain. Beginners ko pehle ek file mein concept samjhana easy hota hai.</td>
         </tr>
         <tr>
-          <td>3</td>
-          <td>Heading, paragraph, link, list change karke experiment karo.</td>
-          <td>Students ko turant visual feedback milega. Yeh beginner confidence build karta hai.</td>
+          <td>Code likhne ke baad</td>
+          <td>File save karo and Live Server se open karo.</td>
+          <td>Browser mein left side editor and right side preview dikhega.</td>
         </tr>
         <tr>
-          <td>4</td>
-          <td>Same code ko VS Code ke <code>index.html</code> mein likhwao.</td>
-          <td>Interpreter quick practice ke liye hai. Real project implementation VS Code files mein hi karni hai.</td>
+          <td>Output dikhne ke baad</td>
+          <td>Textarea mein <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;ul&gt;</code> tags try karwao.</td>
+          <td>Students ko real-time output dikhega. Isse HTML tags ka behavior quickly clear hoga.</td>
+        </tr>
+        <tr>
+          <td>Interpreter complete hone ke baad</td>
+          <td>Travel project ke liye <code>index.html</code> and <code>styles.css</code> start karo.</td>
+          <td>Ab learners ready hain, kyunki unko samajh aa gaya ki browser HTML ko kaise render karta hai.</td>
         </tr>
       </table>
 
-      <h3>Live Interpreter Code Explanation</h3>
-      <pre><code>&lt;textarea id="htmlInput"&gt;...&lt;/textarea&gt;
-&lt;iframe id="previewFrame"&gt;&lt;/iframe&gt;
-
-&lt;script&gt;
-  const htmlInput = document.getElementById('htmlInput');
-  const previewFrame = document.getElementById('previewFrame');
-
-  function updatePreview() {
-    previewFrame.srcdoc = htmlInput.value;
-  }
-
-  htmlInput.addEventListener('input', updatePreview);
-  updatePreview();
-&lt;/script&gt;</code></pre>
+      <h3>Live HTML Interpreter Code Ka Detailed Explanation</h3>
       <table>
         <tr>
           <th>Code Line</th>
           <th>Detailed Simple Hinglish Explanation</th>
         </tr>
         <tr>
+          <td><code>&lt;!DOCTYPE html&gt;</code></td>
+          <td>Browser ko batata hai ki file HTML5 document hai. Har HTML page ke top par ye line likhna best practice hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;html lang="en"&gt;</code></td>
+          <td>HTML document yahan se start hota hai. <code>lang="en"</code> language English set karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;style&gt; ... &lt;/style&gt;</code></td>
+          <td>Internal CSS likhne ke liye use hota hai. Interpreter mini project hai, isliye CSS same file mein rakhi gayi hai taaki learners ko file switching kam karni pade.</td>
+        </tr>
+        <tr>
+          <td><code>body { ... }</code></td>
+          <td>Complete page ka base design set karta hai, jaise margin, font, background, and text color.</td>
+        </tr>
+        <tr>
+          <td><code>.app { display: grid; grid-template-columns: 1fr 1fr; }</code></td>
+          <td>Main app ko two columns mein divide karta hai. Left column code editor ke liye, right column preview ke liye. <code>1fr 1fr</code> ka matlab dono equal width lenge.</td>
+        </tr>
+        <tr>
+          <td><code>textarea, iframe { ... }</code></td>
+          <td>Textarea and iframe dono ko same width, height, border, and rounded corners deta hai. Isse editor and preview visually balanced dikhenge.</td>
+        </tr>
+        <tr>
           <td><code>&lt;textarea id="htmlInput"&gt;...&lt;/textarea&gt;</code></td>
-          <td>Textarea ek input box hota hai jahan user multiple lines ka text likh sakta hai. Yahan students HTML code type karenge. <code>id="htmlInput"</code> is textarea ko JavaScript se identify karne ke liye diya gaya hai.</td>
+          <td>Textarea ek multi-line input box hai. Students yahan HTML code type karenge. <code>id="htmlInput"</code> JavaScript ko is textarea ko find karne mein help karta hai.</td>
         </tr>
         <tr>
           <td><code>&lt;iframe id="previewFrame"&gt;&lt;/iframe&gt;</code></td>
-          <td>Iframe page ke andar ek mini browser window jaisa hota hai. Hum typed HTML ka output isi iframe mein show karenge. <code>id="previewFrame"</code> JavaScript ko iframe access karne mein help karta hai.</td>
+          <td>Iframe page ke andar ek mini browser jaisa hota hai. Typed HTML ka final output isi iframe ke andar render hoga.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;script&gt; ... &lt;/script&gt;</code></td>
+          <td>JavaScript code likhne ke liye use hota hai. Yahi part textarea ka code preview iframe mein bhejega.</td>
         </tr>
         <tr>
           <td><code>const htmlInput = document.getElementById('htmlInput');</code></td>
-          <td>JavaScript textarea element ko find karke <code>htmlInput</code> variable mein store karti hai. Ab hum textarea ki value read kar sakte hain.</td>
+          <td>JavaScript textarea ko find karke variable mein store karti hai. Ab hum textarea mein likha code read kar sakte hain.</td>
         </tr>
         <tr>
           <td><code>const previewFrame = document.getElementById('previewFrame');</code></td>
-          <td>JavaScript iframe element ko find karke <code>previewFrame</code> variable mein store karti hai. Ab hum iframe ke andar output set kar sakte hain.</td>
+          <td>JavaScript iframe ko find karke variable mein store karti hai. Ab hum iframe ke andar output set kar sakte hain.</td>
         </tr>
         <tr>
           <td><code>function updatePreview() { ... }</code></td>
-          <td>Function reusable code block hota hai. Jab bhi user textarea mein kuch type karega, yeh function preview update karega.</td>
+          <td>Function ek reusable block hai. Jab bhi textarea change hoga, ye function preview update karega.</td>
         </tr>
         <tr>
           <td><code>previewFrame.srcdoc = htmlInput.value;</code></td>
-          <td><code>htmlInput.value</code> textarea ka current code leta hai. <code>srcdoc</code> iframe ke andar direct HTML content set karta hai. Is line ki wajah se typed HTML preview mein render hota hai.</td>
+          <td>Yeh sabse important line hai. <code>htmlInput.value</code> textarea ka current HTML code leta hai. <code>srcdoc</code> iframe ke andar us HTML ko render karta hai.</td>
         </tr>
         <tr>
           <td><code>htmlInput.addEventListener('input', updatePreview);</code></td>
-          <td>Yeh line textarea par input event listen karti hai. Matlab jab user type kare, delete kare, ya code change kare, tab <code>updatePreview</code> function automatically chale.</td>
+          <td>Input event listen karta hai. Jab learner textarea mein type karega, function automatically chalega aur preview update hoga.</td>
         </tr>
         <tr>
           <td><code>updatePreview();</code></td>
-          <td>Page load hote hi preview ko first time update karta hai. Agar yeh line nahi hogi toh default code ka output tab tak nahi dikhega jab tak user type na kare.</td>
+          <td>Page load hote hi preview ko first time update karta hai. Is line se default sample HTML ka output immediately dikh jaata hai.</td>
         </tr>
       </table>
 
