@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #172033;
-  background: #f5f7fb;
+  color: #123047;
+  background: #f4f8fb;
   line-height: 1.6;
 }
 
@@ -23,7 +23,7 @@ a {
 
 .site-header {
   background: #ffffff;
-  border-bottom: 1px solid #dbe2ef;
+  border-bottom: 1px solid #d8e8f2;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -38,7 +38,7 @@ a {
 
 .logo {
   margin: 0;
-  color: #2563eb;
+  color: #0284c7;
   font-size: 24px;
 }
 
@@ -49,23 +49,23 @@ a {
 }
 
 .nav-links a:hover {
-  color: #2563eb;
+  color: #0284c7;
 }
 
 .hero {
-  background: linear-gradient(135deg, #dbeafe, #ffffff);
-  padding: 84px 0;
+  background: linear-gradient(135deg, #dff6ff, #ffffff);
+  padding: 88px 0;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.4fr 0.6fr;
-  gap: 36px;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 34px;
   align-items: center;
 }
 
 .tagline {
-  color: #2563eb;
+  color: #0284c7;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -77,41 +77,41 @@ a {
   margin: 12px 0;
 }
 
-.hero-text p {
-  color: #5f6b7a;
+.hero-description {
+  color: #52677a;
   font-size: 18px;
 }
 
 .primary-button {
   display: inline-block;
-  background: #2563eb;
+  background: #0284c7;
   color: #ffffff;
   padding: 12px 22px;
-  border-radius: 8px;
+  border-radius: 999px;
   font-weight: 800;
   margin-top: 12px;
 }
 
 .primary-button:hover {
-  background: #1e40af;
+  background: #0369a1;
 }
 
-.hero-card,
-.course-card,
-.schedule-box,
+.booking-card,
+.destination-card,
+.package-box,
 .contact-box {
   background: #ffffff;
-  border: 1px solid #dbe2ef;
-  border-radius: 14px;
-  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  border: 1px solid #d8e8f2;
+  border-radius: 16px;
+  box-shadow: 0 14px 32px rgba(18, 48, 71, 0.08);
 }
 
-.hero-card {
+.booking-card {
   padding: 28px;
 }
 
-.hero-card h3 {
-  color: #2563eb;
+.booking-card h3 {
+  color: #0284c7;
   margin-top: 0;
 }
 
@@ -125,52 +125,71 @@ a {
   text-align: center;
 }
 
-.course-grid {
+.destination-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
-.course-card {
-  padding: 24px;
+.destination-card {
+  overflow: hidden;
 }
 
-.course-card span {
-  color: #2563eb;
-  font-weight: 900;
+.card-image {
+  height: 160px;
 }
 
-.course-card h3 {
+.mountains {
+  background: linear-gradient(135deg, #0ea5e9, #e0f2fe);
+}
+
+.beach {
+  background: linear-gradient(135deg, #14b8a6, #ccfbf1);
+}
+
+.city {
+  background: linear-gradient(135deg, #f97316, #ffedd5);
+}
+
+.destination-card h3,
+.destination-card p {
+  padding: 0 20px;
+}
+
+.destination-card h3 {
   margin-bottom: 8px;
 }
 
-.course-card p,
-.schedule-box p,
-.contact-box p {
-  color: #5f6b7a;
+.destination-card p {
+  color: #52677a;
+  padding-bottom: 20px;
 }
 
-.schedule-section {
+.packages-section {
   background: #ffffff;
 }
 
-.schedule-box {
+.package-box {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 28px;
   padding: 30px;
 }
 
-.schedule-box h2 {
+.package-box h2 {
   text-align: left;
 }
 
-.schedule-list {
+.package-box p {
+  color: #52677a;
+}
+
+.package-list {
   margin: 0;
   padding-left: 20px;
 }
 
-.schedule-list li {
+.package-list li {
   margin-bottom: 10px;
 }
 
@@ -182,8 +201,14 @@ a {
   padding: 36px;
 }
 
+.contact-box p {
+  color: #52677a;
+  max-width: 720px;
+  margin: 0 auto 14px;
+}
+
 .site-footer {
-  background: #172033;
+  background: #123047;
   color: #ffffff;
   text-align: center;
   padding: 18px;
@@ -200,8 +225,8 @@ a {
   }
 
   .hero-grid,
-  .course-grid,
-  .schedule-box {
+  .destination-grid,
+  .package-box {
     grid-template-columns: 1fr;
   }
 
