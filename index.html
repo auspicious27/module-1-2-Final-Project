@@ -180,6 +180,106 @@
       </table>
       <div class="note">Teaching point: Project ko ek saath copy-paste mat karwana. Pehle header likhwao and output dikhao, phir hero likhwao, phir destinations. CSS bhi step-by-step add karna. Isse learners ko har change ka visual impact samajh aayega.</div>
 
+      <h2>Live HTML Interpreter - Class Mein Instant Practice</h2>
+      <p>Is notes page mein ek small live HTML interpreter bhi add kiya gaya hai. Iska use aap class mein starting demo ke liye kar sakte ho. Learners ko dikhao ki left side mein HTML likhne par right side preview mein output turant dikhta hai. Isse unko browser ka behavior quickly samajh aata hai, phir wahi concept VS Code mein implement karwana easy ho jaata hai.</p>
+      <p>Real use case: Jab aap <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, ya <code>&lt;button&gt;</code> explain kar rahe ho, toh pehle interpreter mein chhota code run karke output dikhao. Phir bolo: "Ab isi idea ko hum VS Code ke real project file mein likhenge."</p>
+
+      <div class="live-lab">
+        <div class="lab-panel">
+          <h3>Write HTML Here</h3>
+          <textarea id="htmlInput" spellcheck="false">&lt;h1&gt;SkyTrip Travel&lt;/h1&gt;
+&lt;p&gt;Plan your next holiday with us.&lt;/p&gt;
+&lt;a href="#"&gt;View Packages&lt;/a&gt;</textarea>
+        </div>
+        <div class="lab-panel">
+          <h3>Live Preview</h3>
+          <iframe id="previewFrame" title="Live HTML preview"></iframe>
+        </div>
+      </div>
+
+      <h3>Live Interpreter Ko Kaise Use Karna Hai?</h3>
+      <table>
+        <tr>
+          <th>Step</th>
+          <th>Action</th>
+          <th>Explanation</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Left side textarea mein HTML code type karo.</td>
+          <td>Textarea ek practice editor jaisa kaam karega. Students yahan small HTML snippets try kar sakte hain.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Right side preview dekho.</td>
+          <td>Iframe browser ke andar ek mini browser jaisa hota hai. Yeh typed HTML ka output show karega.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Heading, paragraph, link, list change karke experiment karo.</td>
+          <td>Students ko turant visual feedback milega. Yeh beginner confidence build karta hai.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Same code ko VS Code ke <code>index.html</code> mein likhwao.</td>
+          <td>Interpreter quick practice ke liye hai. Real project implementation VS Code files mein hi karni hai.</td>
+        </tr>
+      </table>
+
+      <h3>Live Interpreter Code Explanation</h3>
+      <pre><code>&lt;textarea id="htmlInput"&gt;...&lt;/textarea&gt;
+&lt;iframe id="previewFrame"&gt;&lt;/iframe&gt;
+
+&lt;script&gt;
+  const htmlInput = document.getElementById('htmlInput');
+  const previewFrame = document.getElementById('previewFrame');
+
+  function updatePreview() {
+    previewFrame.srcdoc = htmlInput.value;
+  }
+
+  htmlInput.addEventListener('input', updatePreview);
+  updatePreview();
+&lt;/script&gt;</code></pre>
+      <table>
+        <tr>
+          <th>Code Line</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;textarea id="htmlInput"&gt;...&lt;/textarea&gt;</code></td>
+          <td>Textarea ek input box hota hai jahan user multiple lines ka text likh sakta hai. Yahan students HTML code type karenge. <code>id="htmlInput"</code> is textarea ko JavaScript se identify karne ke liye diya gaya hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;iframe id="previewFrame"&gt;&lt;/iframe&gt;</code></td>
+          <td>Iframe page ke andar ek mini browser window jaisa hota hai. Hum typed HTML ka output isi iframe mein show karenge. <code>id="previewFrame"</code> JavaScript ko iframe access karne mein help karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>const htmlInput = document.getElementById('htmlInput');</code></td>
+          <td>JavaScript textarea element ko find karke <code>htmlInput</code> variable mein store karti hai. Ab hum textarea ki value read kar sakte hain.</td>
+        </tr>
+        <tr>
+          <td><code>const previewFrame = document.getElementById('previewFrame');</code></td>
+          <td>JavaScript iframe element ko find karke <code>previewFrame</code> variable mein store karti hai. Ab hum iframe ke andar output set kar sakte hain.</td>
+        </tr>
+        <tr>
+          <td><code>function updatePreview() { ... }</code></td>
+          <td>Function reusable code block hota hai. Jab bhi user textarea mein kuch type karega, yeh function preview update karega.</td>
+        </tr>
+        <tr>
+          <td><code>previewFrame.srcdoc = htmlInput.value;</code></td>
+          <td><code>htmlInput.value</code> textarea ka current code leta hai. <code>srcdoc</code> iframe ke andar direct HTML content set karta hai. Is line ki wajah se typed HTML preview mein render hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>htmlInput.addEventListener('input', updatePreview);</code></td>
+          <td>Yeh line textarea par input event listen karti hai. Matlab jab user type kare, delete kare, ya code change kare, tab <code>updatePreview</code> function automatically chale.</td>
+        </tr>
+        <tr>
+          <td><code>updatePreview();</code></td>
+          <td>Page load hote hi preview ko first time update karta hai. Agar yeh line nahi hogi toh default code ka output tab tak nahi dikhega jab tak user type na kare.</td>
+        </tr>
+      </table>
+
       <h2>Project Build Roadmap</h2>
       <p>Is roadmap ko class ke starting mein dikha do. Learners ko pata rahega ki hum kis order mein project build karenge.</p>
       <table>
@@ -695,5 +795,16 @@ body {
   <footer class="footer">
     Travel Landing Page Notes - HTML and CSS Teaching Guide
   </footer>
+  <script>
+    const htmlInput = document.getElementById('htmlInput');
+    const previewFrame = document.getElementById('previewFrame');
+
+    function updatePreview() {
+      previewFrame.srcdoc = htmlInput.value;
+    }
+
+    htmlInput.addEventListener('input', updatePreview);
+    updatePreview();
+  </script>
 </body>
 </html>
