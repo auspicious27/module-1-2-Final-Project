@@ -180,10 +180,11 @@
       </table>
       <div class="note">Teaching point: Project ko ek saath copy-paste mat karwana. Pehle header likhwao and output dikhao, phir hero likhwao, phir destinations. CSS bhi step-by-step add karna. Isse learners ko har change ka visual impact samajh aayega.</div>
 
-      <h2>Before Project: Live HTML Interpreter Build Karna Sikhao</h2>
-      <p>Travel landing page start karne se pehle learners ko ek chhota sa <strong>Live HTML Interpreter</strong> build karwana useful rahega. Interpreter ka matlab hota hai ek aisa mini tool jahan user HTML code type kare aur uska output turant side mein preview ho jaye. Isse learners ko instantly samajh aata hai ki HTML tag browser mein kaise render hota hai.</p>
-      <p>Aap class mein aise explain kar sakte ho: "Pehle hum ek mini HTML practice tool banayenge. Left side hum HTML likhenge, right side browser uska output dikhayega. Jab ye samajh aa jayega, tab hum same HTML knowledge use karke Travel Landing Page project start karenge."</p>
-      <div class="note">Important teaching flow: Pehle <code>live-interpreter.html</code> file banwao aur interpreter build karwao. Uske baad naya project file <code>index.html</code> and <code>styles.css</code> se travel landing page start karwao.</div>
+      <h2>Part A: Live HTML Interpreter - Separate Mini Practice Project</h2>
+      <p><strong>Important:</strong> Live HTML Interpreter ko Travel Landing Page project ke andar merge nahi karna hai. Yeh ek separate mini practice project hai. Iska kaam sirf learners ko HTML ka output instantly samjhana hai. Travel Landing Page ek alag main project rahega jisme alag <code>index.html</code> and <code>styles.css</code> files use hongi.</p>
+      <p>Interpreter ka matlab hota hai ek aisa mini tool jahan user HTML code type kare aur uska output turant side mein preview ho jaye. Isse learners ko instantly samajh aata hai ki HTML tag browser mein kaise render hota hai. Jab learner <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, ya list tags try karta hai, toh output turant dikh jaata hai.</p>
+      <p>Aap class mein aise explain kar sakte ho: "Pehle hum ek separate mini tool banayenge jiska naam hai Live HTML Interpreter. Isse hum HTML tags ka behavior samjhenge. Jab tags ka output clear ho jayega, tab hum is interpreter ko side mein rakh denge aur alag se Travel Landing Page project start karenge."</p>
+      <div class="note">Do not merge rule: <code>live-interpreter.html</code> ka code travel project ke <code>index.html</code> mein paste nahi karna. Interpreter ek separate practice file hai. Travel project ke liye baad mein fresh <code>index.html</code> and <code>styles.css</code> banenge.</div>
 
       <div class="live-lab">
         <div class="lab-panel">
@@ -198,8 +199,30 @@
         </div>
       </div>
 
+      <h3>Live HTML Interpreter Ka Separate Folder/File Setup</h3>
+      <p>Interpreter ko alag rakhne ke liye learners se pehle ek separate folder ya separate file banwao. Iska naam clear rakhna zaroori hai, taaki students confuse na hon ki kaunsa code interpreter ka hai aur kaunsa code travel project ka hai.</p>
+      <pre><code>html-interpreter-practice/
+  live-interpreter.html</code></pre>
+      <table>
+        <tr>
+          <th>File / Folder</th>
+          <th>Purpose</th>
+          <th>Important Note</th>
+        </tr>
+        <tr>
+          <td><code>html-interpreter-practice</code></td>
+          <td>Separate practice folder jahan interpreter ka code rahega.</td>
+          <td>Is folder ko travel project folder ke saath mix mat karo.</td>
+        </tr>
+        <tr>
+          <td><code>live-interpreter.html</code></td>
+          <td>Single file jisme HTML editor, preview iframe, CSS styling, and JavaScript logic rahega.</td>
+          <td>Yeh file sirf HTML practice ke liye hai, final landing page ke liye nahi.</td>
+        </tr>
+      </table>
+
       <h3>Live HTML Interpreter Build Karne Ka Complete Code</h3>
-      <p>Is code ko learners se VS Code mein <code>live-interpreter.html</code> file ke andar likhwao. Yeh ek single-file mini project hai, isliye isme HTML, CSS, and JavaScript teeno ek hi file mein rakhe gaye hain. Isse beginners ko setup easy lagega.</p>
+      <p>Is code ko learners se VS Code mein <code>live-interpreter.html</code> file ke andar likhwao. Yeh ek single-file mini project hai, isliye isme HTML, CSS, and JavaScript teeno ek hi file mein rakhe gaye hain. Isse beginners ko setup easy lagega. Lekin yaad rakho: yeh travel landing page ka code nahi hai, yeh sirf interpreter practice code hai.</p>
       <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -294,8 +317,8 @@
         </tr>
         <tr>
           <td>Interpreter complete hone ke baad</td>
-          <td>Travel project ke liye <code>index.html</code> and <code>styles.css</code> start karo.</td>
-          <td>Ab learners ready hain, kyunki unko samajh aa gaya ki browser HTML ko kaise render karta hai.</td>
+          <td>Interpreter file close karo, phir Travel Landing Page ke liye separate <code>index.html</code> and <code>styles.css</code> start karo.</td>
+          <td>Ab learners ready hain, kyunki unko samajh aa gaya ki browser HTML ko kaise render karta hai. Ab main project alag se start hoga.</td>
         </tr>
       </table>
 
@@ -367,8 +390,14 @@
         </tr>
       </table>
 
-      <h2>Project Build Roadmap</h2>
-      <p>Is roadmap ko class ke starting mein dikha do. Learners ko pata rahega ki hum kis order mein project build karenge.</p>
+      <h2>Part B: Travel Landing Page - Main Project Roadmap</h2>
+      <p>Ab Live HTML Interpreter complete ho chuka hai. Ab usko side mein rakh do. Iske baad hum alag main project start karenge jiska naam hai <strong>SkyTrip Travel Landing Page</strong>. Is project mein sirf travel website ka code rahega.</p>
+      <p>Main project ke liye folder/file structure alag rahega:</p>
+      <pre><code>travel-landing-page/
+  index.html
+  styles.css</code></pre>
+      <div class="note">Separation reminder: <code>live-interpreter.html</code> interpreter practice ke liye tha. Travel Landing Page ke andar live interpreter ka textarea, iframe, or JavaScript code add nahi karna.</div>
+      <p>Is roadmap ko travel project start karte time dikha do. Learners ko pata rahega ki hum kis order mein landing page build karenge.</p>
       <table>
         <tr>
           <th>Phase</th>
