@@ -807,6 +807,375 @@ a {
       <p>Desktop par website mein top sticky header hoga. Logo left side and navigation links right side honge. Hero section mein left side heading and button hoga, right side feature card hoga. Services section mein 3 cards ek row mein dikhenge. About and contact sections white card style mein dikhenge.</p>
       <p>Mobile par layout simple ho jayega. Navbar vertical ho jayega, hero section one-column ho jayega, and services cards one-by-one stack honge. Button hover par smooth movement and dark blue color change dikhega.</p>
 
+      <h2>Extra Simple Project - FreshBite Cafe Website</h2>
+      <p>Ab ek very simple HTML and CSS project banate hain jise learners easily understand kar sakte hain. Project ka naam hai <strong>FreshBite Cafe</strong>. Story simple hai: ek small cafe apni website banana chahta hai jahan visitors cafe ka name, menu, about section, contact timing, and email button dekh sakein. Is project mein sirf 2 files use hongi: <code>index.html</code> and <code>styles.css</code>.</p>
+      <p>Is project ka purpose hai ki learners samjhein ki real website mein HTML and CSS ka relation kaise hota hai. HTML content rakhta hai: header, menu cards, about text, contact text. CSS design deta hai: colors, spacing, navbar, cards, button, grid layout, and mobile responsive layout.</p>
+
+      <h3>Project Files</h3>
+      <pre><code>freshbite-cafe/
+  index.html
+  styles.css</code></pre>
+      <table>
+        <tr>
+          <th>File</th>
+          <th>Kaam Kya Hai?</th>
+        </tr>
+        <tr>
+          <td><code>index.html</code></td>
+          <td>Website ka structure. Isme header, navbar, hero, menu, about, contact, and footer ka content rahega.</td>
+        </tr>
+        <tr>
+          <td><code>styles.css</code></td>
+          <td>Website ka design. Isme color, font, spacing, layout, cards, hover effect, and responsive rules rahenge.</td>
+        </tr>
+      </table>
+
+      <h3>How To Implement This Project In VS Code</h3>
+      <table>
+        <tr>
+          <th>Step</th>
+          <th>Action</th>
+          <th>Simple Explanation</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><code>freshbite-cafe</code> naam ka folder banao.</td>
+          <td>Project ka complete code isi folder ke andar rahega. Folder name clear rakhne se project organize rahta hai.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>VS Code mein folder open karo.</td>
+          <td>VS Code ko project folder open karna zaroori hai taaki files same folder ke andar create ho.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><code>index.html</code> file banao and HTML code paste karo.</td>
+          <td>HTML file browser ko batati hai ki page par kya content show karna hai.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><code>styles.css</code> file banao and CSS code paste karo.</td>
+          <td>CSS file browser ko batati hai ki content ko kaise design karna hai.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><code>index.html</code> mein CSS link check karo: <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+          <td>Agar link tag correct hai, toh CSS apply hogi. Agar file name galat hai, toh page plain HTML jaisa dikhega.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Right click on <code>index.html</code> and choose <strong>Open with Live Server</strong>.</td>
+          <td>Browser mein website open hogi. Changes save karte hi output refresh ho jayega.</td>
+        </tr>
+      </table>
+
+      <h3>Expected Output Of FreshBite Cafe</h3>
+      <p>Browser mein top par white navbar dikhega. Left side cafe ka name <strong>FreshBite Cafe</strong> hoga and right side Menu, About, Contact links honge. Hero section light orange background ke saath center text show karega. Menu section mein 3 cards honge: Veg Sandwich, Fruit Bowl, Cold Coffee. About section cafe ki short story batayega. Contact section timing and email button show karega. Mobile screen par navbar vertical ho jayega and menu cards one-by-one stack honge.</p>
+
+      <h3>index.html Code Explanation - Har Line Ka Matlab</h3>
+      <table>
+        <tr>
+          <th>HTML Line / Code</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>&lt;!DOCTYPE html&gt;</code></td>
+          <td>Browser ko batata hai ki yeh HTML5 document hai. Isko file ke top par likhna best practice hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;html lang="en"&gt;</code></td>
+          <td>Complete HTML page ka root element start hota hai. <code>lang="en"</code> browser and screen readers ko batata hai ki page ki main language English hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;head&gt;</code></td>
+          <td>Head section page ki hidden information rakhta hai, jaise title, metadata, and CSS file link. Yeh content direct page body mein visible nahi hota.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+          <td>Text encoding set karta hai. Isse letters, symbols, and special characters properly show hote hain.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></td>
+          <td>Mobile responsive behavior ke liye important line hai. Browser ko bolti hai ki page device width ke according render karo.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;title&gt;FreshBite Cafe&lt;/title&gt;</code></td>
+          <td>Browser tab ka title set karta hai. Jab page open hoga toh tab mein FreshBite Cafe dikhega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+          <td>HTML file ko CSS file se connect karta hai. <code>href="styles.css"</code> ka matlab CSS file same folder mein hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;body&gt;</code></td>
+          <td>Visible website content yahan se start hota hai. Browser screen par jo kuch dikhta hai, mostly body ke andar hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;header class="site-header"&gt;</code></td>
+          <td>Website ka top header start hota hai. <code>site-header</code> class CSS mein header ko background, border, and sticky behavior dene ke liye use hogi.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="container navbar"&gt;</code></td>
+          <td>Ek div par two classes hain. <code>container</code> width control karega and <code>navbar</code> logo and links ko Flexbox se arrange karega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h1 class="logo"&gt;FreshBite Cafe&lt;/h1&gt;</code></td>
+          <td>Website ka main brand name hai. <code>logo</code> class se color and font size set hoga.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;nav class="nav-links"&gt;</code></td>
+          <td>Navigation area start hota hai. Iske andar page ke sections par jaane wale links rahenge.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a href="#menu"&gt;Menu&lt;/a&gt;</code></td>
+          <td>Menu section par scroll karne wala link hai. <code>#menu</code> same page ke <code>id="menu"</code> section ko target karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a href="#about"&gt;About&lt;/a&gt;</code></td>
+          <td>About section par le jaane wala link hai. Isse one-page website navigation easy hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</code></td>
+          <td>Contact section par le jaane wala link hai. User quickly contact information tak pahunch sakta hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;main&gt;</code></td>
+          <td>Page ka main content start hota hai. Header and footer ke beech ka primary content main ke andar rakha jata hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section class="hero"&gt;</code></td>
+          <td>Hero section website ka first important section hai. Isme main message and button hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="container hero-content"&gt;</code></td>
+          <td>Hero content ko center and readable width mein rakhta hai. <code>hero-content</code> text alignment and max width ke liye use hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p class="tagline"&gt;Fresh food, friendly place&lt;/p&gt;</code></td>
+          <td>Short label/tagline hai. CSS se uppercase, orange color, and letter spacing milegi.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h2&gt;Healthy meals made simple for busy people.&lt;/h2&gt;</code></td>
+          <td>Hero section ki main heading hai. User ko immediately cafe ka main value samajh aata hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p class="hero-text"&gt;...&lt;/p&gt;</code></td>
+          <td>Hero heading ke neeche supporting paragraph hai. CSS se text soft gray and slightly bigger hoga.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a class="button" href="#menu"&gt;View Menu&lt;/a&gt;</code></td>
+          <td>Call-to-action link hai. CSS isko orange rounded button banayegi. Click karne par menu section par jayega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section id="menu" class="section"&gt;</code></td>
+          <td>Menu section start hota hai. <code>id="menu"</code> navigation link ke liye hai. <code>section</code> class spacing ke liye hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div class="menu-grid"&gt;</code></td>
+          <td>Menu cards ka wrapper hai. CSS Grid se 3 cards ek row mein arrange honge.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;article class="menu-card"&gt;</code></td>
+          <td>Har menu item ek independent card hai. Article tag meaningful hai kyunki har card apne aap mein complete information block hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h3&gt;Veg Sandwich&lt;/h3&gt;</code></td>
+          <td>Menu item ka title hai. Same pattern Fruit Bowl and Cold Coffee cards mein bhi use hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p&gt;Fresh vegetables...&lt;/p&gt;</code></td>
+          <td>Menu item ka short description hai. User ko item ke baare mein simple information milti hai.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;strong&gt;Rs. 99&lt;/strong&gt;</code></td>
+          <td>Price ko important dikhane ke liye strong tag use kiya hai. CSS se price orange and bigger dikhega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section id="about" class="section about-box"&gt;</code></td>
+          <td>About section start hota hai. <code>about-box</code> class se white background apply hoga.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section id="contact" class="section contact-box"&gt;</code></td>
+          <td>Contact section start hota hai. Isme timing and email button hai. <code>contact-box</code> text center karega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a class="button" href="mailto:hello@freshbite.com"&gt;Email Us&lt;/a&gt;</code></td>
+          <td>Email link hai. Click karne par user's mail app open ho sakta hai. Same <code>button</code> class se design consistent rahega.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;footer class="site-footer"&gt;</code></td>
+          <td>Website ka bottom area hai. Isme small project credit text rakha gaya hai.</td>
+        </tr>
+      </table>
+
+      <h3>styles.css Code Explanation - Har CSS Rule Ka Matlab</h3>
+      <table>
+        <tr>
+          <th>CSS Code</th>
+          <th>Detailed Simple Hinglish Explanation</th>
+        </tr>
+        <tr>
+          <td><code>* { box-sizing: border-box; }</code></td>
+          <td>Universal selector saare elements par apply hota hai. <code>border-box</code> layout calculation easy karta hai because padding and border element ki width ke andar count hote hain.</td>
+        </tr>
+        <tr>
+          <td><code>body</code></td>
+          <td>Complete page ke base styles set karta hai: margin remove, font set, text color, background color, and line height.</td>
+        </tr>
+        <tr>
+          <td><code>margin: 0;</code></td>
+          <td>Browser ka default body margin remove karta hai. Isse header and sections screen edge se clean start hote hain.</td>
+        </tr>
+        <tr>
+          <td><code>font-family: Arial, Helvetica, sans-serif;</code></td>
+          <td>Page ka font set karta hai. Agar Arial available nahi hai toh Helvetica use hogi, warna generic sans-serif use hoga.</td>
+        </tr>
+        <tr>
+          <td><code>background: #fff7ed;</code></td>
+          <td>Complete page ka light warm background set karta hai. Cafe theme ke liye soft orange background suitable hai.</td>
+        </tr>
+        <tr>
+          <td><code>a</code></td>
+          <td>All links ko target karta hai. Default underline remove and text color inherit karne ke liye use hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>.container</code></td>
+          <td>Content ko center and fixed readable width mein rakhta hai. Large screen par content zyada spread nahi hota.</td>
+        </tr>
+        <tr>
+          <td><code>width: 90%;</code></td>
+          <td>Container screen ka 90% width lega. Isse mobile and desktop dono par side spacing bachi rahegi.</td>
+        </tr>
+        <tr>
+          <td><code>max-width: 1100px;</code></td>
+          <td>Container ko very large screen par bhi 1100px se zyada wide nahi hone deta. Readability better hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>.site-header</code></td>
+          <td>Top header ko style karta hai. White background, bottom border, and sticky behavior isi rule se milta hai.</td>
+        </tr>
+        <tr>
+          <td><code>position: sticky; top: 0;</code></td>
+          <td>Header ko scroll ke time top par stick karne mein help karta hai. <code>top: 0</code> batata hai ki header top edge par rahe.</td>
+        </tr>
+        <tr>
+          <td><code>.navbar</code></td>
+          <td>Logo and navigation links ko Flexbox se arrange karta hai. Desktop par logo left and links right side rahenge.</td>
+        </tr>
+        <tr>
+          <td><code>display: flex;</code></td>
+          <td>Element ko Flexbox container banata hai. Iske child elements row mein align ho sakte hain.</td>
+        </tr>
+        <tr>
+          <td><code>align-items: center;</code></td>
+          <td>Navbar items ko vertical center align karta hai, taaki logo and links balanced dikhein.</td>
+        </tr>
+        <tr>
+          <td><code>justify-content: space-between;</code></td>
+          <td>First item ko left and last group ko right side push karta hai. Navbar professional dikhta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.logo</code></td>
+          <td>Cafe name ko orange color and proper font size deta hai. Logo brand identity clear karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.nav-links</code></td>
+          <td>Navigation links ko row mein arrange karta hai and links ke beech gap add karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.nav-links a:hover</code></td>
+          <td>Mouse hover par nav link ka color orange ho jaata hai. User ko clickable feedback milta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.hero</code></td>
+          <td>Hero section ko light gradient background and large top-bottom spacing deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.hero-content</code></td>
+          <td>Hero text ko limited width and center align karta hai. Isse message clean and focused dikhta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.tagline</code></td>
+          <td>Small intro text ko orange, bold, uppercase, and spaced letters ke saath highlight karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.hero h2</code></td>
+          <td>Hero heading ka large font size and line height set karta hai. Heading page ka main attention point hoti hai.</td>
+        </tr>
+        <tr>
+          <td><code>.hero-text</code></td>
+          <td>Supporting paragraph ko gray color and readable size deta hai. Yeh heading ko explain karta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.button</code></td>
+          <td>Normal link ko button jaisa design deta hai: orange background, white text, padding, rounded shape, bold text.</td>
+        </tr>
+        <tr>
+          <td><code>.button:hover</code></td>
+          <td>Hover par button dark orange ho jaata hai. Isse button interactive feel deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.section</code></td>
+          <td>Common section spacing set karta hai. Menu, about, contact sections ko top-bottom padding milti hai.</td>
+        </tr>
+        <tr>
+          <td><code>.section h2</code></td>
+          <td>Section headings ko center and bigger size mein show karta hai. Har section ka title clearly visible hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>.menu-grid</code></td>
+          <td>Menu cards ka Grid layout parent hai. Desktop par cards 3 columns mein arrange honge.</td>
+        </tr>
+        <tr>
+          <td><code>grid-template-columns: repeat(3, 1fr);</code></td>
+          <td>3 equal columns banata hai. <code>1fr</code> ka matlab available space ka equal fraction.</td>
+        </tr>
+        <tr>
+          <td><code>gap: 20px;</code></td>
+          <td>Cards ke beech equal gap add karta hai. Gap ke bina cards chipke hue dikhenge.</td>
+        </tr>
+        <tr>
+          <td><code>.menu-card</code></td>
+          <td>Har menu item ko card style deta hai: white background, border, rounded corners, padding, and shadow.</td>
+        </tr>
+        <tr>
+          <td><code>box-shadow</code></td>
+          <td>Card ke neeche soft shadow add karta hai. Card page se slightly lifted feel hota hai.</td>
+        </tr>
+        <tr>
+          <td><code>.about-box</code></td>
+          <td>About section ko white background deta hai, jisse section page background se separate dikhta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.about-box p, .contact-box p</code></td>
+          <td>Group selector hai. About and contact paragraphs ko same max width and center alignment deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.contact-box</code></td>
+          <td>Contact section ka text center align karta hai. Contact CTA usually center aligned achha dikhta hai.</td>
+        </tr>
+        <tr>
+          <td><code>.site-footer</code></td>
+          <td>Footer ko dark background, white text, center alignment, and padding deta hai.</td>
+        </tr>
+        <tr>
+          <td><code>@media (max-width: 768px)</code></td>
+          <td>Responsive design rule start karta hai. Jab screen 768px ya usse kam hogi, andar ke styles apply honge.</td>
+        </tr>
+        <tr>
+          <td><code>flex-direction: column;</code></td>
+          <td>Mobile par navbar items ko vertical stack karta hai. Small screen par links fit ho jaate hain.</td>
+        </tr>
+        <tr>
+          <td><code>.hero h2 { font-size: 32px; }</code></td>
+          <td>Mobile par hero heading ka size kam karta hai, taaki text screen par properly fit ho.</td>
+        </tr>
+        <tr>
+          <td><code>.menu-grid { grid-template-columns: 1fr; }</code></td>
+          <td>Mobile par menu cards ko one-column layout mein convert karta hai. Cards one-by-one readable dikhenge.</td>
+        </tr>
+      </table>
+
       <h2>Common Mistakes</h2>
       <table>
         <tr>
