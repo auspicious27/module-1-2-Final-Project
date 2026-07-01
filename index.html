@@ -67,15 +67,77 @@
       <p>Real-world example se samjho: HTML ek ghar ka structure hai, jisme rooms, doors, windows, and walls hote hain. CSS us ghar ka paint, lighting, furniture arrangement, decoration, and spacing hai. Structure ke bina ghar nahi banega, aur styling ke bina ghar plain and unfinished lagega. Isi tarah HTML ke bina website ka content nahi banega, aur CSS ke bina website professional nahi dikhegi.</p>
       <p>Class mein CSS explain karte time pehle learners ko ek plain HTML page dikhao. Phir same HTML par CSS apply karke output dikhao. Jab woh dekhenge ki same content styling ke baad beautiful card, button, navbar, and layout ban gaya, toh unko CSS ka importance easily samajh aa jayega.</p>
 
+      <h3>In Starting Demos Ko VS Code Mein Kaise Implement Karna Hai?</h3>
+      <p>In 3 demos ko final project start karne se pehle short warm-up practice ki tarah karwana hai. Isse learners ko CSS ka basic flow samajh aa jayega: HTML mein class dena, CSS file connect karna, selector likhna, property-value apply karna, aur browser mein output check karna.</p>
+      <table>
+        <tr>
+          <th>Step</th>
+          <th>Action</th>
+          <th>Simple Explanation</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Desktop ya Documents mein <code>css-demo-practice</code> naam ka folder banao.</td>
+          <td>Ye temporary practice folder hai. Isme hum sirf small CSS demos test karenge, final business website project nahi.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>VS Code open karo, phir <code>File &gt; Open Folder</code> se <code>css-demo-practice</code> folder open karo.</td>
+          <td>VS Code ko batana hota hai ki hum kis folder ke andar kaam kar rahe hain. Folder open hone ke baad left side Explorer mein files create kar sakte hain.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Folder ke andar 2 files banao: <code>index.html</code> and <code>style.css</code>.</td>
+          <td><code>index.html</code> mein page ka structure rahega. <code>style.css</code> mein design rules rahenge.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><code>index.html</code> ke head section mein <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> add karo.</td>
+          <td>Ye line HTML ko CSS file se connect karti hai. Agar ye line missing hogi, toh CSS file ka code browser mein apply nahi hoga.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Demo ka HTML code <code>&lt;body&gt;</code> ke andar paste karo, aur demo ka CSS code <code>style.css</code> mein paste karo.</td>
+          <td>HTML content browser mein visible hota hai. CSS us visible content ko style karta hai.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>VS Code mein right click karo and <strong>Open with Live Server</strong> choose karo.</td>
+          <td>Live Server browser mein page open karta hai. Jab aap file save karte ho, output automatically refresh ho sakta hai.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Output dekho, phir CSS values change karke experiment karo.</td>
+          <td>Example: color change karo, font-size badhao, padding kam/zyada karo. Experiment se CSS concept fast clear hota hai.</td>
+        </tr>
+      </table>
+      <div class="note">Teacher flow: Pehle HTML file run karke plain output dikhao. Phir CSS file connect karo and styling add karo. Learners ko clearly dikhega ki CSS add karne ke baad same content ka look change ho gaya.</div>
+
       <h3>Demo 1: Plain Text Ko Styled Heading Banana</h3>
       <p>Is demo ka goal hai learners ko dikhana ki CSS ek simple heading ko attractive bana sakta hai. Pehle HTML heading normal dikhegi. CSS apply karne ke baad uska color, size, and spacing change ho jayega.</p>
-      <pre><code>&lt;h1 class="main-title"&gt;Welcome to My Website&lt;/h1&gt;</code></pre>
+      <h4>Demo 1 Implementation Files</h4>
+      <p>Demo 1 run karne ke liye <code>index.html</code> mein complete basic HTML structure likho. Body ke andar sirf heading rakho. Phir <code>style.css</code> mein heading ki styling likho.</p>
+      <p><strong>index.html</strong></p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;CSS Demo 1&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 class="main-title"&gt;Welcome to My Website&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <p><strong>style.css</strong></p>
       <pre><code>.main-title {
   color: #2563eb;
   font-size: 36px;
   text-align: center;
   margin-top: 40px;
 }</code></pre>
+      <p><strong>Expected Output:</strong> Browser mein ek heading show hogi: <code>Welcome to My Website</code>. Heading blue color mein hogi, center aligned hogi, size bada hoga, aur top se thoda gap hoga. Agar CSS file link nahi hui, toh heading default black and left aligned dikhegi.</p>
       <table>
         <tr>
           <th>Code Part</th>
@@ -109,6 +171,7 @@
 
       <h3>Demo 2: Simple Link Ko Button Banana</h3>
       <p>Is demo se learners ko samjhao ki HTML mein button jaisa dikhne wala element actual mein link bhi ho sakta hai. CSS us link ko button ka visual design deta hai.</p>
+      <p><strong>Implementation:</strong> Isi <code>css-demo-practice</code> folder mein kaam karo. <code>index.html</code> ke body ke andar Demo 1 wali heading replace karke neeche wala link paste karo. Phir <code>style.css</code> ka old CSS remove karke Demo 2 wala CSS paste karo. Save karne ke baad browser refresh karo ya Live Server output dekho.</p>
       <pre><code>&lt;a class="demo-button" href="#contact"&gt;Contact Us&lt;/a&gt;</code></pre>
       <pre><code>.demo-button {
   display: inline-block;
@@ -118,6 +181,7 @@
   border-radius: 8px;
   font-weight: 700;
 }</code></pre>
+      <p><strong>Expected Output:</strong> Browser mein <code>Contact Us</code> ek normal underlined link ki tarah nahi, balki blue rounded button ki tarah dikhega. Button ke andar white text, proper spacing, and bold font hoga.</p>
       <table>
         <tr>
           <th>Code Part</th>
@@ -155,10 +219,12 @@
 
       <h3>Demo 3: Hover Effect Se Interaction Dikhana</h3>
       <p>Hover effect ka matlab hai jab user mouse kisi element ke upar le jaata hai, tab style change hota hai. Yeh learner ko samjhata hai ki CSS sirf static design nahi, small interaction bhi create kar sakta hai.</p>
+      <p><strong>Implementation:</strong> Demo 3 ke liye Demo 2 ka same HTML button rakho. <code>style.css</code> mein Demo 2 ka button CSS bhi rakho, aur uske neeche hover wala CSS add karo. Agar sirf hover CSS likhoge aur button ka base CSS remove kar doge, toh button ka full design nahi dikhega.</p>
       <pre><code>.demo-button:hover {
   background: #1d4ed8;
   transform: translateY(-2px);
 }</code></pre>
+      <p><strong>Expected Output:</strong> Jab mouse button ke upar le jaoge, button ka color thoda dark blue ho jayega aur button halka sa upar move karega. Isse user ko feel hota hai ki element clickable hai.</p>
       <table>
         <tr>
           <th>Code Part</th>
